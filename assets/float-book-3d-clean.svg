@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" fill="none">
+  <defs>
+    <linearGradient id="bCover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16593F" />
+      <stop offset="60%" stop-color="#0E3B2E" />
+      <stop offset="100%" stop-color="#0A2C22" />
+    </linearGradient>
+    <linearGradient id="bSpine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0E3B2E" />
+      <stop offset="100%" stop-color="#16593F" />
+    </linearGradient>
+    <linearGradient id="bGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <filter id="bShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <g filter="url(#bShadow)" transform="rotate(-6 60 65)">
+    <!-- Page edges -->
+    <path d="M96 22 L104 28 L104 108 L96 102 Z" fill="#E5E7EB" opacity="0.85" />
+    <path d="M26 108 L96 102 L104 108 L34 114 Z" fill="#D1D5DB" opacity="0.75" />
+    
+    <!-- Spine -->
+    <path d="M18 28 L26 22 L34 114 L26 120 Z" fill="url(#bSpine)" />
+    
+    <!-- Front Cover -->
+    <path d="M26 22 L96 16 L88 106 L18 112 Z" fill="url(#bCover)" stroke="#45B28D" stroke-width="1.2" stroke-opacity="0.6" />
+    
+    <!-- Gold Ribbon Bookmark -->
+    <path d="M72 18 L80 17 L78 52 L75 48 L72 52 Z" fill="url(#bGold)" />
+    
+    <!-- Minimal Geometric Seal -->
+    <circle cx="53" cy="58" r="16" fill="#0E3B2E" stroke="#45B28D" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="53" y="64" font-family="'Clash Display', sans-serif" font-size="16" font-weight="700" fill="#A7F3D0" text-anchor="middle">₹</text>
+    
+    <!-- Fine lines -->
+    <line x1="36" y1="84" x2="70" y2="84" stroke="#8CA096" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
+    <line x1="42" y1="90" x2="64" y2="90" stroke="#8CA096" stroke-width="1.2" stroke-linecap="round" opacity="0.35" />
+  </g>
+</svg>

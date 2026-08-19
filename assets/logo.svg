@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" fill="none">
+  <g transform="translate(4, 5)">
+    <!-- Spiral 'e' Mark -->
+    <path d="M40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80H52V64H40C26.7452 64 16 53.2548 16 40C16 26.7452 26.7452 16 40 16C53.2548 16 64 26.7452 64 40V46H26C26 53.732 32.268 60 40 60H48V46H50C57.732 46 64 39.732 64 32C64 14.3269 53.2741 0 40 0ZM40 28C44.4183 28 48 31.5817 48 36H32C32 31.5817 35.5817 28 40 28Z" fill="#3EAB87" fill-rule="evenodd" clip-rule="evenodd"/>
+  </g>
+  <!-- Eazy Dezyn Typography -->
+  <text x="96" y="58" font-family="'Plus Jakarta Sans', 'Satoshi', 'Inter', -apple-system, sans-serif" font-size="44" font-weight="800" letter-spacing="-1.2px" fill="#3EAB87">Eazy Dezyn</text>
+</svg>
