@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" fill="none">
+  <defs>
+    <!-- Gold Metallic Gradients -->
+    <radialGradient id="goldRadial" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFF3A8"/>
+      <stop offset="35%" stop-color="#F7C048"/>
+      <stop offset="75%" stop-color="#DB9518"/>
+      <stop offset="100%" stop-color="#AC6E06"/>
+    </radialGradient>
+
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5B8"/>
+      <stop offset="50%" stop-color="#E5A625"/>
+      <stop offset="100%" stop-color="#9E6200"/>
+    </linearGradient>
+
+    <linearGradient id="goldCenter" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE885"/>
+      <stop offset="100%" stop-color="#D49015"/>
+    </linearGradient>
+
+    <!-- Red Ribbon Gradients -->
+    <linearGradient id="redRibbon" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E61030"/>
+      <stop offset="45%" stop-color="#C40520"/>
+      <stop offset="100%" stop-color="#910014"/>
+    </linearGradient>
+
+    <linearGradient id="redRibbonFold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6E000C"/>
+      <stop offset="100%" stop-color="#400007"/>
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="badgeShadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+
+    <filter id="ribbonShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Text Curved Path -->
+    <path id="textArcTop" d="M 68 140 A 92 92 0 0 1 252 140" fill="none"/>
+  </defs>
+
+  <g filter="url(#badgeShadow)">
+    <!-- BACK RIBBON TAILS -->
+    <!-- Left Tail -->
+    <path d="M 100 200 L 72 305 L 115 282 L 148 318 L 136 210 Z" fill="url(#redRibbon)" stroke="url(#goldTrim)" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M 103 205 L 79 295 L 115 276 L 142 306 L 132 215 Z" fill="none" stroke="#FFF" stroke-width="1.2" stroke-opacity="0.5"/>
+
+    <!-- Right Tail -->
+    <path d="M 220 200 L 248 305 L 205 282 L 172 318 L 184 210 Z" fill="url(#redRibbon)" stroke="url(#goldTrim)" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M 217 205 L 241 295 L 205 276 L 178 306 L 188 215 Z" fill="none" stroke="#FFF" stroke-width="1.2" stroke-opacity="0.5"/>
+
+    <!-- GOLD STARBURST ROSETTE MEDAL -->
+    <g transform="translate(160, 135)">
+      <!-- 24-point Starburst points -->
+      <path d="
+        M 0 -115 L 15 -105 L 30 -112 L 42 -98 L 59 -100 L 68 -83 L 85 -81 L 90 -63 L 105 -56 L 105 -37 L 116 -28 L 112 -9 L 118 3 L 110 22 L 112 41 L 100 57 L 97 76 L 82 89 L 75 106 L 57 114 L 46 128 L 27 131 L 14 142 L -6 140 L -21 148 L -38 141 L -54 144 L -68 132 L -85 130 L -95 115 L -109 108 L -114 90 L -124 79 L -123 60 L -129 46 L -122 28 L -124 9 L -113 -6 L -111 -25 L -97 -38 L -91 -57 L -74 -67 L -64 -84 L -45 -90 L -32 -104 L -13 -106 Z
+      " fill="url(#goldRadial)" stroke="url(#goldTrim)" stroke-width="3" stroke-linejoin="round"/>
+
+      <!-- Outer Gold Bezel -->
+      <circle cx="0" cy="0" r="102" fill="none" stroke="#AC6E06" stroke-width="2"/>
+      <circle cx="0" cy="0" r="98" fill="url(#goldRadial)"/>
+
+      <!-- Dark Charcoal Ring with Bevel -->
+      <circle cx="0" cy="0" r="88" fill="#1C1F24" stroke="#D49015" stroke-width="3"/>
+      <circle cx="0" cy="0" r="86" fill="none" stroke="#000000" stroke-width="2" opacity="0.6"/>
+
+      <!-- Inner Gold Center Disc -->
+      <circle cx="0" cy="0" r="54" fill="url(#goldCenter)" stroke="#E5A625" stroke-width="3"/>
+      <circle cx="0" cy="0" r="51" fill="none" stroke="#8C5500" stroke-width="1.5" opacity="0.5"/>
+
+      <!-- 100% Text in Center Disc -->
+      <text x="0" y="-8" font-family="'Bricolage Grotesque', 'Arial Black', sans-serif" font-weight="900" font-size="36" fill="#1A1E24" text-anchor="middle" letter-spacing="-1">100%</text>
+    </g>
+
+    <!-- MONEY BACK Arched Text (on top dark ring) -->
+    <text font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="19" fill="#FFFFFF" letter-spacing="2.5">
+      <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">MONEY BACK</textPath>
+    </text>
+
+    <!-- 3D RED FRONT RIBBON -->
+    <g filter="url(#ribbonShadow)">
+      <!-- Left Fold Back -->
+      <path d="M 28 175 L 56 142 L 56 206 L 28 175 Z" fill="url(#redRibbonFold)"/>
+      <path d="M 28 175 L 56 142 L 56 160 L 28 175 Z" fill="#380006"/>
+
+      <!-- Right Fold Back -->
+      <path d="M 292 175 L 264 142 L 264 206 L 292 175 Z" fill="url(#redRibbonFold)"/>
+      <path d="M 292 175 L 264 142 L 264 160 L 292 175 Z" fill="#380006"/>
+
+      <!-- Left Ribbon Wing -->
+      <path d="M 28 175 L 75 148 L 75 204 L 28 226 L 46 200 Z" fill="url(#redRibbon)" stroke="url(#goldTrim)" stroke-width="2.5" stroke-linejoin="round"/>
+
+      <!-- Right Ribbon Wing -->
+      <path d="M 292 175 L 245 148 L 245 204 L 292 226 L 274 200 Z" fill="url(#redRibbon)" stroke="url(#goldTrim)" stroke-width="2.5" stroke-linejoin="round"/>
+
+      <!-- Center Main Ribbon Banner with Convex Curve -->
+      <path d="M 46 150 Q 160 134 274 150 L 274 204 Q 160 188 46 204 Z" fill="url(#redRibbon)" stroke="url(#goldTrim)" stroke-width="3" stroke-linejoin="round"/>
+
+      <!-- Top & Bottom Inner Gold Pinstripes -->
+      <path d="M 49 156 Q 160 140 271 156" fill="none" stroke="#FFEAA0" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 49 198 Q 160 182 271 198" fill="none" stroke="#FFEAA0" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+
+      <!-- Center GUARANTEED Text -->
+      <!-- Shadow Layer -->
+      <text x="160" y="184" font-family="'Bricolage Grotesque', 'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#4A0008" text-anchor="middle" letter-spacing="1.5">GUARANTEED</text>
+      <!-- Main Text Layer -->
+      <text x="160" y="182" font-family="'Bricolage Grotesque', 'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5">GUARANTEED</text>
+    </g>
+  </g>
+</svg>

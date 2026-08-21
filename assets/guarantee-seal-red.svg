@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 380" fill="none">
+  <defs>
+    <!-- Red Rosette Gradient -->
+    <radialGradient id="sealRedRadial" cx="42%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="60%" stop-color="#E53935"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </radialGradient>
+
+    <!-- Ribbon Tail Gradients -->
+    <linearGradient id="ribbonTailLeft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E53935"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </linearGradient>
+    <linearGradient id="ribbonTailRight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E53935"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </linearGradient>
+
+    <!-- Shadow filters -->
+    <filter id="sealDropShadow" x="-20%" y="-15%" width="140%" height="145%">
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#D32F2F" flood-opacity="0.32"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#sealDropShadow)">
+    <!-- TWO RED RIBBON TAILS AT BOTTOM -->
+    <!-- Left Ribbon Tail with V Notch -->
+    <polygon points="110,240 50,345 105,315 135,355 145,250" fill="url(#ribbonTailLeft)" />
+    <!-- Right Ribbon Tail with V Notch -->
+    <polygon points="210,240 270,345 215,315 185,355 175,250" fill="url(#ribbonTailRight)" />
+
+    <!-- Ribbon Fold Shadow under seal -->
+    <polygon points="105,245 145,250 125,260" fill="#7F0000" opacity="0.6"/>
+    <polygon points="215,245 175,250 195,260" fill="#7F0000" opacity="0.6"/>
+
+    <!-- MAIN ROSETTE STARBURST SEAL -->
+    <!-- 36-pointed serrated gear rosette -->
+    <path d="
+      M 160 20
+      L 170 23 L 180 20 L 188 27 L 199 26 L 206 35 L 217 36 L 222 47 L 233 50 L 236 62 L 246 68 L 246 80 L 255 88 L 253 100 L 260 110 L 255 122 L 260 133 L 252 144 L 255 156 L 244 166 L 244 178 L 232 186 L 229 198 L 216 204 L 210 215 L 197 218 L 188 228 L 176 228 L 165 236 L 155 233 L 144 238 L 134 232 L 123 234 L 114 226 L 103 225 L 97 215 L 87 211 L 84 200 L 74 193 L 74 181 L 65 173 L 67 161 L 60 151 L 65 139 L 60 128 L 68 117 L 65 105 L 76 95 L 76 83 L 88 75 L 91 63 L 104 57 L 110 46 L 123 43 L 132 33 L 144 33 L 152 24 Z
+    " fill="url(#sealRedRadial)" stroke="#FFE8A3" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Inner Cream/Gold Circular Border -->
+    <circle cx="160" cy="130" r="92" fill="none" stroke="#FFF5D6" stroke-width="2.5" opacity="0.95"/>
+    <circle cx="160" cy="130" r="88" fill="none" stroke="#FFF5D6" stroke-width="1" stroke-dasharray="3,3" opacity="0.75"/>
+
+    <!-- CENTER TEXT CONTENT -->
+    <!-- '100%' in Tall Bold Condensed Typography -->
+    <text x="160" y="98" font-family="'Plus Jakarta Sans', 'Bricolage Grotesque', 'Arial Black', sans-serif" font-weight="900" font-size="52" fill="#FFF5D6" text-anchor="middle" letter-spacing="-1.5">100%</text>
+
+    <!-- 'MONEY BACK' in Bold Uppercase Typography -->
+    <text x="160" y="128" font-family="'Plus Jakarta Sans', 'Bricolage Grotesque', 'Arial Black', sans-serif" font-weight="900" font-size="21" fill="#FFF5D6" text-anchor="middle" letter-spacing="1">MONEY BACK</text>
+
+    <!-- 'Guaranteed' in Elegant Script / Serif Italic Style -->
+    <text x="160" y="156" font-family="'Playfair Display', 'Georgia', serif" font-weight="700" font-style="italic" font-size="25" fill="#FFF5D6" text-anchor="middle">Guaranteed</text>
+
+    <!-- 3 Gold Stars Below Guaranteed -->
+    <!-- Center Star (Larger) -->
+    <polygon points="160,165 163.5,173 172,173.5 165,178.5 167.5,187 160,182 152.5,187 155,178.5 148,173.5 156.5,173" fill="#FFF5D6"/>
+    <!-- Left Star (Smaller) -->
+    <polygon points="140,169 142.5,175 149,175.5 143.5,179.5 145.5,186 140,182 134.5,186 136.5,179.5 131,175.5 137.5,175" fill="#FFF5D6" opacity="0.9"/>
+    <!-- Right Star (Smaller) -->
+    <polygon points="180,169 182.5,175 189,175.5 183.5,179.5 185.5,186 180,182 174.5,186 176.5,179.5 171,175.5 177.5,175" fill="#FFF5D6" opacity="0.9"/>
+  </g>
+</svg>

@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <!-- Conical / Radial Gold Gradients -->
+    <radialGradient id="goldRadialCenter" cx="45%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFF8D6"/>
+      <stop offset="20%" stop-color="#FCDA6A"/>
+      <stop offset="45%" stop-color="#F3B728"/>
+      <stop offset="70%" stop-color="#CF8508"/>
+      <stop offset="90%" stop-color="#995702"/>
+      <stop offset="100%" stop-color="#6E3A00"/>
+    </radialGradient>
+
+    <!-- Beveled Gold Linear Gradients -->
+    <linearGradient id="goldHighlightFacet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDD8"/>
+      <stop offset="40%" stop-color="#FCD566"/>
+      <stop offset="80%" stop-color="#C6800E"/>
+      <stop offset="100%" stop-color="#804400"/>
+    </linearGradient>
+
+    <linearGradient id="goldShadowFacet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C07706"/>
+      <stop offset="50%" stop-color="#7B4200"/>
+      <stop offset="100%" stop-color="#462200"/>
+    </linearGradient>
+
+    <linearGradient id="goldBevelRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFEE8"/>
+      <stop offset="25%" stop-color="#FCD668"/>
+      <stop offset="50%" stop-color="#8E5002"/>
+      <stop offset="75%" stop-color="#F3BD35"/>
+      <stop offset="100%" stop-color="#5C3000"/>
+    </linearGradient>
+
+    <linearGradient id="goldDigitBevel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A8"/>
+      <stop offset="45%" stop-color="#EAA622"/>
+      <stop offset="100%" stop-color="#7A4200"/>
+    </linearGradient>
+
+    <!-- Metallic Sheen Highlights -->
+    <linearGradient id="sheenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Deep 3D Drop Shadow -->
+    <filter id="skeuoBadgeShadow" x="-20%" y="-15%" width="140%" height="145%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#703E00" flood-opacity="0.38"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Arched Text Paths for BEST QUALITY with Stars -->
+    <!-- Top Arc Path -->
+    <path id="arcTop" d="M 52 200 A 148 148 0 0 1 348 200" fill="none"/>
+    <!-- Bottom Arc Path -->
+    <path id="arcBottom" d="M 348 200 A 148 148 0 0 1 52 200" fill="none"/>
+  </defs>
+
+  <g filter="url(#skeuoBadgeShadow)" transform="translate(0, 0)">
+    <!-- 3D MULTI-FACETED GOLD STARBURST ROSETTE (32 Points) -->
+    <!-- Dark Under-Rim Shadow Points -->
+    <g transform="translate(200, 200) rotate(5.625)">
+      <path d="
+        M 0 -192 L 23 -176 L 49 -186 L 68 -164 L 96 -166 L 112 -140 L 140 -134 L 150 -105 L 175 -93 L 175 -63 L 192 -47 L 186 -17 L 196 4 L 183 33 L 186 65 L 165 92 L 160 124 L 134 146 L 124 174 L 93 188 L 76 210 L 42 215 L 23 233 L -10 229 L -34 242 L -64 230 L -89 235 L -112 216 L -140 212 L -157 188 L -180 177 L -187 146 L -204 128 L -202 96 L -212 74 L -201 44 L -205 15 L -187 -9 L -183 -40 L -160 -61 L -150 -92 L -122 -108 L -105 -136 L -74 -146 L -52 -169 L -21 -173 Z
+      " fill="url(#goldShadowFacet)"/>
+    </g>
+
+    <!-- Main Brilliant 3D Starburst Facets -->
+    <g transform="translate(200, 200)">
+      <path d="
+        M 0 -188 L 23 -172 L 49 -182 L 68 -160 L 96 -162 L 112 -136 L 140 -130 L 150 -101 L 175 -89 L 175 -59 L 192 -43 L 186 -13 L 196 8 L 183 37 L 186 69 L 165 96 L 160 128 L 134 150 L 124 178 L 93 192 L 76 214 L 42 219 L 23 237 L -10 233 L -34 246 L -64 234 L -89 239 L -112 220 L -140 216 L -157 192 L -180 181 L -187 150 L -204 132 L -202 100 L -212 78 L -201 48 L -205 19 L -187 -5 L -183 -36 L -160 -57 L -150 -88 L -122 -104 L -105 -132 L -74 -142 L -52 -165 L -21 -169 Z
+      " fill="url(#goldHighlightFacet)" stroke="url(#goldBevelRing)" stroke-width="3" stroke-linejoin="round"/>
+
+      <!-- Outer 3D Bevel Rim -->
+      <circle cx="0" cy="0" r="168" fill="none" stroke="#683400" stroke-width="3"/>
+      <circle cx="0" cy="0" r="165" fill="none" stroke="url(#goldBevelRing)" stroke-width="4"/>
+
+      <!-- BLACK GLOSSY BEZEL RING -->
+      <circle cx="0" cy="0" r="160" fill="#120E08" stroke="url(#goldBevelRing)" stroke-width="3.5"/>
+      <circle cx="0" cy="0" r="158" fill="#18130B"/>
+
+      <!-- Inner Gold 3D Bevel Border -->
+      <circle cx="0" cy="0" r="114" fill="none" stroke="url(#goldBevelRing)" stroke-width="4.5"/>
+      <circle cx="0" cy="0" r="110" fill="none" stroke="#5E2F00" stroke-width="2"/>
+
+      <!-- CENTER GOLD METALLIC SHINE DISC -->
+      <circle cx="0" cy="0" r="109" fill="url(#goldRadialCenter)"/>
+
+      <!-- Specular Glossy Sheen Overlay -->
+      <path d="M -77 -77 C 0 -130 109 -50 109 0 C 109 50 50 109 0 109 C -50 109 -109 50 -109 0 Z" fill="url(#sheenGlow)" opacity="0.85"/>
+      <circle cx="0" cy="0" r="105" fill="none" stroke="#FFFCE0" stroke-width="1.5" opacity="0.6"/>
+
+      <!-- 3D SKEUOMORPHIC EMBOSSED 100% -->
+      <!-- Shadow Under 100% -->
+      <text x="0" y="8" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="70" fill="#000000" text-anchor="middle" letter-spacing="-2" opacity="0.75" transform="translate(0, 3)">100%</text>
+      <!-- Gold Beveled Edge Layer -->
+      <text x="0" y="8" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="70" fill="#000000" stroke="url(#goldDigitBevel)" stroke-width="4" stroke-linejoin="round" text-anchor="middle" letter-spacing="-2">100%</text>
+      <!-- Deep Black Glossy Fill Layer -->
+      <text x="0" y="8" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="70" fill="#110C05" text-anchor="middle" letter-spacing="-2">100%</text>
+      <!-- Top White Inset Highlight on 100% -->
+      <text x="0" y="6.5" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="70" fill="none" stroke="#FFFAD0" stroke-width="1.2" stroke-linecap="round" text-anchor="middle" letter-spacing="-2" opacity="0.8">100%</text>
+
+      <!-- DIVIDER HAIRLINE & 3 STARS -->
+      <!-- Left Line -->
+      <line x1="-80" y1="20" x2="-26" y2="20" stroke="#1A1206" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="-80" y1="21" x2="-26" y2="21" stroke="#FFE998" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+      <!-- Right Line -->
+      <line x1="26" y1="20" x2="80" y2="20" stroke="#1A1206" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="26" y1="21" x2="80" y2="21" stroke="#FFE998" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+
+      <!-- 3 Embossed Black Stars with Gold Trim -->
+      <!-- Center Star (Bigger) -->
+      <polygon points="0,11 3.5,19 12,19.5 5,24.5 7.5,33 0,28 -7.5,33 -5,24.5 -12,19.5 -3.5,19" fill="#110C05" stroke="#E5A625" stroke-width="1.2"/>
+      <!-- Left Star -->
+      <polygon points="-16,13 -13.5,19.5 -7,20 -11.5,24 -9.5,30.5 -16,26.5 -22.5,30.5 -20.5,24 -25,20 -18.5,19.5" fill="#110C05" stroke="#E5A625" stroke-width="1"/>
+      <!-- Right Star -->
+      <polygon points="16,13 18.5,19.5 25,20 20.5,24 22.5,30.5 16,26.5 9.5,30.5 11.5,24 7,20 13.5,19.5" fill="#110C05" stroke="#E5A625" stroke-width="1"/>
+
+      <!-- 3D SKEUOMORPHIC EMBOSSED MONEY BACK -->
+      <text x="0" y="55" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="20" fill="#000000" text-anchor="middle" letter-spacing="1.5" opacity="0.6" transform="translate(0, 1.5)">MONEY BACK</text>
+      <text x="0" y="55" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="20" fill="#110C05" stroke="url(#goldDigitBevel)" stroke-width="1.5" stroke-linejoin="round" text-anchor="middle" letter-spacing="1.5">MONEY BACK</text>
+      <text x="0" y="54" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="20" fill="#1A1207" text-anchor="middle" letter-spacing="1.5">MONEY BACK</text>
+    </g>
+
+    <!-- ARCHED TEXT: BEST QUALITY AROUND BLACK RING -->
+    <!-- Top Arc Text with 3D Gold Fill -->
+    <text font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="19.5" fill="#FFFFFF" letter-spacing="3.2">
+      <textPath href="#arcTop" startOffset="50%" text-anchor="middle">★ BEST QUALITY ★ BEST QUALITY</textPath>
+    </text>
+
+    <!-- Bottom Arc Text -->
+    <text font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="19.5" fill="#FFFFFF" letter-spacing="3.2">
+      <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">★ BEST QUALITY ★ BEST QUALITY</textPath>
+    </text>
+  </g>
+</svg>

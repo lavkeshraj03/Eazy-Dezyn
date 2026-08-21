@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <defs>
+    <filter id="houseShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#052E20" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="roofLeft" x1="20" y1="35" x2="60" y2="15" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="roofRight" x1="60" y1="15" x2="105" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="wallLeft" x1="25" y1="50" x2="60" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="wallRight" x1="60" y1="90" x2="98" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+    <linearGradient id="chimneyGrad" x1="75" y1="20" x2="85" y2="35" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#houseShadow)">
+    <!-- Chimney -->
+    <polygon points="76,22 84,18 84,32 76,36" fill="url(#chimneyGrad)"/>
+    <polygon points="76,22 80,20 88,24 84,26" fill="#FB923C"/>
+    
+    <!-- Main Roof Isometric -->
+    <!-- Left Roof Face -->
+    <polygon points="60,18 18,44 32,52 60,30" fill="url(#roofLeft)"/>
+    <polygon points="60,18 102,40 88,52 60,30" fill="url(#roofRight)"/>
+    <!-- Overhang Ridge -->
+    <polygon points="60,16 104,39 102,42 60,20" fill="#FDE68A"/>
+
+    <!-- Walls Isometric -->
+    <!-- Left Wall Face -->
+    <polygon points="26,50 60,34 60,82 26,98" fill="url(#wallLeft)"/>
+    <!-- Right Wall Face -->
+    <polygon points="60,34 94,50 94,98 60,82" fill="url(#wallRight)"/>
+
+    <!-- Door on Left Wall -->
+    <polygon points="36,75 48,69 48,90 36,94" fill="#059669"/>
+    <polygon points="38,77 46,73 46,89 38,92" fill="#10B981"/>
+    <circle cx="45" cy="82" r="1" fill="#FCD34D"/>
+
+    <!-- Window on Right Wall -->
+    <polygon points="68,54 84,62 84,74 68,66" fill="#38BDF8"/>
+    <line x1="76" y1="58" x2="76" y2="70" stroke="#FFFFFF" stroke-width="1.2"/>
+    <line x1="68" y1="60" x2="84" y2="68" stroke="#FFFFFF" stroke-width="1.2"/>
+
+    <!-- Small circular window on peak -->
+    <ellipse cx="60" cy="42" rx="3.5" ry="3" fill="#0284C7"/>
+  </g>
+</svg>

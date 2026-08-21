@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" fill="none">
+  <defs>
+    <!-- 3D Curve Gradient for ₹500 note -->
+    <linearGradient id="noteWaveGrad" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#E2EBE5"/>
+      <stop offset="25%" stop-color="#B8CEC2"/>
+      <stop offset="50%" stop-color="#E8F1EC"/>
+      <stop offset="75%" stop-color="#9FB7A9"/>
+      <stop offset="100%" stop-color="#DCE7E1"/>
+    </linearGradient>
+
+    <!-- Shading on curve fold -->
+    <linearGradient id="noteFoldShade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="curvedNoteShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#000000" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#curvedNoteShadow)">
+    <!-- 3D WAVING BANKNOTE BODY (Curved Ribbon Perspective) -->
+    <path d="
+      M 30 110
+      C 70 40, 130 30, 180 80
+      C 220 120, 250 110, 265 95
+      L 255 45
+      C 240 60, 210 70, 170 30
+      C 120 -20, 60 -10, 20 60
+      Z
+    " fill="url(#noteWaveGrad)" stroke="#8FA89A" stroke-width="1.2" stroke-linejoin="round"/>
+
+    <!-- Subtle Greenish Inner Border lines of ₹500 Note -->
+    <path d="
+      M 34 104
+      C 72 38, 128 28, 178 74
+      C 216 112, 244 104, 258 90
+    " fill="none" stroke="#688474" stroke-width="1" opacity="0.65"/>
+    <path d="
+      M 24 64
+      C 62 -4, 118 -14, 168 34
+      C 206 72, 234 64, 248 50
+    " fill="none" stroke="#688474" stroke-width="1" opacity="0.65"/>
+
+    <!-- ₹500 Currency Numerals & Text Elements -->
+    <!-- ₹500 numeral on left crest -->
+    <text x="50" y="85" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="22" fill="#2E4839" opacity="0.85" transform="rotate(-25 50 85)">₹500</text>
+    
+    <!-- RBI / Reserve Bank text motif -->
+    <text x="105" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9" fill="#3B5948" letter-spacing="1" opacity="0.75" transform="rotate(18 105 46)">RESERVE BANK OF INDIA</text>
+
+    <!-- Gandhi Portrait Watermark Silhouette Circle -->
+    <ellipse cx="140" cy="52" rx="18" ry="24" fill="#6B8878" opacity="0.18" transform="rotate(12 140 52)"/>
+    <ellipse cx="140" cy="48" rx="8" ry="10" fill="#4B6656" opacity="0.25" transform="rotate(12 140 48)"/>
+
+    <!-- Green Security Thread Strip -->
+    <path d="M 115 15 C 122 35, 126 55, 130 85" fill="none" stroke="#10B981" stroke-width="2.5" stroke-dasharray="6,3" opacity="0.85"/>
+
+    <!-- ₹500 on Right edge -->
+    <text x="215" y="85" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="18" fill="#2E4839" opacity="0.8" transform="rotate(-15 215 85)">500</text>
+
+    <!-- Shading overlay on the concave curve -->
+    <path d="
+      M 120 18
+      C 150 48, 180 65, 195 82
+      L 180 80
+      C 145 50, 110 32, 90 12
+      Z
+    " fill="#000000" opacity="0.12"/>
+  </g>
+</svg>

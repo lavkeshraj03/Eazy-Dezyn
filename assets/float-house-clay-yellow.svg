@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" fill="none">
+  <defs>
+    <!-- Soft 3D Drop Shadow -->
+    <filter id="clayShadow" x="-25%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#02140D" flood-opacity="0.42"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Clay Yellow Roof Gradients -->
+    <linearGradient id="clayRoofTop" x1="40" y1="20" x2="120" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFDD55"/>
+      <stop offset="60%" stop-color="#F5B82A"/>
+      <stop offset="100%" stop-color="#D99010"/>
+    </linearGradient>
+    <linearGradient id="clayRoofFront" x1="30" y1="40" x2="90" y2="75" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F7C036"/>
+      <stop offset="100%" stop-color="#B87508"/>
+    </linearGradient>
+
+    <!-- Clay Wall Gradients -->
+    <linearGradient id="clayWallLeft" x1="35" y1="65" x2="80" y2="135" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFDF5"/>
+      <stop offset="100%" stop-color="#E5DCCE"/>
+    </linearGradient>
+    <linearGradient id="clayWallRight" x1="80" y1="135" x2="135" y2="85" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DFD3C0"/>
+      <stop offset="100%" stop-color="#B8A892"/>
+    </linearGradient>
+
+    <!-- Base Plinth -->
+    <linearGradient id="plinthGrad" x1="30" y1="120" x2="135" y2="145" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5B82A"/>
+      <stop offset="100%" stop-color="#A56502"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#clayShadow)">
+    <!-- Base Plinth -->
+    <polygon points="32,126 80,146 132,124 130,132 80,154 28,134" fill="url(#plinthGrad)"/>
+
+    <!-- Chimney -->
+    <polygon points="100,32 112,26 112,48 100,54" fill="#D98008"/>
+    <polygon points="100,32 106,29 118,34 112,37" fill="#F7C036"/>
+
+    <!-- Main House Body (Left & Right Faces) -->
+    <!-- Left Face -->
+    <polygon points="36,74 80,56 80,126 36,116" fill="url(#clayWallLeft)"/>
+    <!-- Right Face -->
+    <polygon points="80,56 126,74 126,116 80,126" fill="url(#clayWallRight)"/>
+
+    <!-- Cute 3D Yellow Gable Roof -->
+    <!-- Left Slanted Roof -->
+    <polygon points="26,68 80,32 80,56 26,78" fill="url(#clayRoofFront)"/>
+    <!-- Right Slanted Roof -->
+    <polygon points="80,32 134,68 134,78 80,56" fill="url(#clayRoofTop)"/>
+    <!-- Overhang Gable Cap -->
+    <polygon points="24,68 80,30 136,68 132,74 80,38 28,74" fill="#FFE885"/>
+
+    <!-- Cute Pastel Blue Windows -->
+    <!-- Left Wall Window -->
+    <rect x="46" y="82" width="16" height="16" rx="3" transform="skewY(-12)" fill="#81D4FA" stroke="#E1F5FE" stroke-width="2"/>
+    <line x1="54" y1="80" x2="54" y2="94" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="46" y1="87" x2="62" y2="87" stroke="#FFFFFF" stroke-width="1.5"/>
+
+    <!-- Right Wall Window -->
+    <rect x="94" y="82" width="18" height="16" rx="3" transform="skewY(12)" fill="#4FC3F7" stroke="#B3E5FC" stroke-width="2"/>
+    <line x1="103" y1="84" x2="103" y2="98" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="94" y1="91" x2="112" y2="91" stroke="#FFFFFF" stroke-width="1.5"/>
+
+    <!-- Cute Yellow Door on Left -->
+    <path d="M 64 96 L 76 92 L 76 123 L 64 121 Z" fill="#F5B82A" stroke="#FFF" stroke-width="1.2"/>
+    <circle cx="73" cy="108" r="1.5" fill="#5C3400"/>
+  </g>
+</svg>
