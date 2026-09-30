@@ -134,3 +134,67 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+/* --- Ghosted timeline: section pins, cards reveal one by one as you scroll (GSAP) --- */
+(function () {
+  if (!window.gsap || !window.ScrollTrigger) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  var section = document.querySelector('.ghosted-section');
+  var wrap = document.querySelector('.ghosted-timeline-wrap');
+  if (!section || !wrap) return;
+  var rows = wrap.querySelectorAll('.timeline-row');
+  var nodes = wrap.querySelectorAll('.timeline-node');
+  var line = wrap.querySelector('.timeline-line');
+
+  // Left column: title, lead and subtext ease in one after another when the section enters view
+  var leftItems = section.querySelectorAll('.ghosted-title, .ghosted-lead, .ghosted-subtext');
+  gsap.from(leftItems, {
+    opacity: 0,
+    x: -40,
+    y: 24,
+    duration: 1,
+    ease: 'power3.out',
+    stagger: 0.18,
+    scrollTrigger: { trigger: section, start: 'top 70%', once: true }
+  });
+
+  ScrollTrigger.matchMedia({
+    // Desktop: pin the section, first card visible, each scroll step reveals the next
+    '(min-width: 901px)': function () {
+      gsap.set(rows, { opacity: 0, y: 60 });
+      gsap.set(nodes, { scale: 0 });
+      gsap.set(line, { scaleY: 0, transformOrigin: 'top' });
+
+      var tl = gsap.timeline({
+        defaults: { ease: 'power2.out' },
+        scrollTrigger: {
+          trigger: section,
+          start: 'center center',
+          end: '+=' + rows.length * 50 + '%',
+          pin: true,
+          scrub: 0.6,
+          anticipatePin: 1
+        }
+      });
+
+      rows.forEach(function (row, i) {
+        tl.to(row, { opacity: 1, y: 0, duration: 1 }, i)
+          .to(nodes[i], { scale: 1, duration: 0.5, ease: 'back.out(3)' }, i)
+          .to(line, { scaleY: (i + 1) / rows.length, duration: 1, ease: 'none' }, i);
+      });
+      tl.to({}, { duration: 0.3 }); // short hold after the last card
+    },
+
+    // Mobile: no pinning, each card reveals as it scrolls into view
+    '(max-width: 900px)': function () {
+      rows.forEach(function (row) {
+        gsap.from(row, {
+          opacity: 0, y: 40, duration: 0.6, ease: 'power3.out',
+          scrollTrigger: { trigger: row, start: 'top 88%', once: true }
+        });
+      });
+    }
+  });
+})();
