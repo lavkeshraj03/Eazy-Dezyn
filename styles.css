@@ -1047,6 +1047,7 @@ svg {
   background: #D8EBE2;
   padding: 104px 0;
   position: relative;
+  z-index: 2;
   overflow: hidden;
   border-top: 1px solid rgba(46, 143, 108, 0.14);
   border-bottom: 1px solid rgba(46, 143, 108, 0.14);
@@ -1068,6 +1069,19 @@ svg {
   pointer-events: none;
   z-index: 0;
   line-height: 0;
+}
+
+.ghosted-section > .container {
+  width: 100%;
+}
+
+/* Full-height pinned stage on desktop keeps the pin stable and stops it overlapping neighbours */
+@media (min-width: 901px) {
+  .ghosted-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .ghosted-grid {

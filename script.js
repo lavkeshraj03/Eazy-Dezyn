@@ -160,6 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTrigger: { trigger: section, start: 'top 70%', once: true }
   });
 
+  // Re-measure once fonts/images have loaded so the pin spacing is exact
+  window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { ScrollTrigger.refresh(); });
+
   ScrollTrigger.matchMedia({
     // Desktop: pin the section, first card visible, each scroll step reveals the next
     '(min-width: 901px)': function () {
@@ -171,11 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
         defaults: { ease: 'power2.out' },
         scrollTrigger: {
           trigger: section,
-          start: 'center center',
+          start: 'top top',
           end: '+=' + rows.length * 50 + '%',
           pin: true,
           scrub: 0.6,
-          anticipatePin: 1
+          invalidateOnRefresh: true
         }
       });
 
