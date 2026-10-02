@@ -2558,13 +2558,13 @@ svg {
 /* Red straight cut line across the whole price (text itself stays whole) */
 .val-total-crossed .cut-stroke {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 55%;
+  left: 16px;
+  right: 16px;
+  top: 57%;
   height: 2.5px;
   margin-top: -1.25px;
   border-radius: 0;
-  background: #E5322D;
+  background: #FFFFFF;
   pointer-events: none;
 }
 
@@ -2636,6 +2636,12 @@ svg {
   letter-spacing: 0.02em;
   flex-shrink: 0;
   white-space: nowrap;
+  /* red pill, mirrors the green offer pill */
+  color: #FFFFFF;
+  background: #E5584F;
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 10px 26px rgba(229, 88, 79, 0.38);
 }
 
 .val-today-bar .val-total-crossed {
@@ -4685,5 +4691,6 @@ svg {
   .val-today-offer { padding: 12px 14px; gap: 8px; }
   .val-today-text { font-size: 11.5px; }
   .val-today-price { font-size: 25px; }
-  .val-today-bar .val-total-crossed { font-size: 15px; }
+  .val-today-bar .val-total-crossed { font-size: 15px; padding: 12px 11px; border-radius: 14px; }
+  .val-total-crossed .cut-stroke { left: 11px; right: 11px; }
 }
