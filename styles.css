@@ -3950,7 +3950,7 @@ svg {
   height: 42px;
 }
 
-.who-icon-circle svg { width: 18px; height: 18px; }
+.who-icon-circle svg { width: 24px; height: 24px; stroke-width: 4.5; } /* bigger, bolder tick and cross */
 .who-icon-good { background: #45B28D; box-shadow: none; }
 .who-icon-bad { background: #EF4444; box-shadow: none; }
 
