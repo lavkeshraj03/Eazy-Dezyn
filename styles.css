@@ -2555,14 +2555,14 @@ svg {
   color: #5E7168;
 }
 
-/* Red cut line across the grey glass price pill (text itself stays whole) */
+/* Black cut line across the grey glass price pill (text itself stays whole) */
 .val-total-crossed .cut-stroke {
   position: absolute;
   inset: 0;
   pointer-events: none;
   /* diagonal from the bottom-left corner of the pill to the top-right corner */
   background: linear-gradient(to bottom right,
-      transparent calc(50% - 1.25px), #E5322D calc(50% - 1.25px), #E5322D calc(50% + 1.25px), transparent calc(50% + 1.25px));
+      transparent calc(50% - 1.25px), #000000 calc(50% - 1.25px), #000000 calc(50% + 1.25px), transparent calc(50% + 1.25px));
 }
 
 .val-today-bar {
