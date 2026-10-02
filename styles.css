@@ -3909,25 +3909,6 @@ svg {
   padding-bottom: 0;
 }
 
-.who-item-bullet {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.bullet-good {
-  background: #E8F5EF;
-}
-
-.bullet-bad {
-  background: rgba(239, 68, 68, 0.8);
-}
-
 @media (max-width: 768px) {
   .who-comparison-grid {
     grid-template-columns: 1fr;
@@ -3993,18 +3974,6 @@ svg {
 }
 
 .who-item-row:last-child { border-bottom: none; padding-bottom: 0; }
-
-.who-item-bullet {
-  width: 24px;
-  height: 24px;
-  margin: 0 9px; /* 24 + 18 = 42px: centres bullets under the 42px header icon */
-}
-
-.who-item-bullet svg { width: 12px; height: 12px; }
-.bullet-good { background: #E8F5EF; }
-.bullet-good svg { stroke: #34A87C; }
-.bullet-bad { background: #FDECEC; }
-.bullet-bad svg { stroke: #EF4444; }
 
 /* ============ FAQ ============ */
 .faq-section {
