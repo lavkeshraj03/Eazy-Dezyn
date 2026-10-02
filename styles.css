@@ -3576,6 +3576,8 @@ svg {
   height: 100%;
   object-fit: cover;
   object-position: 50% 35%; /* keeps her face in frame when the portrait is cropped to the card */
+  transform: scale(1.18); /* slight zoom-in on the portrait (the frame clips the overflow) */
+  transform-origin: 50% 38%;
   display: block;
   border-radius: 32px;
 }
