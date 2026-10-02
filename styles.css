@@ -4154,11 +4154,11 @@ svg {
 
 .final-watermark-left {
   position: absolute;
-  left: -80px;
+  left: -60px;
   top: 50%;
   transform: translateY(-50%);
-  width: 520px;
-  height: 520px;
+  width: 400px;
+  height: 400px;
   opacity: 0.085;
   pointer-events: none;
   z-index: 1;
@@ -4169,15 +4169,6 @@ svg {
   height: 100%;
   object-fit: contain;
   display: block;
-}
-
-.final-bg-curves {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
 }
 
 .final-coin {
