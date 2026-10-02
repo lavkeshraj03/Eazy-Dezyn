@@ -3636,7 +3636,7 @@ svg {
 }
 
 .instructor-quote-card {
-  background: #FFFFFF;
+  background: #EEF8F3; /* light green tint */
   border-radius: 18px;
   padding: 22px 26px;
   box-shadow: 0 14px 34px rgba(46, 143, 108, 0.08);
