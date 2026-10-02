@@ -2555,14 +2555,14 @@ svg {
   color: #5E7168;
 }
 
-/* Red cut line across the grey glass price pill (text itself stays whole) */
+/* Dark-red cut line across the steel price pill (text itself stays whole) */
 .val-total-crossed .cut-stroke {
   position: absolute;
   inset: 0;
   pointer-events: none;
   /* diagonal from the bottom-left corner of the pill to the top-right corner */
   background: linear-gradient(to bottom right,
-      transparent calc(50% - 1.25px), #E5322D calc(50% - 1.25px), #E5322D calc(50% + 1.25px), transparent calc(50% + 1.25px));
+      transparent calc(50% - 2px), #8E0A12 calc(50% - 2px), #8E0A12 calc(50% + 2px), transparent calc(50% + 2px));
 }
 
 .val-today-bar {
@@ -2633,28 +2633,45 @@ svg {
   letter-spacing: 0.02em;
   flex-shrink: 0;
   white-space: nowrap;
-  /* water-drop pill: clear cool-tinted gel, curved specular highlight, soft inner glow */
-  color: #E5322D;
+  /* polished-steel pill like the reference: brushed silver face, chrome bevel rim, bold red price */
+  color: #EB0008;
   background:
-    radial-gradient(ellipse 85% 42% at 50% 6%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.55) 45%, rgba(255, 255, 255, 0) 100%),
-    radial-gradient(ellipse 70% 60% at 50% 115%, rgba(150, 190, 215, 0.55), rgba(150, 190, 215, 0) 70%),
-    linear-gradient(180deg, rgba(236, 242, 246, 0.95), rgba(205, 218, 227, 0.95));
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px) saturate(170%);
-  -webkit-backdrop-filter: blur(10px) saturate(170%);
-  border-radius: 22px;
-  padding: 13px 16px;
-  overflow: hidden; /* the cut line runs edge to edge and is trimmed by the pill */
+    radial-gradient(ellipse 70% 120% at 50% 40%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 70%),
+    linear-gradient(180deg, #D9D9D9 0%, #C4C4C4 55%, #B4B4B4 100%);
+  border: 1.5px solid #4D4D4D;
+  border-radius: 999px;
+  padding: 13px 19px;
+  overflow: hidden; /* the cut line runs corner to corner and is trimmed by the pill */
   box-shadow:
-    0 12px 24px rgba(90, 120, 145, 0.28),
-    0 2px 5px rgba(90, 120, 145, 0.20),
-    inset 0 3px 5px rgba(255, 255, 255, 1),
-    inset 0 -6px 12px rgba(120, 160, 190, 0.35),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    inset 0 0 0 2px #F6F6F6,
+    inset 0 0 0 4px #9C9C9C,
+    inset 0 5px 7px rgba(255, 255, 255, 0.75),
+    inset 0 -4px 7px rgba(0, 0, 0, 0.20),
+    0 6px 14px rgba(0, 0, 0, 0.22);
 }
 
 .val-today-bar .val-total-crossed {
   margin-left: auto;
+}
+
+/* Steel pill with the red price and dark-red cut line is a supplied image (assets/price-cut-steel.png) */
+.val-today-bar .val-total-steel {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  overflow: visible;
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.val-total-steel img {
+  display: block;
+  height: 46px;
+  width: auto;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.22));
 }
 
 .val-today-text {
@@ -4700,5 +4717,6 @@ svg {
   .val-today-offer { padding: 12px 14px; gap: 8px; }
   .val-today-text { font-size: 11.5px; }
   .val-today-price { font-size: 25px; }
-  .val-today-bar .val-total-crossed { font-size: 15px; padding: 12px 11px; border-radius: 14px; }
+  .val-today-bar .val-total-crossed { font-size: 15px; padding: 11px 14px; }
+  .val-total-steel img { height: 36px; }
 }
