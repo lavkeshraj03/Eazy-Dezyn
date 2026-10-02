@@ -3978,9 +3978,9 @@ svg {
   font-size: 23px;
 }
 
-/* titles match the colour of the circle beside them */
-.who-card-good .who-card-heading { color: #45B28D; }
-.who-card-bad .who-card-heading { color: #EF4444; }
+/* only the key words in each title take the colour of the circle beside them */
+.who-card-good .who-hl { color: #45B28D; }
+.who-card-bad .who-hl { color: #EF4444; }
 
 .who-card-good .who-item-row,
 .who-card-bad .who-item-row {
