@@ -4248,8 +4248,15 @@ svg {
   text-align: center;
 }
 
+.final-headline-lead {
+  display: block;
+  font-size: 0.74em; /* the opening line sits a step smaller than the punch line below it */
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
 .final-ghosted-word {
-  color: #2E8F6C;
+  color: #44B28D;
 }
 
 .final-sub {
