@@ -4356,7 +4356,7 @@ svg {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 48px;
+  margin-bottom: 0;
 }
 
 .final-pill {
@@ -4375,20 +4375,6 @@ svg {
 .final-pill-check {
   color: #2E8F6C;
   font-weight: 700;
-}
-
-.final-ps-text {
-  font-family: var(--font-body);
-  font-size: 15px;
-  color: #6B7A72;
-  line-height: 1.65;
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.final-ps-text strong {
-  color: #3A4D43;
 }
 
 @media (max-width: 768px) {
