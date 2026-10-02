@@ -3970,8 +3970,8 @@ svg {
 }
 
 .who-icon-circle svg { width: 18px; height: 18px; }
-.who-icon-good { background: #45B28D; box-shadow: 0 0 0 6px rgba(69, 178, 141, 0.16); }
-.who-icon-bad { background: #EF4444; box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.14); }
+.who-icon-good { background: #45B28D; box-shadow: none; }
+.who-icon-bad { background: #EF4444; box-shadow: none; }
 
 .who-card-heading {
   color: #1E2B24;
