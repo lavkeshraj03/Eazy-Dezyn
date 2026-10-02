@@ -4273,14 +4273,57 @@ svg {
   text-align: center;
 }
 
+.final-offer-wrap {
+  width: min(800px, calc(100vw - 48px));
+  align-self: center;
+  margin: 6px 0 28px; /* no auto margins: they would stop the card centring inside the narrow column */
+  border-radius: 24px;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 22px 46px rgba(46, 120, 92, 0.22), 0 2px 6px rgba(46, 120, 92, 0.12);
+}
+
+.final-offer-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #FBFDFC;
+  border-top: 1px solid rgba(46, 143, 108, 0.14);
+}
+
+.final-point {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 10px;
+  font-family: var(--font-subhead);
+  font-size: 16px;
+  font-weight: 700;
+  color: #25362E;
+  text-align: left;
+}
+
+.final-point + .final-point {
+  border-left: 1px solid #E3ECE7;
+}
+
+.final-point-check {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #4FA882;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .final-offer-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  width: min(800px, calc(100vw - 48px));
-  align-self: center;
-  margin: 6px 0 24px; /* no auto margins: they would stop the card centring inside the narrow column */
+  width: 100%;
   padding: 20px 28px;
   text-align: left;
   /* light green glass: #D0E7DE base, bright top reflection, glowing orbs seen through frosted layer */
@@ -4292,12 +4335,10 @@ svg {
     linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.05) 60%, rgba(255, 255, 255, 0.30) 100%),
     rgba(208, 231, 222, 0.88);
   border: 0; /* no border: a border is what shows up as a white line ... */
-  border-radius: 24px;
+  border-radius: 0; /* corners come from the wrapper */
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
   box-shadow:
-    0 22px 46px rgba(46, 120, 92, 0.22),
-    0 2px 6px rgba(46, 120, 92, 0.12),
     inset 0 0 20px 4px rgba(255, 255, 255, 0.68), /* ... a little more white, feathered inwards so it blends */
     inset 0 -14px 26px rgba(46, 143, 108, 0.14);
 }
@@ -4412,33 +4453,6 @@ svg {
   line-height: 1;
 }
 
-.final-proof-pills {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 0;
-}
-
-.final-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #F3F8F5;
-  border: 1px solid #DCE9E2;
-  border-radius: 9999px;
-  padding: 6px 14px;
-  color: #4A5D53;
-  font-size: 12.5px;
-  font-weight: 500;
-}
-
-.final-pill-check {
-  color: #2E8F6C;
-  font-weight: 700;
-}
-
 @media (max-width: 768px) {
   .final-cta-section {
     padding: 72px 0 64px;
@@ -4463,6 +4477,17 @@ svg {
   }
   .final-offer-note {
     font-size: 15px;
+  }
+  .final-point {
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 6px;
+    font-size: 12.5px;
+    text-align: center;
+  }
+  .final-point-check {
+    width: 26px;
+    height: 26px;
   }
   .final-coin-left,
   .final-coin-right {
