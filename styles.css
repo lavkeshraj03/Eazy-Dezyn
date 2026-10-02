@@ -3957,19 +3957,6 @@ svg {
   box-shadow: 0 24px 56px rgba(0, 0, 0, 0.28);
 }
 
-/* thin coloured accent along the top edge */
-.who-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 4px;
-}
-
-.who-card-good::before { background: linear-gradient(90deg, #45B28D, #7FE0BC); }
-.who-card-bad::before { background: linear-gradient(90deg, #EF4444, #FF8A80); }
-
 .who-card-header {
   gap: 16px;
   margin-bottom: 26px;
