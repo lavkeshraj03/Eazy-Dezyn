@@ -2662,17 +2662,13 @@ svg {
   text-decoration: none;
 }
 
-/* Dark-red cut line through the middle of the price, slightly tilted, from one edge of the box to the other */
+/* Thin dark-red cut line running corner to corner of the price box (bottom-left to top-right) */
 .val-total-steel .cut-stroke {
   position: absolute;
-  left: -6px;
-  right: -6px;
-  top: 55%;
-  height: 3.5px;
-  margin-top: -1.75px;
-  background: #8E0A12;
-  transform: rotate(-7deg);
+  inset: 0;
   pointer-events: none;
+  background: linear-gradient(to bottom right,
+      transparent calc(50% - 0.75px), #8E0A12 calc(50% - 0.75px), #8E0A12 calc(50% + 0.75px), transparent calc(50% + 0.75px));
 }
 
 .val-today-text {
