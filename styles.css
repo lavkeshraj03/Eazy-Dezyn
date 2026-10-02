@@ -2657,8 +2657,22 @@ svg {
   border-radius: 16px;
   padding: 14px 15px;
   box-shadow: 0 10px 26px rgba(30, 43, 36, 0.14);
-  overflow: visible;
+  position: relative;
+  overflow: hidden; /* the cut line runs edge to edge and is trimmed by the rounded box */
   text-decoration: none;
+}
+
+/* Dark-red cut line through the middle of the price, slightly tilted, from one edge of the box to the other */
+.val-total-steel .cut-stroke {
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  top: 55%;
+  height: 3.5px;
+  margin-top: -1.75px;
+  background: #8E0A12;
+  transform: rotate(-7deg);
+  pointer-events: none;
 }
 
 .val-today-text {
