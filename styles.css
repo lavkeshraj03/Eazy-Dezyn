@@ -2662,12 +2662,15 @@ svg {
   text-decoration: none;
 }
 
-/* Thin dark-red cut line running corner to corner of the price box (bottom-left to top-right) */
+/* Two thin dark-red lines crossing corner to corner (an X): bottom-left to top-right, and top-left to bottom-right */
 .val-total-steel .cut-stroke {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(to bottom right,
+  background:
+    linear-gradient(to bottom right,
+      transparent calc(50% - 0.75px), #8E0A12 calc(50% - 0.75px), #8E0A12 calc(50% + 0.75px), transparent calc(50% + 0.75px)),
+    linear-gradient(to top right,
       transparent calc(50% - 0.75px), #8E0A12 calc(50% - 0.75px), #8E0A12 calc(50% + 0.75px), transparent calc(50% + 0.75px));
 }
 
