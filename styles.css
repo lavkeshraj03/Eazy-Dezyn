@@ -4259,6 +4259,10 @@ svg {
   color: #EF4444;
 }
 
+.final-next-project {
+  color: #44B28D;
+}
+
 .final-sub {
   font-family: var(--font-body);
   font-size: 15.5px;
