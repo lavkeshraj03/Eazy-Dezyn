@@ -4277,18 +4277,18 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  width: min(940px, calc(100vw - 48px));
+  gap: 20px;
+  width: min(800px, calc(100vw - 48px));
   align-self: center;
-  margin: 8px 0 28px; /* no auto margins: they would stop the card centring inside the narrow column */
-  padding: 28px 38px;
+  margin: 6px 0 24px; /* no auto margins: they would stop the card centring inside the narrow column */
+  padding: 20px 28px;
   text-align: left;
   /* light green glass: #D0E7DE base, soft white sheen, frosted edge */
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.10) 55%, rgba(255, 255, 255, 0.28) 100%),
     #D0E7DE;
   border: 1.5px solid rgba(255, 255, 255, 0.85);
-  border-radius: 28px;
+  border-radius: 24px;
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   box-shadow:
@@ -4300,23 +4300,23 @@ svg {
 .final-offer-label {
   display: block;
   font-family: var(--font-subhead);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.14em;
   color: #2E8F6C;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .final-offer-price-row {
   display: flex;
   align-items: baseline;
-  gap: 14px;
-  margin-bottom: 12px;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .final-offer-price {
   font-family: var(--font-head);
-  font-size: clamp(38px, 4.6vw, 54px);
+  font-size: clamp(32px, 3.8vw, 44px);
   font-weight: 800;
   line-height: 1;
   color: #1E2B24;
@@ -4325,7 +4325,7 @@ svg {
 
 .final-offer-old {
   font-family: var(--font-subhead);
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 600;
   color: #6F8179;
   text-decoration: line-through;
@@ -4334,8 +4334,8 @@ svg {
 .final-offer-note {
   margin: 0;
   font-family: var(--font-subhead);
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 13.5px;
+  line-height: 1.45;
   color: #44584E;
   text-wrap: balance;
 }
@@ -4351,16 +4351,16 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  min-width: 300px;
-  padding: 24px 34px;
+  min-width: 240px;
+  padding: 17px 26px;
   background: #FFFFFF;
   color: #14221C;
   font-family: var(--font-head);
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 800;
   text-decoration: none;
   border-radius: 9999px;
-  box-shadow: 0 10px 24px rgba(46, 120, 92, 0.28);
+  box-shadow: 0 8px 20px rgba(46, 120, 92, 0.26);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -4370,7 +4370,7 @@ svg {
 }
 
 .final-offer-arrow {
-  font-size: 22px;
+  font-size: 19px;
   line-height: 1;
 }
 
