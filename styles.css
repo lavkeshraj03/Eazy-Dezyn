@@ -3940,8 +3940,8 @@ svg {
 
 .who-card-header {
   gap: 16px;
-  margin-bottom: 26px;
-  padding-bottom: 22px;
+  margin-bottom: 0;
+  padding-bottom: 18px;
   border-bottom: 1px solid #EEF3F0;
 }
 
@@ -3968,9 +3968,12 @@ svg {
   color: #3A4D43;
   font-size: 15.5px;
   line-height: 1.5;
-  padding: 18px 0;
+  padding: 12px 0;
   gap: 16px;
   border-bottom-color: #EEF3F0;
+  /* every row is as tall as a two-line item, so the grey divider lines sit at the same height in both cards */
+  min-height: 74px;
+  align-items: center;
 }
 
 .who-item-row:last-child { border-bottom: none; padding-bottom: 0; }
