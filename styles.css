@@ -2654,24 +2654,29 @@ svg {
   margin-left: auto;
 }
 
-/* Steel pill with the red price and dark-red cut line is a supplied image (assets/price-cut-steel.png) */
+/* Steel pill: supplied steel artwork (blank face) as the background, live text on top in the same font as the offer price */
 .val-today-bar .val-total-steel {
-  background: none;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 23px;
+  letter-spacing: 0;
+  line-height: 1;
+  color: #EB0008;
+  background: url("assets/price-steel-blank.png") center / 100% 100% no-repeat;
   border: 0;
   border-radius: 0;
-  padding: 0;
+  padding: 14px 20px;
   box-shadow: none;
   overflow: visible;
-  display: block;
-  line-height: 0;
   text-decoration: none;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.22));
 }
 
-.val-total-steel img {
-  display: block;
-  height: 46px;
-  width: auto;
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.22));
+/* dark-red cut line inside the steel face, bottom-left to top-right */
+.val-total-steel .cut-stroke {
+  inset: 11% 5%;
+  background: linear-gradient(to bottom right,
+      transparent calc(50% - 2px), #8E0A12 calc(50% - 2px), #8E0A12 calc(50% + 2px), transparent calc(50% + 2px));
 }
 
 .val-today-text {
@@ -4718,5 +4723,5 @@ svg {
   .val-today-text { font-size: 11.5px; }
   .val-today-price { font-size: 25px; }
   .val-today-bar .val-total-crossed { font-size: 15px; padding: 11px 14px; }
-  .val-total-steel img { height: 36px; }
+  .val-today-bar .val-total-steel { font-size: 14px; padding: 11px 16px; }
 }
