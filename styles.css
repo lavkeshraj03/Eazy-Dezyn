@@ -4255,8 +4255,12 @@ svg {
   margin-bottom: 6px;
 }
 
-.final-ghosted-word {
+.final-donot {
   color: #EF4444;
+}
+
+.final-ghosted-word {
+  color: #44B28D;
 }
 
 .final-next-project {
