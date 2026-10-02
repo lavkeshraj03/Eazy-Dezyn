@@ -2552,27 +2552,20 @@ svg {
   position: relative;
   display: inline-block;
   text-decoration: none;
-  color: transparent; /* real text stays for screen readers; the two sliced copies below are what you see */
-}
-
-/* "Cut" price: the number is sliced along a diagonal and the two halves slide apart */
-.val-total-crossed::before,
-.val-total-crossed::after {
-  content: attr(data-text);
-  position: absolute;
-  inset: 0;
   color: #5E7168;
+}
+
+/* Red straight cut line across the whole price (text itself stays whole) */
+.val-total-crossed .cut-stroke {
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: 55%;
+  height: 2.5px;
+  margin-top: -1.25px;
+  border-radius: 2px;
+  background: #E5322D;
   pointer-events: none;
-}
-
-.val-total-crossed::before {
-  clip-path: polygon(0 0, 100% 0, 100% 34%, 0 72%);
-  transform: translate(-0.6px, -1.2px);
-}
-
-.val-total-crossed::after {
-  clip-path: polygon(0 72%, 100% 34%, 100% 100%, 0 100%);
-  transform: translate(0.6px, 1.2px);
 }
 
 .val-today-bar {
