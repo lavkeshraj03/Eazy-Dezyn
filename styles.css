@@ -4288,7 +4288,6 @@ svg {
   overflow: hidden;
   isolation: isolate;
   background:
-    radial-gradient(ellipse 190px 110px at 4% 0%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 72%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.18) 38%, rgba(255, 255, 255, 0) 39%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.05) 60%, rgba(255, 255, 255, 0.30) 100%),
     rgba(208, 231, 222, 0.88);
@@ -4304,7 +4303,7 @@ svg {
     inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 }
 
-/* soft green glow along the bottom edge, under both the left text and the button, so it reads as frosted glass */
+/* soft green glow from the top-left corner, plus one under the button at the bottom-right, so it reads as frosted glass */
 .final-offer-card::before,
 .final-offer-card::after {
   content: "";
@@ -4316,10 +4315,10 @@ svg {
 }
 
 .final-offer-card::before {
-  width: 230px;
-  height: 230px;
-  left: 60px;
-  bottom: -110px;
+  width: 240px;
+  height: 240px;
+  left: -40px;
+  top: -120px;
   background: radial-gradient(circle, rgba(69, 178, 141, 0.55), rgba(69, 178, 141, 0) 70%);
 }
 
@@ -4343,7 +4342,7 @@ svg {
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.14em;
-  color: #2E8F6C;
+  color: #14221C;
   margin-bottom: 6px;
 }
 
@@ -4376,12 +4375,12 @@ svg {
   font-family: var(--font-subhead);
   font-size: 13.5px;
   line-height: 1.45;
-  color: #44584E;
+  color: #14221C;
   text-wrap: balance;
 }
 
 .final-offer-note strong {
-  color: #1E7A58;
+  color: #14221C;
   font-weight: 800;
 }
 
