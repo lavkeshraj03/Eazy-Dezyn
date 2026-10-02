@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumen Pendant – Day / Night Gallery POC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F4F1EA;
+      --card: #FFFFFF;
+      --text: #1E2B24;
+      --muted: #6B7A72;
+      --line: rgba(30, 43, 36, 0.12);
+      --accent: #2E8F6C;
+      --accent-text: #FFFFFF;
+      --toggle-bg: #E6E1D6;
+      --shadow: 0 24px 60px rgba(60, 50, 30, 0.14);
+    }
+
+    [data-theme="night"] {
+      --bg: #0B0F1C;
+      --card: #141A2B;
+      --text: #F1EEE6;
+      --muted: #8E98B0;
+      --line: rgba(255, 255, 255, 0.12);
+      --accent: #FFC96B;
+      --accent-text: #1A1405;
+      --toggle-bg: #1E2640;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.6s ease, color 0.6s ease;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    .poc-tag {
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px dashed var(--line);
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* ---------- Gallery ---------- */
+    .stage {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 28px;
+      overflow: hidden;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      transition: background 0.6s ease, box-shadow 0.6s ease;
+    }
+
+    .layer {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.9s ease;
+    }
+
+    .layer svg { width: 100%; height: 100%; display: block; }
+    .layer.on { opacity: 1; }
+
+    .badge {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      z-index: 3;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      color: #1E2B24;
+      backdrop-filter: blur(8px);
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    [data-theme="night"] .badge {
+      background: rgba(20, 26, 43, 0.75);
+      color: #FFE2A8;
+    }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 0;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.85);
+      color: #1E2B24;
+      font-size: 18px;
+      backdrop-filter: blur(8px);
+    }
+
+    [data-theme="night"] .nav { background: rgba(20, 26, 43, 0.75); color: #FFE2A8; }
+    .nav.prev { left: 14px; }
+    .nav.next { right: 14px; }
+
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .thumb {
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      padding: 0;
+      cursor: pointer;
+      background: var(--card);
+      opacity: 0.7;
+      transition: opacity 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .thumb:hover { opacity: 1; transform: translateY(-2px); }
+    .thumb.active { opacity: 1; border-color: var(--accent); }
+    .thumb svg { width: 100%; height: 100%; display: block; }
+
+    /* ---------- Info ---------- */
+    .info { padding-top: 8px; }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: clamp(34px, 4.5vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      margin: 10px 0 14px;
+    }
+
+    .price {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .price s { font-size: 18px; color: var(--muted); margin-left: 10px; font-weight: 600; }
+
+    .desc { margin: 18px 0 28px; line-height: 1.7; color: var(--muted); }
+
+    .mode-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .toggle {
+      position: relative;
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--toggle-bg);
+      border-radius: 999px;
+      padding: 5px;
+      transition: background 0.5s ease;
+    }
+
+    .toggle .pill {
+      position: absolute;
+      top: 5px;
+      bottom: 5px;
+      left: 5px;
+      width: calc(50% - 5px);
+      border-radius: 999px;
+      background: var(--card);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+      transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1), background 0.5s ease;
+    }
+
+    [data-theme="night"] .toggle .pill { transform: translateX(100%); }
+
+    .toggle button {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      min-width: 118px;
+      padding: 11px 20px;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      font: 700 14px 'Plus Jakarta Sans', sans-serif;
+      color: var(--muted);
+      transition: color 0.3s ease;
+    }
+
+    .toggle button.active { color: var(--text); }
+    .toggle svg { width: 18px; height: 18px; }
+
+    .specs {
+      list-style: none;
+      margin: 32px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .specs li {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    .specs span:first-child { color: var(--muted); }
+    .specs span:last-child { font-weight: 700; }
+
+    .cta {
+      width: 100%;
+      padding: 17px;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      font: 700 16px 'Plus Jakarta Sans', sans-serif;
+      background: var(--accent);
+      color: var(--accent-text);
+      box-shadow: 0 10px 28px color-mix(in srgb, var(--accent) 45%, transparent);
+      transition: transform 0.2s ease, background 0.5s ease, color 0.5s ease;
+    }
+
+    .cta:hover { transform: translateY(-2px); }
+
+    @media (max-width: 860px) {
+      .product { grid-template-columns: 1fr; gap: 32px; }
+      .wrap { padding: 20px 16px 48px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0.01s !important; }
+    }
+  </style>
+</head>
+
+<body data-theme="day">
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">Lumen&amp;Co</div>
+      <div class="poc-tag">Proof of concept · Day / Night gallery</div>
+    </header>
+
+    <main class="product">
+      <!-- Gallery -->
+      <section aria-label="Product gallery">
+        <div class="stage" id="stage">
+          <span class="badge" id="badge">Day view</span>
+          <button class="nav prev" id="prev" aria-label="Previous image">&#8592;</button>
+          <button class="nav next" id="next" aria-label="Next image">&#8594;</button>
+          <div class="layer on" id="layerDay"></div>
+          <div class="layer" id="layerNight"></div>
+        </div>
+        <div class="thumbs" id="thumbs"></div>
+      </section>
+
+      <!-- Info -->
+      <section class="info">
+        <span class="eyebrow">Pendant lighting</span>
+        <h1>Lumen Dome Pendant</h1>
+        <div class="price">₹4,999 <s>₹6,499</s></div>
+        <p class="desc">A hand-finished brass dome with a warm, dimmable glow. Looks calm and airy in daylight,
+          and turns the whole room golden after dark. Flip the switch to see how it lives at both times of day.</p>
+
+        <div class="mode-label">See it in</div>
+        <div class="toggle" role="group" aria-label="Day or night view">
+          <span class="pill"></span>
+          <button type="button" id="btnDay" class="active" aria-pressed="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+            Day
+          </button>
+          <button type="button" id="btnNight" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+            Night
+          </button>
+        </div>
+
+        <ul class="specs">
+          <li><span>Material</span><span>Brushed brass</span></li>
+          <li><span>Bulb</span><span>E27 · warm 2700K</span></li>
+          <li><span>Drop length</span><span>Adjustable, up to 120 cm</span></li>
+        </ul>
+
+        <button class="cta" type="button">Add to cart</button>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    /* ---- Scene generator: same scene, two moods (day / night) ---- */
+    var P = {
+      day: {
+        wall: '#EFE8DD', wall2: '#E4DBCB', floor: '#C9B79C', sky: '#BFE3F5', frame: '#FFFFFF',
+        sofa: '#6E8B7A', sofa2: '#5B7868', desk: '#B98C5A', shade: '#E7B54A', shadeIn: '#F6DE9B',
+        cord: '#3A3A3A', bulb: '#FFF3C4', item: '#8C6D4A', art: '#D9825B', bed: '#F3EEE6', bed2: '#DCD3C4'
+      },
+      night: {
+        wall: '#1B2136', wall2: '#141A2C', floor: '#12151F', sky: '#0A1030', frame: '#39425F',
+        sofa: '#2B3B36', sofa2: '#22302C', desk: '#3B2E22', shade: '#FFC96B', shadeIn: '#FFE9B0',
+        cord: '#0B0B0B', bulb: '#FFF7DA', item: '#4B3A2A', art: '#6E4B3B', bed: '#2A3148', bed2: '#20263A'
+      }
+    };
+
+    function glow(id, cx, cy, r, mode) {
+      if (mode !== 'night') return '';
+      return '<radialGradient id="' + id + '" cx="' + cx + '" cy="' + cy + '" r="' + r + '" gradientUnits="userSpaceOnUse">' +
+        '<stop offset="0" stop-color="#FFD98A" stop-opacity="0.85"/><stop offset="0.35" stop-color="#FFB84D" stop-opacity="0.35"/>' +
+        '<stop offset="1" stop-color="#FFB84D" stop-opacity="0"/></radialGradient>';
+    }
+
+    function windowSvg(x, y, w, h, p, mode) {
+      var s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="6" fill="' + p.sky + '"/>';
+      if (mode === 'night') {
+        s += '<circle cx="' + (x + w * 0.72) + '" cy="' + (y + h * 0.28) + '" r="18" fill="#F5F1DC"/>' +
+          '<circle cx="' + (x + w * 0.72 + 8) + '" cy="' + (y + h * 0.28 - 5) + '" r="16" fill="' + p.sky + '"/>';
+        [[.15, .2], [.3, .55], [.55, .15], [.85, .6], [.45, .78], [.2, .82], [.9, .18]].forEach(function (t) {
+          s += '<circle cx="' + (x + w * t[0]) + '" cy="' + (y + h * t[1]) + '" r="1.8" fill="#fff"/>';
+        });
+      } else {
+        s += '<circle cx="' + (x + w * 0.72) + '" cy="' + (y + h * 0.3) + '" r="20" fill="#FFE27A"/>' +
+          '<ellipse cx="' + (x + w * 0.3) + '" cy="' + (y + h * 0.5) + '" rx="30" ry="10" fill="#fff" opacity=".9"/>';
+      }
+      s += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="6" fill="none" stroke="' + p.frame + '" stroke-width="8"/>' +
+        '<line x1="' + (x + w / 2) + '" y1="' + y + '" x2="' + (x + w / 2) + '" y2="' + (y + h) + '" stroke="' + p.frame + '" stroke-width="6"/>';
+      return s;
+    }
+
+    function pendant(x, topY, shadeY, w, p, mode) {
+      var h = w * 0.5;
+      return '<line x1="' + x + '" y1="' + topY + '" x2="' + x + '" y2="' + shadeY + '" stroke="' + p.cord + '" stroke-width="3"/>' +
+        '<path d="M' + (x - w / 2) + ' ' + (shadeY + h) + ' Q' + x + ' ' + (shadeY - h * 0.35) + ' ' + (x + w / 2) + ' ' + (shadeY + h) + ' Z" fill="' + p.shade + '"/>' +
+        '<ellipse cx="' + x + '" cy="' + (shadeY + h) + '" rx="' + (w / 2) + '" ry="' + (h * 0.14) + '" fill="' + p.shadeIn + '"/>' +
+        (mode === 'night' ? '<ellipse cx="' + x + '" cy="' + (shadeY + h + 6) + '" rx="' + (w * 0.22) + '" ry="' + (h * 0.12) + '" fill="' + p.bulb + '"/>' : '');
+    }
+
+    var scenes = {
+      /* 1 – living room with pendant */
+      living: function (m) {
+        var p = P[m];
+        var s = '<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><defs>' + glow('g1', 210, 215, 300, m) +
+          (m === 'night' ? '<linearGradient id="c1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD98A" stop-opacity=".55"/><stop offset="1" stop-color="#FFD98A" stop-opacity="0"/></linearGradient>' : '') +
+          '</defs>' +
+          '<rect width="600" height="600" fill="' + p.wall + '"/><rect y="410" width="600" height="190" fill="' + p.floor + '"/>' +
+          windowSvg(380, 90, 160, 210, p, m) +
+          '<rect x="60" y="340" width="280" height="90" rx="22" fill="' + p.sofa + '"/><rect x="60" y="300" width="280" height="60" rx="22" fill="' + p.sofa2 + '"/>' +
+          '<rect x="80" y="345" width="115" height="55" rx="14" fill="' + p.sofa + '"/><rect x="205" y="345" width="115" height="55" rx="14" fill="' + p.sofa + '"/>' +
+          '<rect x="60" y="440" width="12" height="18" fill="' + p.item + '"/><rect x="328" y="440" width="12" height="18" fill="' + p.item + '"/>';
+        if (m === 'night') s += '<polygon points="180,225 240,225 340,430 80,430" fill="url(#c1)"/>';
+        s += pendant(210, 0, 120, 100, p, m);
+        if (m === 'night') s += '<rect width="600" height="600" fill="url(#g1)"/>';
+        return s + '</svg>';
+      },
+
+      /* 2 – hero close-up */
+      closeup: function (m) {
+        var p = P[m];
+        var s = '<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><defs>' + glow('g2', 300, 330, 330, m) +
+          (m === 'night' ? '<linearGradient id="c2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD98A" stop-opacity=".5"/><stop offset="1" stop-color="#FFD98A" stop-opacity="0"/></linearGradient>' : '') +
+          '</defs><rect width="600" height="600" fill="' + p.wall + '"/>' +
+          '<rect y="470" width="600" height="130" fill="' + p.floor + '"/>' +
+          '<circle cx="300" cy="300" r="230" fill="' + p.wall2 + '"/>';
+        if (m === 'night') s += '<polygon points="215,360 385,360 520,600 80,600" fill="url(#c2)"/>';
+        s += pendant(300, 0, 150, 260, p, m);
+        s += '<rect x="292" y="0" width="16" height="40" fill="' + p.cord + '"/>';
+        if (m === 'night') s += '<rect width="600" height="600" fill="url(#g2)"/>';
+        return s + '</svg>';
+      },
+
+      /* 3 – study desk */
+      desk: function (m) {
+        var p = P[m];
+        var s = '<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><defs>' + glow('g3', 210, 250, 300, m) + '</defs>' +
+          '<rect width="600" height="600" fill="' + p.wall + '"/>' +
+          '<rect x="360" y="70" width="150" height="190" rx="8" fill="' + p.art + '"/><rect x="376" y="86" width="118" height="158" rx="4" fill="' + p.wall2 + '"/>' +
+          '<circle cx="435" cy="150" r="30" fill="' + p.art + '" opacity=".8"/><rect x="400" y="195" width="70" height="8" rx="4" fill="' + p.art + '" opacity=".8"/>' +
+          '<rect x="0" y="430" width="600" height="170" fill="' + p.floor + '"/>' +
+          '<rect x="40" y="390" width="520" height="30" rx="8" fill="' + p.desk + '"/><rect x="70" y="420" width="16" height="160" fill="' + p.desk + '"/><rect x="514" y="420" width="16" height="160" fill="' + p.desk + '"/>' +
+          '<rect x="330" y="335" width="150" height="55" rx="6" fill="' + p.item + '"/><rect x="345" y="322" width="150" height="14" rx="4" fill="' + p.sofa + '"/>' +
+          /* table lamp */
+          '<rect x="150" y="372" width="70" height="18" rx="9" fill="' + p.cord + '"/>' +
+          '<path d="M185 372 L185 300 L230 240" stroke="' + p.cord + '" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' +
+          '<path d="M195 225 Q235 205 265 250 L215 262 Z" fill="' + p.shade + '"/>' +
+          (m === 'night' ? '<ellipse cx="240" cy="258" rx="26" ry="8" fill="' + p.bulb + '"/><polygon points="215,262 265,250 340,400 190,400" fill="#FFD98A" opacity=".35"/>' : '');
+        if (m === 'night') s += '<rect width="600" height="600" fill="url(#g3)"/>';
+        return s + '</svg>';
+      },
+
+      /* 4 – bedroom */
+      bedroom: function (m) {
+        var p = P[m];
+        var s = '<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><defs>' + glow('g4', 470, 300, 280, m) + '</defs>' +
+          '<rect width="600" height="600" fill="' + p.wall + '"/>' +
+          '<rect x="0" y="440" width="600" height="160" fill="' + p.floor + '"/>' +
+          '<rect x="40" y="220" width="300" height="130" rx="18" fill="' + p.desk + '"/>' +
+          '<rect x="40" y="330" width="330" height="130" rx="16" fill="' + p.bed + '"/><rect x="40" y="380" width="330" height="80" rx="14" fill="' + p.bed2 + '"/>' +
+          '<rect x="60" y="300" width="120" height="50" rx="14" fill="' + p.bed + '"/><rect x="195" y="300" width="120" height="50" rx="14" fill="' + p.bed + '"/>' +
+          windowSvg(80, 60, 200, 130, p, m) +
+          /* bedside table + lamp */
+          '<rect x="410" y="380" width="110" height="80" rx="8" fill="' + p.desk + '"/><rect x="420" y="460" width="10" height="60" fill="' + p.desk + '"/><rect x="500" y="460" width="10" height="60" fill="' + p.desk + '"/>' +
+          '<rect x="452" y="345" width="26" height="35" rx="8" fill="' + p.cord + '"/>' +
+          '<path d="M430 345 Q465 265 500 345 Z" fill="' + p.shade + '"/>' +
+          (m === 'night' ? '<ellipse cx="465" cy="346" rx="30" ry="6" fill="' + p.bulb + '"/><polygon points="430,346 500,346 590,600 340,600" fill="#FFD98A" opacity=".18"/>' : '');
+        if (m === 'night') s += '<rect width="600" height="600" fill="url(#g4)"/>';
+        return s + '</svg>';
+      }
+    };
+
+    var order = ['living', 'closeup', 'desk', 'bedroom'];
+    var labels = ['Living room', 'Close-up', 'Study', 'Bedroom'];
+
+    var body = document.body;
+    var layerDay = document.getElementById('layerDay');
+    var layerNight = document.getElementById('layerNight');
+    var thumbsEl = document.getElementById('thumbs');
+    var badge = document.getElementById('badge');
+    var btnDay = document.getElementById('btnDay');
+    var btnNight = document.getElementById('btnNight');
+    var mode = 'day';
+    var index = 0;
+
+    function renderMain() {
+      layerDay.innerHTML = scenes[order[index]]('day');
+      layerNight.innerHTML = scenes[order[index]]('night');
+    }
+
+    function renderThumbs() {
+      thumbsEl.innerHTML = '';
+      order.forEach(function (key, i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'thumb' + (i === index ? ' active' : '');
+        b.setAttribute('aria-label', labels[i] + ' (' + mode + ')');
+        b.innerHTML = scenes[key](mode);
+        b.addEventListener('click', function () { select(i); });
+        thumbsEl.appendChild(b);
+      });
+    }
+
+    function select(i) {
+      index = (i + order.length) % order.length;
+      renderMain();
+      renderThumbs();
+    }
+
+    function setMode(m) {
+      if (m === mode) return;
+      mode = m;
+      body.setAttribute('data-theme', m);
+      layerDay.classList.toggle('on', m === 'day');
+      layerNight.classList.toggle('on', m === 'night');
+      btnDay.classList.toggle('active', m === 'day');
+      btnNight.classList.toggle('active', m === 'night');
+      btnDay.setAttribute('aria-pressed', m === 'day');
+      btnNight.setAttribute('aria-pressed', m === 'night');
+      badge.textContent = m === 'day' ? 'Day view' : 'Night view';
+      renderThumbs();
+    }
+
+    btnDay.addEventListener('click', function () { setMode('day'); });
+    btnNight.addEventListener('click', function () { setMode('night'); });
+    document.getElementById('prev').addEventListener('click', function () { select(index - 1); });
+    document.getElementById('next').addEventListener('click', function () { select(index + 1); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') select(index - 1);
+      if (e.key === 'ArrowRight') select(index + 1);
+    });
+
+    select(0);
+  </script>
+</body>
+
+</html>
