@@ -2549,9 +2549,23 @@ svg {
   font-size: 20px;
   font-weight: 700;
   color: #7A8E85;
-  text-decoration: line-through;
-  text-decoration-color: #E5322D;
-  text-decoration-thickness: 2px;
+  position: relative;
+  text-decoration: none;
+}
+
+/* Bold red strike, tilted slightly instead of dead straight */
+.val-total-crossed::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: 50%;
+  height: 3.5px;
+  margin-top: -2px;
+  border-radius: 2px;
+  background: #E5322D;
+  transform: rotate(-7deg);
+  pointer-events: none;
 }
 
 .val-today-bar {
