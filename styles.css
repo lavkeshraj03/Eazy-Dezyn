@@ -4263,16 +4263,6 @@ svg {
   text-align: center;
 }
 
-.final-glow-bar {
-  width: 140px;
-  height: 4px;
-  background: rgba(56, 232, 142, 0.6);
-  filter: blur(5px);
-  margin: 0 auto 20px;
-  border-radius: 9999px;
-  pointer-events: none;
-}
-
 .final-cta-row {
   display: flex;
   align-items: center;
