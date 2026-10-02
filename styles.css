@@ -3935,22 +3935,29 @@ svg {
   }
 }
 
-/* --- Who section: refined dark glass cards (overrides above) --- */
+/* --- Who section: solid white cards (overrides above) --- */
 .who-comparison-grid {
   max-width: 1040px;
   gap: 32px;
 }
 
-.who-card {
+.who-card,
+.who-card-good,
+.who-card-bad,
+.who-card-good:hover,
+.who-card-bad:hover {
   position: relative;
   overflow: hidden;
   padding: 40px 38px 34px;
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: #FFFFFF;
+  border: 1px solid #E6EEEA;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.28);
 }
 
+/* thin coloured accent along the top edge */
 .who-card::before {
   content: "";
   position: absolute;
@@ -3960,67 +3967,38 @@ svg {
   height: 4px;
 }
 
-.who-card::after {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  right: -140px;
-  top: -140px;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.who-card-good,
-.who-card-good:hover {
-  background: linear-gradient(160deg, rgba(69, 178, 141, 0.20) 0%, rgba(255, 255, 255, 0.05) 60%);
-  border-color: rgba(69, 178, 141, 0.38);
-  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.30);
-}
-
 .who-card-good::before { background: linear-gradient(90deg, #45B28D, #7FE0BC); }
-.who-card-good::after { background: radial-gradient(circle, rgba(69, 178, 141, 0.30), transparent 70%); }
-
-.who-card-bad,
-.who-card-bad:hover {
-  background: linear-gradient(160deg, rgba(239, 68, 68, 0.14) 0%, rgba(255, 255, 255, 0.04) 60%);
-  border-color: rgba(239, 68, 68, 0.30);
-  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.30);
-}
-
 .who-card-bad::before { background: linear-gradient(90deg, #EF4444, #FF8A80); }
-.who-card-bad::after { background: radial-gradient(circle, rgba(239, 68, 68, 0.22), transparent 70%); }
 
 .who-card-header {
   gap: 16px;
   margin-bottom: 26px;
   padding-bottom: 22px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid #EEF3F0;
 }
 
 .who-icon-circle {
   width: 42px;
   height: 42px;
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.06);
 }
 
 .who-icon-circle svg { width: 18px; height: 18px; }
-.who-icon-good { background: #45B28D; box-shadow: 0 0 0 6px rgba(69, 178, 141, 0.20); }
-.who-icon-bad { background: #EF4444; box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.20); }
+.who-icon-good { background: #45B28D; box-shadow: 0 0 0 6px rgba(69, 178, 141, 0.16); }
+.who-icon-bad { background: #EF4444; box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.14); }
 
 .who-card-heading {
-  color: #FFFFFF;
+  color: #1E2B24;
   font-size: 23px;
 }
 
 .who-card-good .who-item-row,
 .who-card-bad .who-item-row {
-  color: #E3EFE9;
+  color: #3A4D43;
   font-size: 15.5px;
   line-height: 1.5;
   padding: 18px 0;
   gap: 16px;
-  border-bottom-color: rgba(255, 255, 255, 0.09);
+  border-bottom-color: #EEF3F0;
 }
 
 .who-item-row:last-child { border-bottom: none; padding-bottom: 0; }
@@ -4032,10 +4010,10 @@ svg {
 }
 
 .who-item-bullet svg { width: 12px; height: 12px; }
-.bullet-good { background: rgba(69, 178, 141, 0.22); }
-.bullet-good svg { stroke: #7FE0BC; }
-.bullet-bad { background: rgba(239, 68, 68, 0.22); }
-.bullet-bad svg { stroke: #FF8A80; }
+.bullet-good { background: #E8F5EF; }
+.bullet-good svg { stroke: #34A87C; }
+.bullet-bad { background: #FDECEC; }
+.bullet-bad svg { stroke: #EF4444; }
 
 /* ============ FAQ ============ */
 .faq-section {
