@@ -4288,6 +4288,7 @@ svg {
   overflow: hidden;
   isolation: isolate;
   background:
+    radial-gradient(ellipse 190px 110px at 4% 0%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 72%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.18) 38%, rgba(255, 255, 255, 0) 39%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.05) 60%, rgba(255, 255, 255, 0.30) 100%),
     rgba(208, 231, 222, 0.88);
@@ -4303,7 +4304,7 @@ svg {
     inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 }
 
-/* soft glowing orbs inside the glass so it reads as frosted, not flat */
+/* soft green glow along the bottom edge, under both the left text and the button, so it reads as frosted glass */
 .final-offer-card::before,
 .final-offer-card::after {
   content: "";
@@ -4315,11 +4316,11 @@ svg {
 }
 
 .final-offer-card::before {
-  width: 190px;
-  height: 190px;
-  left: -50px;
-  top: -70px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 70%);
+  width: 230px;
+  height: 230px;
+  left: 60px;
+  bottom: -110px;
+  background: radial-gradient(circle, rgba(69, 178, 141, 0.55), rgba(69, 178, 141, 0) 70%);
 }
 
 .final-offer-card::after {
