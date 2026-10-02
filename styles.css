@@ -4291,14 +4291,14 @@ svg {
     linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.18) 38%, rgba(255, 255, 255, 0) 39%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.05) 60%, rgba(255, 255, 255, 0.30) 100%),
     rgba(208, 231, 222, 0.88);
-  border: 0; /* no rim at all, so there is no white line ... */
+  border: 2px solid rgba(255, 255, 255, 0.34); /* a soft white rim, not a hard line ... */
   border-radius: 24px;
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
   box-shadow:
     0 22px 46px rgba(46, 120, 92, 0.22),
     0 2px 6px rgba(46, 120, 92, 0.12),
-    inset 0 0 38px 14px rgba(255, 255, 255, 0.55), /* ... a wide, soft white haze that fades gradually into the green */
+    inset 0 0 16px 4px rgba(255, 255, 255, 0.70), /* ... feathered inwards so it blends into the green without disappearing */
     inset 0 -14px 26px rgba(46, 143, 108, 0.14);
 }
 
