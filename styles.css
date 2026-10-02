@@ -4307,6 +4307,12 @@ svg {
   border-left: 1px solid #E3ECE7;
 }
 
+.final-point-check svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 4.6; /* thicker tick */
+}
+
 .final-point-check {
   flex-shrink: 0;
   width: 32px;
