@@ -2555,14 +2555,14 @@ svg {
   color: #5E7168;
 }
 
-/* White cut line across the red price pill (text itself stays whole) */
+/* Red cut line across the grey glass price pill (text itself stays whole) */
 .val-total-crossed .cut-stroke {
   position: absolute;
   inset: 0;
   pointer-events: none;
   /* diagonal from the bottom-left corner of the pill to the top-right corner */
   background: linear-gradient(to bottom right,
-      transparent calc(50% - 1.25px), #FFFFFF calc(50% - 1.25px), #FFFFFF calc(50% + 1.25px), transparent calc(50% + 1.25px));
+      transparent calc(50% - 1.25px), #E5322D calc(50% - 1.25px), #E5322D calc(50% + 1.25px), transparent calc(50% + 1.25px));
 }
 
 .val-today-bar {
@@ -2633,13 +2633,16 @@ svg {
   letter-spacing: 0.02em;
   flex-shrink: 0;
   white-space: nowrap;
-  /* red pill, mirrors the green offer pill */
-  color: #FFFFFF;
-  background: #E5584F;
+  /* glassmorphic grey pill with red text, mirrors the green offer pill */
+  color: #E5322D;
+  background: linear-gradient(135deg, rgba(150, 160, 155, 0.30), rgba(120, 130, 125, 0.16));
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
   border-radius: 16px;
-  padding: 14px 16px;
+  padding: 13px 15px;
   overflow: hidden; /* the cut line runs edge to edge and is trimmed by the pill */
-  box-shadow: 0 10px 26px rgba(229, 88, 79, 0.38);
+  box-shadow: 0 10px 26px rgba(60, 75, 68, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .val-today-bar .val-total-crossed {
