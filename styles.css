@@ -2555,18 +2555,14 @@ svg {
   color: #5E7168;
 }
 
-/* Red straight cut line across the whole price (text itself stays whole) */
+/* White cut line across the red price pill (text itself stays whole) */
 .val-total-crossed .cut-stroke {
   position: absolute;
-  left: -6px;
-  right: -6px;
-  top: 55%;
-  height: 2.5px;
-  margin-top: -1.25px;
-  border-radius: 0;
-  background: #FFFFFF;
-  transform: rotate(-6deg);
+  inset: 0;
   pointer-events: none;
+  /* diagonal from the bottom-left corner of the pill to the top-right corner */
+  background: linear-gradient(to bottom right,
+      transparent calc(50% - 1.25px), #FFFFFF calc(50% - 1.25px), #FFFFFF calc(50% + 1.25px), transparent calc(50% + 1.25px));
 }
 
 .val-today-bar {
