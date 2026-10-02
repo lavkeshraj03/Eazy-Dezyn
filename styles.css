@@ -2580,7 +2580,7 @@ svg {
 .val-today-offer {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #1B936B 0%, #12775A 100%);
+  background: #44B28D;
   border-radius: 16px;
   padding: 14px 20px;
   display: flex;
@@ -2588,7 +2588,7 @@ svg {
   gap: 10px;
   min-width: 0;
   white-space: nowrap;
-  box-shadow: 0 10px 26px rgba(27, 147, 107, 0.38);
+  box-shadow: 0 10px 26px rgba(68, 178, 141, 0.42);
 }
 
 /* soft light sweep passing over the offer every few seconds to pull the eye */
@@ -2598,19 +2598,34 @@ svg {
   top: 0;
   bottom: 0;
   left: -60%;
-  width: 40%;
-  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  width: 55%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transform: skewX(-18deg);
-  animation: offerSweep 3.6s ease-in-out infinite;
+  animation: offerSweep 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* second, thinner streak trailing just behind the first */
+.val-today-offer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 28%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-18deg);
+  animation: offerSweep 2s ease-in-out 0.18s infinite;
   pointer-events: none;
 }
 
 @keyframes offerSweep {
-  0%, 55% { left: -60%; }
+  0%, 40% { left: -60%; }
   100% { left: 130%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .val-today-offer::before,
   .val-today-offer::after { animation: none; display: none; }
 }
 
