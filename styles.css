@@ -2548,24 +2548,31 @@ svg {
   font-family: var(--font-head);
   font-size: 20px;
   font-weight: 700;
-  color: #7A8E85;
+  line-height: 1.2;
   position: relative;
+  display: inline-block;
   text-decoration: none;
+  color: transparent; /* real text stays for screen readers; the two sliced copies below are what you see */
 }
 
-/* Bold red strike, tilted slightly instead of dead straight */
+/* "Cut" price: the number is sliced along a diagonal and the two halves slide apart */
+.val-total-crossed::before,
 .val-total-crossed::after {
-  content: "";
+  content: attr(data-text);
   position: absolute;
-  left: -4px;
-  right: -4px;
-  top: 58%;
-  height: 3px;
-  margin-top: -1.5px;
-  border-radius: 2px;
-  background: rgba(229, 50, 45, 0.92);
-  transform: rotate(10deg);
+  inset: 0;
+  color: #5E7168;
   pointer-events: none;
+}
+
+.val-total-crossed::before {
+  clip-path: polygon(0 0, 100% 0, 100% 34%, 0 72%);
+  transform: translate(-0.6px, -1.2px);
+}
+
+.val-total-crossed::after {
+  clip-path: polygon(0 72%, 100% 34%, 100% 100%, 0 100%);
+  transform: translate(0.6px, 1.2px);
 }
 
 .val-today-bar {
@@ -2580,9 +2587,8 @@ svg {
 
 .val-today-bar .val-total-crossed {
   font-family: var(--font-subhead); /* plain, simple-shaped digits so the 9 reads clearly */
-  font-size: 26px;
-  font-weight: 700;
-  color: #5E7168; /* darker so digits stay readable under the strike */
+  font-size: 22px;
+  font-weight: 800;
   letter-spacing: 0.02em;
 }
 
@@ -2599,7 +2605,7 @@ svg {
 
 .val-today-price {
   font-family: var(--font-head);
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 800;
   color: #1B936B;
 }
