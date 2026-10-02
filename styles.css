@@ -4291,16 +4291,16 @@ svg {
     linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.18) 38%, rgba(255, 255, 255, 0) 39%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.05) 60%, rgba(255, 255, 255, 0.30) 100%),
     rgba(208, 231, 222, 0.88);
-  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border: 3px solid rgba(255, 255, 255, 0.50); /* wider, softer rim ... */
   border-radius: 24px;
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
   box-shadow:
     0 22px 46px rgba(46, 120, 92, 0.22),
     0 2px 6px rgba(46, 120, 92, 0.12),
-    inset 0 2px 1px rgba(255, 255, 255, 1),
-    inset 0 -14px 26px rgba(46, 143, 108, 0.14),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+    inset 0 0 10px 3px rgba(255, 255, 255, 0.95), /* ... feathered into the card so the white edge looks blurred */
+    inset 0 2px 6px rgba(255, 255, 255, 1),
+    inset 0 -14px 26px rgba(46, 143, 108, 0.14);
 }
 
 /* soft green glow from the top-left corner, plus one under the button at the bottom-right, so it reads as frosted glass */
