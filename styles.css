@@ -2564,7 +2564,7 @@ svg {
   margin-top: -1.5px;
   border-radius: 2px;
   background: rgba(229, 50, 45, 0.92);
-  transform: rotate(-10deg);
+  transform: rotate(10deg);
   pointer-events: none;
 }
 
@@ -2579,7 +2579,9 @@ svg {
 }
 
 .val-today-bar .val-total-crossed {
+  font-family: var(--font-subhead); /* plain, simple-shaped digits so the 9 reads clearly */
   font-size: 26px;
+  font-weight: 700;
   color: #5E7168; /* darker so digits stay readable under the strike */
   letter-spacing: 0.02em;
 }
