@@ -2569,11 +2569,19 @@ svg {
 }
 
 .val-today-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* Only the offer ("Today, all of it for Rs 2,499.") gets the green background */
+.val-today-offer {
   background: #E5F5ED;
   border-radius: 14px;
   padding: 14px 20px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 14px;
 }
