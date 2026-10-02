@@ -3576,7 +3576,7 @@ svg {
   height: 100%;
   object-fit: cover;
   object-position: 50% 55%; /* crops a little from the top, leaving some room above her head */
-  transform: translateX(-5%) scale(1.18); /* slight zoom-in; shifted left so her torso/body sits at the frame centre (frame clips the overflow) */
+  transform: translateX(-3.9%) scale(1.18); /* slight zoom-in; shifted so the space left and right of her body (elbow to hand) is equal (frame clips the overflow) */
   transform-origin: 50% 50%;
   display: block;
   border-radius: 32px;
