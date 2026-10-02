@@ -2633,16 +2633,26 @@ svg {
   letter-spacing: 0.02em;
   flex-shrink: 0;
   white-space: nowrap;
-  /* glassmorphic grey pill with red text, mirrors the green offer pill */
+  /* liquid-glass ("water") grey pill with red text: glossy top reflection, soft bright blobs, deep bottom edge */
   color: #E5322D;
-  background: linear-gradient(135deg, rgba(120, 130, 125, 0.42), rgba(95, 105, 100, 0.26));
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(12px) saturate(140%);
-  -webkit-backdrop-filter: blur(12px) saturate(140%);
-  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.18) 46%, rgba(255, 255, 255, 0) 47%),
+    radial-gradient(ellipse 60% 55% at 18% 12%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse 50% 40% at 85% 100%, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0) 70%),
+    linear-gradient(165deg, rgba(222, 228, 226, 0.90), rgba(176, 186, 183, 0.90));
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border-radius: 18px;
   padding: 13px 15px;
   overflow: hidden; /* the cut line runs edge to edge and is trimmed by the pill */
-  box-shadow: 0 10px 26px rgba(40, 50, 45, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 12px 26px rgba(40, 55, 50, 0.22),
+    0 2px 4px rgba(40, 55, 50, 0.18),
+    inset 0 2px 3px rgba(255, 255, 255, 0.95),
+    inset 0 -8px 14px rgba(40, 55, 50, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
 }
 
 .val-today-bar .val-total-crossed {
