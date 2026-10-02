@@ -4179,8 +4179,8 @@ svg {
 }
 
 .final-coin-left {
-  left: 6.5%;
-  top: 48%;
+  left: 19%;
+  top: 13%; /* up in the top area, clear of the logo watermark */
   width: 54px;
   height: 54px;
 }
