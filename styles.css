@@ -2873,9 +2873,9 @@ svg {
      its left part on the header strip and its right end passing the card's right edge */
   width: 124px;
   height: 30px;
-  top: -12px;
-  right: -22px;
-  transform: rotate(18deg);
+  top: -10px;
+  right: -30px;
+  transform: rotate(24deg);
   display: flex;
   align-items: center;
   justify-content: center;
