@@ -2782,24 +2782,6 @@ svg {
   box-shadow: 0 20px 54px rgba(0, 0, 0, 0.35);
 }
 
-.plan-floating-badge {
-  position: absolute;
-  top: -14px;
-  right: -10px;
-  transform: rotate(12deg);
-  background: #34A87C;
-  color: #FFFFFF;
-  font-family: var(--font-subhead);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  padding: 6px 16px;
-  border-radius: 999px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-  z-index: 10;
-  white-space: nowrap;
-}
-
 .plan-header-strip {
   padding: 13px 20px;
   text-align: center;
@@ -2899,6 +2881,10 @@ svg {
   font-size: 13px;
   color: #7A8E85;
   font-weight: 500;
+}
+
+.plan-price-unit-dark {
+  color: #14221C;
 }
 
 .plan-savings-row {
