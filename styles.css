@@ -2868,8 +2868,9 @@ svg {
 
 .plan-floating-badge {
   position: absolute;
-  top: -14px; /* centred on the card's top edge: half above, half inside */
-  right: 32px; /* lines up with the right edge of the card's content */
+  top: -14px;
+  right: -10px;
+  transform: rotate(12deg);
   background: #34A87C;
   color: #FFFFFF;
   font-family: var(--font-subhead);
