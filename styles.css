@@ -2869,16 +2869,22 @@ svg {
 
 .plan-floating-badge {
   position: absolute;
-  top: -14px;
-  right: -10px;
+  /* fixed size so the geometry is exact: the tilted tag's lower-right end sits in the card's top-right corner,
+     touching the top edge line and the right edge line */
+  width: 124px;
+  height: 30px;
+  top: -44px;
+  right: -2px;
   transform: rotate(18deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #34A87C;
   color: #FFFFFF;
   font-family: var(--font-subhead);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.05em;
-  padding: 6px 16px;
   border-radius: 999px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
   z-index: 10;
