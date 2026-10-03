@@ -36,6 +36,7 @@ html {
 }
 
 body {
+  text-transform: capitalize; /* first letter of every word on the page is a capital */
   background: #FFFFFF;
   color: var(--text-dark);
   font-family: var(--font-body);
@@ -209,7 +210,7 @@ svg {
   padding: 8px 18px;
   border-radius: 999px;
   margin-bottom: 20px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 /* Main headline */
@@ -518,7 +519,7 @@ svg {
   font-weight: 800;
   color: #7A8E85;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .sheet-total-amount {
@@ -542,7 +543,7 @@ svg {
   text-align: center;
   padding: 7.5px 0;
   border-radius: 999px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 /* Caption — beside spreadsheet card under trailer */
@@ -833,7 +834,7 @@ svg {
   font-weight: 800;
   letter-spacing: 0.09em;
   color: #7AA191;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .metric-spec-value {
@@ -853,7 +854,7 @@ svg {
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 10px;
   display: inline-block;
 }
@@ -1211,7 +1212,7 @@ svg {
   font-weight: 700;
   color: #7A8F85;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .timeline-text {
@@ -1500,7 +1501,7 @@ svg {
   color: #7A8E85;
   letter-spacing: 0.08em;
   margin-bottom: 10px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .schedule-progress-bar {
@@ -1830,7 +1831,7 @@ svg {
   letter-spacing: -0.03em;
   line-height: 0.92;
   margin: 0 0 6px 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -3194,7 +3195,7 @@ svg {
   color: #2E8F6C;
   letter-spacing: 0.08em;
   margin-bottom: 6px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .zero-risk-title {
@@ -3298,7 +3299,7 @@ svg {
   color: #2E8F6C;
   letter-spacing: 0.08em;
   margin-bottom: 14px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .rev-verified-dot {
@@ -3600,7 +3601,7 @@ svg {
   font-weight: 800;
   color: #2E8F6C;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 8px;
   display: inline-block;
 }
@@ -3862,7 +3863,7 @@ svg {
   font-weight: 800;
   color: #7A8E85;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .who-card-heading {
@@ -4230,7 +4231,7 @@ svg {
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #2E8F6C;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 24px;
 }
 
@@ -4744,4 +4745,9 @@ svg {
   .val-today-price { font-size: 25px; }
   .val-today-bar .val-total-crossed { font-size: 15px; padding: 11px 14px; }
   .val-today-bar .val-total-steel { font-size: 16px; padding: 12px 12px; border-radius: 14px; }
+}
+
+/* keep file extensions and e-mail addresses exactly as typed */
+.nocap {
+  text-transform: none;
 }
