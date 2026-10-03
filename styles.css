@@ -3091,7 +3091,7 @@ svg {
 
 .guarantee-watermark-bg-left {
   right: auto;
-  left: 4%;
+  left: 1%;
   top: -10px; /* top-left corner of the section */
   bottom: auto;
 }
