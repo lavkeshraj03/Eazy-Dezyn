@@ -2432,6 +2432,7 @@ svg {
 }
 
 .bonus-free-text {
+  text-transform: uppercase; /* FREE stays in capitals */
   font-family: var(--font-head);
   font-size: 15.5px;
   font-weight: 800;
