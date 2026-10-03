@@ -3075,16 +3075,6 @@ svg {
   z-index: 1;
 }
 
-.guarantee-watermark-left {
-  position: absolute;
-  left: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  user-select: none;
-  z-index: 1;
-}
-
 .guarantee-watermark-bg {
   position: absolute;
   right: 4%;
@@ -3097,6 +3087,11 @@ svg {
   pointer-events: none;
   user-select: none;
   z-index: 1;
+}
+
+.guarantee-watermark-bg-left {
+  right: auto;
+  left: 4%;
 }
 
 .zero-risk-card {
