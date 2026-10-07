@@ -2456,10 +2456,10 @@ svg {
 .value-stack-section::before {
   content: '';
   position: absolute;
-  top: -60px; /* starts above the section so the blurred top edge is clipped away and the top is solid #052419 */
+  top: 0;
   left: -15%;
   right: -15%;
-  height: calc(56% + 310px);
+  height: calc(56% + 250px);
   background: #052419;
   border-bottom-left-radius: 50% 220px;
   border-bottom-right-radius: 50% 220px;
@@ -5378,8 +5378,7 @@ svg {
 .reviews-section {
   padding-left: 24px;
   padding-right: 24px; /* space on the left and right of the marquee */
-  /* top matches the section above (white); bottom matches the top of the section below (its dark #052419 band) */
-  background: linear-gradient(180deg, #FFFFFF 0%, #66aa96 45%, #052419 100%);
+  background: #66aa96; /* simple solid colour, as before */
 }
 
 .reviews-container {
