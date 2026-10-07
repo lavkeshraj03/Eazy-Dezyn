@@ -5270,8 +5270,8 @@ svg {
     font-size: clamp(44px, min(6vw, 9vh), 90px);
     font-weight: 900;
     line-height: 1;
-    color: var(--num);
-    opacity: 0.8;
+    color: #45B28D; /* site green, clearly visible on the light background */
+    opacity: 1;
     margin-bottom: clamp(6px, 1.2vh, 12px);
     user-select: none;
   }
