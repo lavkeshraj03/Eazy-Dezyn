@@ -4724,7 +4724,7 @@ svg {
   position: relative;
   width: 100%;
   padding: 68px 24px 84px;
-  background: linear-gradient(108deg, #53bc98 0%, #7dcdb1 28%, #bbe4d4 58%, #ebf8f3 82%, #ffffff 96%, #ffffff 100%);
+  background: #FFFFFF;
   overflow: hidden;
   box-sizing: border-box;
   text-transform: none;
