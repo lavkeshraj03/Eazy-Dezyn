@@ -5007,7 +5007,7 @@ svg {
     max-width: none;
     margin: 0;
     background: none;
-    padding: 150px 10% 90px; /* inner space on the left and right */
+    padding: clamp(40px, 7vh, 80px) 10% clamp(36px, 6vh, 64px); /* inner space on the left and right; scales with screen height */
     text-align: center;
     overflow: hidden;
     isolation: isolate;
@@ -5015,21 +5015,6 @@ svg {
   }
 
 
-  /* Hot-pink circle in top-left corner (behind everything) */
-  .mm-wrap .mm-section::before {
-    content: "";
-    position: absolute;
-    left: -80px;
-    top: -120px;
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    background: transparent; /* a pink ring instead of a solid circle */
-    border: 38px solid var(--pink);
-    box-sizing: border-box;
-    z-index: 0;
-    pointer-events: none;
-  }
 
 
 
@@ -5040,7 +5025,7 @@ svg {
     font-weight: 900;
     color: var(--navy);
     letter-spacing: -1px;
-    margin-bottom: 60px;
+    margin-bottom: clamp(10px, 2vh, 22px);
     position: relative;
     z-index: 4;
     user-select: none;
@@ -5051,7 +5036,7 @@ svg {
   /* CRITICAL: Stage MUST NOT have z-index or transform to prevent stacking context traps */
   .mm-wrap .mm-stage {
     position: relative;
-    height: clamp(200px, 22vw, 360px);
+    height: clamp(150px, 26vh, 290px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5089,7 +5074,7 @@ svg {
   .mm-wrap .mm-big {
     position: relative;
     z-index: 2;
-    font-size: clamp(44px, 7.2vw, 124px);
+    font-size: clamp(40px, min(7.2vw, 13vh), 124px);
     font-weight: 900;
     line-height: 1;
     color: var(--navy);
@@ -5140,7 +5125,7 @@ svg {
   /* Coin 1: Behind text, just above OSE / PR (rotate: -12deg). Does NOT overlap H2 */
   .mm-wrap .coin-1 {
     left: 36%;
-    top: -16%;
+    top: -2%;
     rotate: -12deg;
     z-index: 1;
     animation-delay: -1s;
@@ -5161,7 +5146,7 @@ svg {
   .mm-wrap .note-500 {
     width: clamp(230px, 23vw, 410px);
     left: 64%;
-    top: -24%;
+    top: -34%;
     rotate: -18deg;
     z-index: 1;
     animation-delay: -4s;
@@ -5183,8 +5168,8 @@ svg {
   /* Rendered 4 times as sibling elements. NO shared parent with transform/filter/z-index/opacity! */
   .mm-wrap .note-200 {
     width: clamp(230px, 23vw, 410px);
-    left: 14%;
-    top: 40%;
+    left: 10%;
+    top: 36%;
     rotate: -8deg;
     animation-delay: -2s;
   }
@@ -5263,7 +5248,7 @@ svg {
     font-size: clamp(16px, 1.2vw, 21px);
     font-weight: 500;
     color: var(--navy);
-    margin: 40px 0 30px;
+    margin: clamp(14px, 2.5vh, 28px) 0 clamp(12px, 2vh, 22px);
     position: relative;
     z-index: 4;
   }
@@ -5282,12 +5267,12 @@ svg {
   }
 .mm-wrap .mm-num {
     display: block;
-    font-size: clamp(60px, 6vw, 110px);
+    font-size: clamp(44px, min(6vw, 9vh), 90px);
     font-weight: 900;
     line-height: 1;
     color: var(--num);
     opacity: 0.8;
-    margin-bottom: 22px;
+    margin-bottom: clamp(6px, 1.2vh, 12px);
     user-select: none;
   }
 .mm-wrap .mm-item p {
@@ -5310,7 +5295,6 @@ svg {
 @media (max-width: 520px) {
 .mm-wrap .mm-grid { grid-template-columns: 1fr; text-align: center; }
 .mm-wrap .mm-item p { margin: 0 auto; }
-.mm-wrap .mm-section::before { width: 220px; height: 220px; left: -50px; top: -70px; border-width: 26px; }
 .mm-wrap .h2-large,
 .mm-wrap .h4-large { opacity: 0.6; }
 .mm-wrap .mm-big { white-space: normal; }
