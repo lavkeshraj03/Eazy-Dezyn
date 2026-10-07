@@ -5007,7 +5007,7 @@ svg {
     max-width: none;
     margin: 0;
     background: none;
-    padding: 150px 6% 90px;
+    padding: 150px 10% 90px; /* inner space on the left and right */
     text-align: center;
     overflow: hidden;
     isolation: isolate;
@@ -5299,7 +5299,7 @@ svg {
 
   /* ===== Responsive Breakpoints ===== */
   @media (max-width: 900px) {
-.mm-wrap .mm-section { padding: 120px 6% 50px; }
+.mm-wrap .mm-section { padding: 120px 8% 50px; }
 .mm-wrap .mm-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .mm-wrap .h3-small { display: none; }
 
