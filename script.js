@@ -244,3 +244,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 })();
+
+/* --- Reviews: duplicate the cards once so the marquee loops seamlessly --- */
+(function () {
+  var grid = document.querySelector('.reviews-grid');
+  if (!grid || grid.dataset.cloned) return;
+  grid.dataset.cloned = '1';
+  var originals = Array.prototype.slice.call(grid.children);
+  originals.forEach(function (card) {
+    var clone = card.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    grid.appendChild(clone);
+  });
+})();
