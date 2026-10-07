@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function measure() {
     setW = grid.scrollWidth / 3;
-    speed = setW / 56;     // one full set every 56 seconds, as before
+    speed = 60;            // slow, steady drift in pixels per second
     if (!view.scrollLeft) { view.scrollLeft = setW; }
     pos = view.scrollLeft;
   }
