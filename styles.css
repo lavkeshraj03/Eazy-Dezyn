@@ -5376,8 +5376,8 @@ svg {
 
 /* ============ REVIEWS: ONE-LINE SLOW MARQUEE WITH SOFT LEFT/RIGHT FADE ============ */
 .reviews-section {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 24px;
+  padding-right: 24px; /* space on the left and right of the marquee */
 }
 
 .reviews-container {
@@ -5387,6 +5387,8 @@ svg {
 
 .reviews-marquee {
   width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
   overflow: hidden;
   padding: 26px 0 34px; /* room for card shadows and the hover lift */
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%);
@@ -5403,7 +5405,7 @@ svg {
   margin: 0;
   padding-right: 18px; /* equals the gap, so the -50% loop lands exactly on the first copy */
   will-change: transform;
-  animation: reviewsMarquee 80s linear infinite;
+  animation: reviewsMarquee 56s linear infinite;
 }
 
 .reviews-marquee:hover .reviews-grid {
