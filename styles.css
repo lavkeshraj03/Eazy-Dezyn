@@ -5442,3 +5442,33 @@ svg {
     animation: none;
   }
 }
+
+/* Review screenshots inside the marquee (replace the written review cards) */
+.reviews-grid .rev-shot {
+  flex: 0 0 auto;
+  height: 320px;
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.14), 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.reviews-grid .rev-shot:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.22);
+}
+
+.reviews-grid .rev-shot img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
+
+@media (max-width: 580px) {
+  .reviews-grid .rev-shot {
+    height: 240px;
+  }
+}
