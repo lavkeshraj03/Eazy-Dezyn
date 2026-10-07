@@ -257,3 +257,123 @@ document.addEventListener('DOMContentLoaded', () => {
     grid.appendChild(clone);
   });
 })();
+
+/* --- Reviews: click a screenshot to open it in a lightbox gallery --- */
+(function () {
+  var grid = document.querySelector('.reviews-grid');
+  if (!grid) return;
+  var shots = Array.prototype.slice.call(grid.querySelectorAll('.rev-shot'));
+  var total = shots.length / 2; // second half are the marquee clones
+  if (!total) return;
+
+  var items = shots.slice(0, total).map(function (fig) {
+    var img = fig.querySelector('img');
+    return { src: img.getAttribute('src'), alt: img.getAttribute('alt') || '' };
+  });
+
+  shots.forEach(function (fig, i) {
+    fig.dataset.index = i % total;
+    if (i < total) {
+      fig.tabIndex = 0;
+      fig.setAttribute('role', 'button');
+      fig.setAttribute('aria-label', 'Open review ' + (i + 1) + ' of ' + total);
+    }
+  });
+
+  // build the lightbox once
+  var lb = document.createElement('div');
+  lb.className = 'rev-lb';
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.setAttribute('aria-label', 'Review gallery');
+  lb.hidden = true;
+  lb.innerHTML =
+    '<button type="button" class="rev-lb-close" aria-label="Close gallery">&times;</button>' +
+    '<button type="button" class="rev-lb-nav rev-lb-prev" aria-label="Previous review">&#8249;</button>' +
+    '<figure class="rev-lb-stage"><img class="rev-lb-img" alt=""></figure>' +
+    '<button type="button" class="rev-lb-nav rev-lb-next" aria-label="Next review">&#8250;</button>' +
+    '<div class="rev-lb-count"></div>' +
+    '<div class="rev-lb-thumbs"></div>';
+  document.body.appendChild(lb);
+
+  var imgEl = lb.querySelector('.rev-lb-img');
+  var countEl = lb.querySelector('.rev-lb-count');
+  var thumbsEl = lb.querySelector('.rev-lb-thumbs');
+  var closeBtn = lb.querySelector('.rev-lb-close');
+  var current = 0;
+  var lastFocus = null;
+
+  var thumbs = items.map(function (it, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'rev-lb-thumb';
+    b.setAttribute('aria-label', 'Show review ' + (i + 1));
+    var t = document.createElement('img');
+    t.src = it.src;
+    t.alt = '';
+    b.appendChild(t);
+    b.addEventListener('click', function () { show(i); });
+    thumbsEl.appendChild(b);
+    return b;
+  });
+
+  function show(i) {
+    current = (i + total) % total;
+    imgEl.src = items[current].src;
+    imgEl.alt = items[current].alt;
+    countEl.textContent = (current + 1) + ' / ' + total;
+    thumbs.forEach(function (b, k) { b.classList.toggle('is-active', k === current); });
+    thumbs[current].scrollIntoView({ block: 'nearest', inline: 'center' });
+  }
+
+  function open(i) {
+    lastFocus = document.activeElement;
+    show(i);
+    lb.hidden = false;
+    document.body.classList.add('rev-lb-open');
+    requestAnimationFrame(function () { lb.classList.add('is-open'); });
+    closeBtn.focus();
+  }
+
+  function close() {
+    lb.classList.remove('is-open');
+    document.body.classList.remove('rev-lb-open');
+    setTimeout(function () { lb.hidden = true; }, 200);
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  grid.addEventListener('click', function (e) {
+    var fig = e.target.closest('.rev-shot');
+    if (fig) open(parseInt(fig.dataset.index, 10) || 0);
+  });
+  grid.addEventListener('keydown', function (e) {
+    var fig = e.target.closest && e.target.closest('.rev-shot');
+    if (fig && (e.key === 'Enter' || e.key === ' ')) {
+      e.preventDefault();
+      open(parseInt(fig.dataset.index, 10) || 0);
+    }
+  });
+
+  lb.querySelector('.rev-lb-prev').addEventListener('click', function () { show(current - 1); });
+  lb.querySelector('.rev-lb-next').addEventListener('click', function () { show(current + 1); });
+  closeBtn.addEventListener('click', close);
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb || e.target.classList.contains('rev-lb-stage')) close();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(current - 1);
+    else if (e.key === 'ArrowRight') show(current + 1);
+  });
+
+  // swipe left/right on touch screens
+  var startX = null;
+  lb.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', function (e) {
+    if (startX === null) return;
+    var dx = e.changedTouches[0].clientX - startX;
+    startX = null;
+    if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+})();
