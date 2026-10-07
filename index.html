@@ -16,6 +16,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -1673,6 +1674,95 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY DO YOU NEED IT / CLOSE PROJECTS (GSAP parallax) ===== -->
+    <section class="mm-block" id="make-money">
+      <div class="mm-wrap">
+      <svg class="svg-filters" width="0" height="0" aria-hidden="true">
+        <!-- Directional blur for background ₹500 note -->
+        <filter id="mm-motion-x" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="5 0.4" />
+        </filter>
+
+        <!-- Speed blur filter for left (trailing) end of ₹200 note -->
+        <filter id="mm-speed-left" x="-40%" y="-10%" width="150%" height="120%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="9 0.3" result="b"/>
+          <feOffset in="b" dx="-10" dy="0"/>
+        </filter>
+      </svg>
+        <section class="mm-section" id="mm-section">
+
+          <!-- Decorative navy corner peeking shapes -->
+          <div class="navy-shape-bl" aria-hidden="true"></div>
+          <div class="navy-shape-br" aria-hidden="true"></div>
+
+          <!-- Section-level houses (outside stage) -->
+          <img class="float blur-md h2-large" src="assets/make-money/house.png" alt="" aria-hidden="true" data-group="h2-large" data-speed="0.6" data-rot="-14">
+          <img class="float shadow-neutral h3-small" src="assets/make-money/house.png" alt="" aria-hidden="true" data-group="h3-small" data-speed="0.4" data-rot="6">
+          <img class="float blur-lg h4-large" src="assets/make-money/house.png" alt="" aria-hidden="true" data-group="h4-large" data-speed="1.8" data-rot="-10">
+
+          <!-- Clean H2 Heading (z-index: 4, nothing covers it) -->
+          <h2 class="mm-title">Why do You need it?</h2>
+
+          <!-- Stage Container (NO z-index or transform) -->
+          <div class="mm-stage">
+
+            <!-- Stage Radial Glow & Concentric Elliptical Rings -->
+            <div class="stage-glow" aria-hidden="true"></div>
+            <div class="ring ring-1" aria-hidden="true"></div>
+            <div class="ring ring-2" aria-hidden="true"></div>
+
+            <!-- Z-INDEX 1: Behind Text Objects -->
+            <img class="float note-500 shadow-motion-500" src="assets/make-money/note-500.png" alt="" aria-hidden="true" data-group="n500" data-speed="0.5" data-rot="-18">
+            <img class="float coin coin-1 shadow-neutral" src="assets/make-money/coin.png" alt="" aria-hidden="true" data-group="c1" data-speed="0.6" data-rot="-12">
+            <img class="float stage-house shadow-neutral" src="assets/make-money/house.png" alt="" aria-hidden="true" data-group="shouse" data-speed="0.35" data-rot="8">
+
+            <!-- ₹200 NOTE BACK LAYER (Z-Index 1: Under text) -->
+            <!-- 1. Back Blurred Copy -->
+            <img class="float note-200 n200-back-blur" src="assets/make-money/note-200.png" alt="" aria-hidden="true" data-group="n200" data-speed="1.6" data-rot="-8">
+            <!-- 2. Back Sharp Copy (masked to fade out left edge) -->
+            <img class="float note-200 n200-back-sharp sharp-mask" src="assets/make-money/note-200.png" alt="" aria-hidden="true" data-group="n200" data-speed="1.6" data-rot="-8">
+
+            <!-- Z-INDEX 2: Big Headline Text -->
+            <h3 class="mm-big">CLOSE PROJECTS</h3>
+
+            <!-- ₹200 NOTE FRONT LAYER (Z-Index 3: Over text) -->
+            <!-- 3. Front Blurred Copy (clipped) -->
+            <img class="float note-200 n200-front-blur front-clip" src="assets/make-money/note-200.png" alt="" aria-hidden="true" data-group="n200" data-speed="1.6" data-rot="-8">
+            <!-- 4. Front Sharp Copy (clipped & masked to fade out left edge) -->
+            <img class="float note-200 n200-front-sharp front-clip sharp-mask" src="assets/make-money/note-200.png" alt="" aria-hidden="true" data-group="n200" data-speed="1.6" data-rot="-8">
+
+            <!-- Z-INDEX 3: Front Coin (over "OJ") -->
+            <img class="float coin coin-2 shadow-neutral" src="assets/make-money/coin.png" alt="" aria-hidden="true" data-group="c2" data-speed="1.7" data-rot="14">
+
+          </div>
+
+          <!-- Subtitle (z-index: 4) -->
+          <p class="mm-sub">This course is perfect for you if:</p>
+
+          <!-- 4-Column Grid (z-index: 4) -->
+          <div class="mm-grid">
+            <div class="mm-item">
+              <span class="mm-num">01</span>
+              <p>You have your own small business</p>
+            </div>
+            <div class="mm-item">
+              <span class="mm-num">02</span>
+              <p>You want to learn design</p>
+            </div>
+            <div class="mm-item">
+              <span class="mm-num">03</span>
+              <p>You are a marketer and want earn more</p>
+            </div>
+            <div class="mm-item">
+              <span class="mm-num">04</span>
+              <p>You want to earn from the comfort of home</p>
+            </div>
+          </div>
+
+        </section>
       </div>
     </section>
 

@@ -202,3 +202,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 })();
+
+/* --- "Why do you need it?" / CLOSE PROJECTS section: one scrubbed GSAP parallax timeline --- */
+(function () {
+  if (!window.gsap || !window.ScrollTrigger) return;
+  var section = document.getElementById('mm-section');
+  if (!section) return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', function () {
+    var tl = gsap.timeline({
+      scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1 }
+    });
+
+    // parallax groups; the n200 group holds all 4 copies of the Rs 200 note so they move as one
+    var groups = [
+      { group: 'n200',     speed: 1.6,  rot: 20 },
+      { group: 'n500',     speed: 0.5,  rot: -16 },
+      { group: 'c1',       speed: 0.6,  isCoin: true },
+      { group: 'c2',       speed: 1.7,  isCoin: true },
+      { group: 'shouse',   speed: 0.35, rot: 10 },
+      { group: 'h2-large', speed: 0.6,  rot: -12 },
+      { group: 'h3-small', speed: 0.4,  rot: 8 },
+      { group: 'h4-large', speed: 1.8,  rot: -14 }
+    ];
+
+    groups.forEach(function (item) {
+      var els = section.querySelectorAll('[data-group="' + item.group + '"]');
+      if (!els.length) return;
+      if (item.isCoin) {
+        // coins fake a 3D spin with scaleX keyframes
+        tl.fromTo(els, { y: 120 * item.speed, force3D: true }, {
+          y: -120 * item.speed, force3D: true, duration: 1, ease: 'none',
+          keyframes: { scaleX: [1, 0.5, 1, 0.5, 1] }
+        }, 0);
+      } else {
+        tl.fromTo(els,
+          { y: 120 * item.speed, rotation: -item.rot / 2, force3D: true },
+          { y: -120 * item.speed, rotation: item.rot / 2, force3D: true, duration: 1, ease: 'none' }, 0);
+      }
+    });
+  });
+})();

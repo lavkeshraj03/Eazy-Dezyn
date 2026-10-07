@@ -4931,3 +4931,411 @@ svg {
   }
 }
 
+/* ============ MAKE MONEY / "WHY DO YOU NEED IT" SECTION (GSAP parallax) ============ */
+.mm-wrap {
+  --navy: #0d2433;
+  --card: #eef1f5;
+  --pink: #ec4a7f;
+  --text: #1b2b36;
+  --num: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  line-height: normal;
+}
+
+.mm-wrap *,
+.mm-wrap *::before,
+.mm-wrap *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mm-wrap .svg-filters {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+
+   
+ 
+ 
+  /* Inline SVG Filter setup for directional & speed motion blur */
+  .mm-wrap .svg-filters {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+
+  /* ===== Outer Section Wrapper ===== */
+  .mm-wrap {
+    position: relative;
+    padding: 60px 4%;
+    overflow: hidden;
+    background: linear-gradient(160deg, #dfe4ea 0%, #dfe4ea 55%, transparent 55%), var(--navy);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /* ===== Main Light Card Container ===== */
+  .mm-wrap .mm-section {
+    position: relative;
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    background: radial-gradient(ellipse at 50% 50%, #ffffff 0%, var(--card) 60%, #e7ebf0 100%);
+    padding: 220px 6% 60px;
+    text-align: center;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 36px;
+  }
+
+
+  /* Hot-pink circle in top-left corner (behind everything) */
+  .mm-wrap .mm-section::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: -120px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: var(--pink);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+
+  /* Decorative navy diagonal shapes peeking at bottom-left and bottom-right */
+  .mm-wrap .navy-shape-bl {
+    position: absolute;
+    left: -70px;
+    bottom: -70px;
+    width: 240px;
+    height: 240px;
+    background: var(--navy);
+    transform: rotate(25deg);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 20px;
+  }
+.mm-wrap .navy-shape-br {
+    position: absolute;
+    right: -70px;
+    bottom: -70px;
+    width: 240px;
+    height: 240px;
+    background: var(--navy);
+    transform: rotate(-25deg);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 20px;
+  }
+
+
+  /* ===== H2 Title (z-index: 4, nothing covers it) ===== */
+  .mm-wrap .mm-title {
+    font-size: clamp(34px, 3.4vw, 58px);
+    font-weight: 900;
+    color: var(--navy);
+    letter-spacing: -1px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 4;
+    user-select: none;
+  }
+
+
+  /* ===== CLOSE PROJECTS Stage ===== */
+  /* CRITICAL: Stage MUST NOT have z-index or transform to prevent stacking context traps */
+  .mm-wrap .mm-stage {
+    position: relative;
+    height: clamp(200px, 22vw, 360px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /* Soft radial glow with faint concentric elliptical rings behind CLOSE PROJECTS */
+  .mm-wrap .stage-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(380px, 50vw, 780px);
+    height: clamp(200px, 26vw, 360px);
+    background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(238, 241, 245, 0.6) 45%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+.mm-wrap .ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(13, 36, 51, 0.06);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+.mm-wrap .ring-1 { width: clamp(320px, 42vw, 640px); height: clamp(160px, 21vw, 310px); }
+.mm-wrap .ring-2 { width: clamp(480px, 60vw, 920px); height: clamp(240px, 32vw, 460px); }
+
+
+  /* Giant "CLOSE PROJECTS" Headline (H3, z-index: 2) */
+  .mm-wrap .mm-big {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(44px, 7.2vw, 124px);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--navy);
+    letter-spacing: -2px;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+  }
+
+
+  /* ===== Base Floating Element Classes ===== */
+  .mm-wrap .float {
+    position: absolute;
+    height: auto;
+    user-select: none;
+    pointer-events: none;
+    animation: mmBob 6s ease-in-out infinite;
+  }
+@keyframes mmBob {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -16px; }
+  }
+
+
+  /* Soft neutral shadow filter rule (NO colored glows) */
+  .mm-wrap .shadow-neutral {
+    filter: drop-shadow(0 18px 22px rgba(13, 36, 51, 0.14));
+  }
+
+
+  /* Directional Motion Blur filter for background ₹500 note */
+  .mm-wrap .shadow-motion-500 {
+    filter: url(#mm-motion-x) drop-shadow(0 18px 22px rgba(13, 36, 51, 0.14));
+  }
+
+
+  /* Depth Blurs */
+  .mm-wrap .blur-sm { filter: blur(1.5px) drop-shadow(0 18px 22px rgba(13, 36, 51, 0.12)); }
+.mm-wrap .blur-md { filter: blur(5px) drop-shadow(0 18px 22px rgba(13, 36, 51, 0.14)); }
+.mm-wrap .blur-lg { filter: blur(9px) drop-shadow(0 18px 22px rgba(13, 36, 51, 0.14)); }
+
+
+  /* ===== Stage Object Sizes & Positions ===== */
+  /* Coins */
+  .mm-wrap .coin { width: clamp(55px, 6vw, 110px); }
+
+  
+  /* Coin 1: Behind text, just above OSE / PR (rotate: -12deg). Does NOT overlap H2 */
+  .mm-wrap .coin-1 {
+    left: 36%;
+    top: -16%;
+    rotate: -12deg;
+    z-index: 1;
+    animation-delay: -1s;
+  }
+
+
+  /* Coin 2: In front of text, lower edge over OJ (rotate: 14deg) */
+  .mm-wrap .coin-2 {
+    left: 54%;
+    top: 60%;
+    rotate: 14deg;
+    z-index: 3;
+    animation-delay: -3s;
+  }
+
+
+  /* ₹500 Note: BEHIND text, top-right near ECTS, rotated -18° */
+  .mm-wrap .note-500 {
+    width: clamp(180px, 18vw, 320px);
+    left: 64%;
+    top: -24%;
+    rotate: -18deg;
+    z-index: 1;
+    animation-delay: -4s;
+  }
+
+
+  /* Stage Small House: BEHIND text, top-right beyond S, sharp ~130px */
+  .mm-wrap .stage-house {
+    width: clamp(70px, 7.5vw, 130px);
+    left: 82%;
+    top: -14%;
+    rotate: 8deg;
+    z-index: 1;
+    animation-delay: -2.5s;
+  }
+
+
+  /* ===== ₹200 Note 4-IMAGE SPEED BLUR & WEAVE SYSTEM ===== */
+  /* Rendered 4 times as sibling elements. NO shared parent with transform/filter/z-index/opacity! */
+  .mm-wrap .note-200 {
+    width: clamp(180px, 18vw, 320px);
+    left: 14%;
+    top: 40%;
+    rotate: -8deg;
+    animation-delay: -2s;
+  }
+
+
+  /* Shared Sharp Mask: Fades out toward left so blurred trailing copy shows through */
+  .mm-wrap .sharp-mask {
+    mask-image: linear-gradient(to right, transparent 0%, #000 42%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 42%);
+  }
+
+
+  /* Shared Front Clip Path: Extends past left edge so the speed streak isn't cut off */
+  .mm-wrap .front-clip {
+    clip-path: polygon(-30% -10%, 50% -10%, 40% 110%, -30% 110%);
+  }
+
+
+  /* 1. Back Layer Blurred Copy (z-index: 1) */
+  .mm-wrap .n200-back-blur {
+    z-index: 1;
+    filter: url(#mm-speed-left) drop-shadow(0 18px 22px rgba(13, 36, 51, 0.14));
+  }
+
+
+  /* 2. Back Layer Sharp Copy (z-index: 1) */
+  .mm-wrap .n200-back-sharp {
+    z-index: 1;
+    filter: drop-shadow(0 18px 22px rgba(13, 36, 51, 0.14));
+  }
+
+
+  /* 3. Front Layer Blurred Copy (z-index: 3) */
+  .mm-wrap .n200-front-blur {
+    z-index: 3;
+    filter: url(#mm-speed-left);
+  }
+
+
+  /* 4. Front Layer Sharp Copy (z-index: 3) */
+  .mm-wrap .n200-front-sharp {
+    z-index: 3;
+    filter: none;
+  }
+
+
+  /* ===== Section-Level Houses (Outside Stage) ===== */
+  .mm-wrap .h2-large {
+    left: 1%;
+    top: 7%;
+    width: clamp(150px, 17vw, 320px);
+    rotate: -14deg;
+    z-index: 2;
+    animation-delay: -1.5s;
+  }
+.mm-wrap .h3-small {
+    left: 8%;
+    top: 62%;
+    width: clamp(60px, 6vw, 115px);
+    rotate: 6deg;
+    z-index: 2;
+    animation-delay: -3.5s;
+  }
+.mm-wrap .h4-large {
+    right: -2%;
+    bottom: 2%;
+    width: clamp(160px, 18vw, 340px);
+    rotate: -10deg;
+    z-index: 2;
+    animation-delay: -0.5s;
+  }
+
+
+  /* ===== Subtitle & 4-Column Grid (z-index: 4, nothing covers them) ===== */
+  .mm-wrap .mm-sub {
+    font-size: clamp(16px, 1.2vw, 21px);
+    font-weight: 500;
+    color: var(--navy);
+    margin: 40px 0 30px;
+    position: relative;
+    z-index: 4;
+  }
+.mm-wrap .mm-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: left;
+    position: relative;
+    z-index: 4;
+  }
+.mm-wrap .mm-item {
+    position: relative;
+  }
+.mm-wrap .mm-num {
+    display: block;
+    font-size: clamp(60px, 6vw, 110px);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--num);
+    opacity: 0.8;
+    margin-bottom: 22px;
+    user-select: none;
+  }
+.mm-wrap .mm-item p {
+    font-size: clamp(15px, 1.05vw, 19px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text);
+    max-width: 230px;
+  }
+
+
+  /* ===== Responsive Breakpoints ===== */
+  @media (max-width: 900px) {
+.mm-wrap .mm-section { padding: 120px 6% 50px; }
+.mm-wrap .mm-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.mm-wrap .h3-small { display: none; }
+
+  
+}
+@media (max-width: 520px) {
+.mm-wrap .mm-grid { grid-template-columns: 1fr; text-align: center; }
+.mm-wrap .mm-item p { margin: 0 auto; }
+.mm-wrap .mm-section::before { width: 220px; height: 220px; left: -50px; top: -70px; }
+.mm-wrap .h2-large,
+.mm-wrap .h4-large { opacity: 0.6; }
+.mm-wrap .mm-big { white-space: normal; }
+ /* Wrap onto 2 lines: CLOSE / PROJECTS */
+    .mm-wrap .note-200 { left: 8%; top: 30%; }
+
+  
+}
+
+
+  /* Accessibility fallback: prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+.mm-wrap .float {
+      animation: none !important;
+      translate: 0 0 !important;
+    }
+
+  
+}
+
+
