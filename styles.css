@@ -5270,7 +5270,13 @@ svg {
     font-size: clamp(44px, min(6vw, 9vh), 90px);
     font-weight: 900;
     line-height: 1;
-    color: #45B28D; /* site green, clearly visible on the light background */
+    /* frosted "bathroom glass" numbers: translucent green-to-white fill, light glass edge, soft blur and glow */
+    color: transparent;
+    background: linear-gradient(160deg, rgba(190, 235, 216, 0.95) 0%, rgba(80, 184, 148, 0.97) 45%, rgba(34, 136, 100, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+    filter: blur(0.4px) drop-shadow(0 6px 12px rgba(46, 143, 108, 0.32));
     opacity: 1;
     margin-bottom: clamp(6px, 1.2vh, 12px);
     user-select: none;
