@@ -5024,7 +5024,9 @@ svg {
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    background: var(--pink);
+    background: transparent; /* a pink ring instead of a solid circle */
+    border: 38px solid var(--pink);
+    box-sizing: border-box;
     z-index: 0;
     pointer-events: none;
   }
@@ -5157,7 +5159,7 @@ svg {
 
   /* ₹500 Note: BEHIND text, top-right near ECTS, rotated -18° */
   .mm-wrap .note-500 {
-    width: clamp(180px, 18vw, 320px);
+    width: clamp(230px, 23vw, 410px);
     left: 64%;
     top: -24%;
     rotate: -18deg;
@@ -5180,7 +5182,7 @@ svg {
   /* ===== ₹200 Note 4-IMAGE SPEED BLUR & WEAVE SYSTEM ===== */
   /* Rendered 4 times as sibling elements. NO shared parent with transform/filter/z-index/opacity! */
   .mm-wrap .note-200 {
-    width: clamp(180px, 18vw, 320px);
+    width: clamp(230px, 23vw, 410px);
     left: 14%;
     top: 40%;
     rotate: -8deg;
@@ -5308,7 +5310,7 @@ svg {
 @media (max-width: 520px) {
 .mm-wrap .mm-grid { grid-template-columns: 1fr; text-align: center; }
 .mm-wrap .mm-item p { margin: 0 auto; }
-.mm-wrap .mm-section::before { width: 220px; height: 220px; left: -50px; top: -70px; }
+.mm-wrap .mm-section::before { width: 220px; height: 220px; left: -50px; top: -70px; border-width: 26px; }
 .mm-wrap .h2-large,
 .mm-wrap .h4-large { opacity: 0.6; }
 .mm-wrap .mm-big { white-space: normal; }
