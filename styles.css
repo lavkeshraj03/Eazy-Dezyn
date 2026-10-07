@@ -4859,7 +4859,7 @@ svg {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 500;
   color: #475569;
   line-height: 1;
@@ -4872,7 +4872,7 @@ svg {
 
 .industry-quote-text {
   font-family: var(--font-body);
-  font-size: 15.5px;
+  font-size: 13.5px;
   line-height: 1.55;
   color: #475569;
   grid-column: 2;
