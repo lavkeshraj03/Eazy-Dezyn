@@ -4992,13 +4992,11 @@ svg {
   /* ===== Outer Section Wrapper ===== */
   .mm-wrap {
     position: relative;
-    padding: 60px 4%;
+    padding: 0;
     overflow: hidden;
-    background: linear-gradient(160deg, #dfe4ea 0%, #dfe4ea 55%, transparent 55%), var(--navy);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* no box: the soft light background fills the whole section */
+    background: radial-gradient(ellipse at 50% 50%, #ffffff 0%, var(--card) 60%, #e7ebf0 100%);
+    display: block;
   }
 
 
@@ -5006,14 +5004,14 @@ svg {
   .mm-wrap .mm-section {
     position: relative;
     width: 100%;
-    max-width: 1700px;
-    margin: 0 auto;
-    background: radial-gradient(ellipse at 50% 50%, #ffffff 0%, var(--card) 60%, #e7ebf0 100%);
-    padding: 220px 6% 60px;
+    max-width: none;
+    margin: 0;
+    background: none;
+    padding: 150px 6% 90px;
     text-align: center;
     overflow: hidden;
     isolation: isolate;
-    border-radius: 36px;
+    border-radius: 0;
   }
 
 
@@ -5032,31 +5030,6 @@ svg {
   }
 
 
-  /* Decorative navy diagonal shapes peeking at bottom-left and bottom-right */
-  .mm-wrap .navy-shape-bl {
-    position: absolute;
-    left: -70px;
-    bottom: -70px;
-    width: 240px;
-    height: 240px;
-    background: var(--navy);
-    transform: rotate(25deg);
-    z-index: 1;
-    pointer-events: none;
-    border-radius: 20px;
-  }
-.mm-wrap .navy-shape-br {
-    position: absolute;
-    right: -70px;
-    bottom: -70px;
-    width: 240px;
-    height: 240px;
-    background: var(--navy);
-    transform: rotate(-25deg);
-    z-index: 1;
-    pointer-events: none;
-    border-radius: 20px;
-  }
 
 
   /* ===== H2 Title (z-index: 4, nothing covers it) ===== */
