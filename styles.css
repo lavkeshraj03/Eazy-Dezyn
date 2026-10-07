@@ -3281,14 +3281,15 @@ svg {
 }
 
 .reviews-title {
-  font-family: var(--font-body);
-  font-size: clamp(24px, 3.2vw, 34px);
+  font-family: var(--font-head);
+  font-size: clamp(28px, 3.5vw, 42px); /* same as the other section titles */
   font-weight: 800;
-  color: #0f172a;
+  line-height: 1.15;
+  letter-spacing: -0.022em;
+  color: #1E2B24;
   text-align: center;
-  letter-spacing: -0.01em;
   margin: 0 0 42px 0;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .reviews-grid {
@@ -3478,7 +3479,6 @@ svg {
   }
   
   .reviews-title {
-    font-size: 22px;
     margin-bottom: 28px;
   }
 }
