@@ -2456,10 +2456,10 @@ svg {
 .value-stack-section::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: -60px; /* starts above the section so the blurred top edge is clipped away and the top is solid #052419 */
   left: -15%;
   right: -15%;
-  height: calc(56% + 250px);
+  height: calc(56% + 310px);
   background: #052419;
   border-bottom-left-radius: 50% 220px;
   border-bottom-right-radius: 50% 220px;
