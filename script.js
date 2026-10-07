@@ -251,11 +251,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!grid || grid.dataset.cloned) return;
   grid.dataset.cloned = '1';
   var originals = Array.prototype.slice.call(grid.children);
-  originals.forEach(function (card) {
-    var clone = card.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    grid.appendChild(clone);
-  });
+  grid.dataset.count = originals.length;
+  // two extra copies (3 sets in total) so the row can loop in both directions while people drag or swipe it
+  for (var copy = 0; copy < 2; copy++) {
+    originals.forEach(function (card) {
+      var clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      grid.appendChild(clone);
+    });
+  }
 })();
 
 /* --- Reviews: click a screenshot to open it in a lightbox gallery --- */
@@ -263,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var grid = document.querySelector('.reviews-grid');
   if (!grid) return;
   var shots = Array.prototype.slice.call(grid.querySelectorAll('.rev-shot'));
-  var total = shots.length / 2; // second half are the marquee clones
+  var total = parseInt(grid.dataset.count, 10) || shots.length; // the rest are marquee copies
   if (!total) return;
 
   var items = shots.slice(0, total).map(function (fig) {
@@ -376,4 +380,93 @@ document.addEventListener('DOMContentLoaded', () => {
     startX = null;
     if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
   }, { passive: true });
+})();
+
+
+/* --- Reviews row: slow auto-scroll that people can also drag (mouse), swipe (phone) or scroll (trackpad) --- */
+(function () {
+  var view = document.querySelector('.reviews-marquee');
+  var grid = document.querySelector('.reviews-grid');
+  if (!view || !grid || !grid.dataset.count) return;
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var setW = 0;            // width of one set of screenshots
+  var pos = 0;             // float scroll position (scrollLeft can round)
+  var speed = 0;           // px per second
+  var holdUntil = 0;       // auto-scroll is paused until this timestamp
+  var hovering = false, dragging = false, visible = true, moved = false;
+  var last = 0;
+
+  function measure() {
+    setW = grid.scrollWidth / 3;
+    speed = setW / 56;     // one full set every 56 seconds, as before
+    if (!view.scrollLeft) { view.scrollLeft = setW; }
+    pos = view.scrollLeft;
+  }
+
+  function wrap() {
+    // the three sets are identical, so jumping by one set width is invisible
+    if (view.scrollLeft >= setW * 2 - view.clientWidth) { view.scrollLeft -= setW; }
+    else if (view.scrollLeft <= setW * 0.25) { view.scrollLeft += setW; }
+    pos = view.scrollLeft;
+  }
+
+  function hold(ms) { holdUntil = Math.max(holdUntil, performance.now() + ms); }
+
+  function tick(now) {
+    var dt = Math.min((now - last) / 1000, 0.1);
+    last = now;
+    if (!reduce && visible && !hovering && !dragging && now > holdUntil &&
+        !document.body.classList.contains('rev-lb-open')) {
+      pos += speed * dt;
+      view.scrollLeft = pos;
+      wrap();
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // keep our position in sync when the user scrolls (trackpad, shift+wheel, touch, scrollbar keys)
+  view.addEventListener('scroll', function () { if (!dragging) { pos = view.scrollLeft; wrap(); } }, { passive: true });
+  view.addEventListener('wheel', function () { hold(1800); }, { passive: true });
+  view.addEventListener('touchstart', function () { hold(2500); }, { passive: true });
+  view.addEventListener('touchend', function () { hold(2500); }, { passive: true });
+  view.addEventListener('mouseenter', function () { hovering = true; });
+  view.addEventListener('mouseleave', function () { hovering = false; });
+
+  // mouse drag
+  var startX = 0, startLeft = 0;
+  view.addEventListener('pointerdown', function (e) {
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    dragging = true; moved = false;
+    startX = e.clientX; startLeft = view.scrollLeft;
+    view.classList.add('is-dragging');
+  });
+  window.addEventListener('pointermove', function (e) {
+    if (!dragging) return;
+    var dx = e.clientX - startX;
+    if (Math.abs(dx) > 5) moved = true;
+    view.scrollLeft = startLeft - dx;
+    wrap();
+    startLeft = view.scrollLeft + dx;
+  });
+  window.addEventListener('pointerup', function () {
+    if (!dragging) return;
+    dragging = false;
+    view.classList.remove('is-dragging');
+    pos = view.scrollLeft;
+    hold(1200);
+  });
+  // a drag must not count as a click on a screenshot (which would open the gallery)
+  view.addEventListener('click', function (e) {
+    if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
+  }, true);
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }).observe(view);
+  }
+
+  window.addEventListener('resize', function () { var rel = setW ? view.scrollLeft / setW : 1; measure(); view.scrollLeft = rel * setW; pos = view.scrollLeft; });
+  window.addEventListener('load', function () { measure(); });
+  measure();
+  requestAnimationFrame(function (t) { last = t; tick(t); });
 })();

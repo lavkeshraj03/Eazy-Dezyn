@@ -5390,7 +5390,13 @@ svg {
   width: 90%;
   max-width: none;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: auto; /* people can drag, swipe or scroll it sideways */
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: auto;
+  overscroll-behavior-x: contain;
+  cursor: grab;
   padding: 26px 0 34px; /* room for card shadows and the hover lift */
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%);
@@ -5406,21 +5412,11 @@ svg {
   margin: 0;
   padding-right: 18px; /* equals the gap, so the -50% loop lands exactly on the first copy */
   will-change: transform;
-  animation: reviewsMarquee 56s linear infinite;
-}
-
-.reviews-marquee:hover .reviews-grid {
-  animation-play-state: paused;
 }
 
 .reviews-grid .rev-card {
   flex: 0 0 310px;
   width: 310px;
-}
-
-@keyframes reviewsMarquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
 }
 
 @media (max-width: 580px) {
@@ -5642,4 +5638,21 @@ body.rev-lb-open {
 
 @media (prefers-reduced-motion: reduce) {
   .rev-lb, .rev-lb-img { transition: none; }
+}
+
+.reviews-marquee::-webkit-scrollbar {
+  display: none;
+}
+
+.reviews-marquee.is-dragging {
+  cursor: grabbing;
+}
+
+.reviews-marquee.is-dragging .rev-shot {
+  cursor: grabbing;
+}
+
+.reviews-marquee .rev-shot img {
+  -webkit-user-drag: none;
+  user-select: none;
 }
