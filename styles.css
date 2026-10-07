@@ -5442,7 +5442,7 @@ svg {
 
 /* Review screenshots inside the marquee (replace the written review cards) */
 .reviews-grid .rev-shot {
-  --n: 5; /* how many screenshots fit across the row at once */
+  --n: 4; /* how many screenshots fit across the row at once */
   flex: 0 0 auto;
   /* all cards share one width so 5 fit in view; each keeps its own natural height, so none is stretched or cut */
   width: calc((90vw - 48px - (var(--n) - 1) * 18px) / var(--n));
