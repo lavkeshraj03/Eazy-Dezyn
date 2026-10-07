@@ -5399,7 +5399,7 @@ svg {
 .reviews-grid {
   display: flex;
   flex-wrap: nowrap;
-  align-items: stretch;
+  align-items: center; /* shorter screenshots sit centred next to the taller ones */
   gap: 18px;
   width: max-content;
   max-width: none;
@@ -5445,8 +5445,10 @@ svg {
 
 /* Review screenshots inside the marquee (replace the written review cards) */
 .reviews-grid .rev-shot {
+  --k: 0.5; /* screenshots shown at half their real size: each keeps its own height so no text is shrunk or cut */
   flex: 0 0 auto;
-  height: 320px;
+  width: calc(var(--w) * var(--k) * 1px);
+  height: auto;
   margin: 0;
   border-radius: 18px;
   overflow: hidden;
@@ -5462,14 +5464,14 @@ svg {
 
 .reviews-grid .rev-shot img {
   display: block;
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
   max-width: none;
 }
 
 @media (max-width: 580px) {
   .reviews-grid .rev-shot {
-    height: 240px;
+    --k: 0.36;
   }
 }
 
