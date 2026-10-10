@@ -5145,7 +5145,7 @@ svg {
 
   /* Coin 2: In front of text, lower edge over OJ (rotate: 14deg) */
   .mm-wrap .coin-2 {
-    left: 69%;
+    left: calc(69% + 60px);
     top: 60%;
     rotate: 14deg;
     z-index: 3;
