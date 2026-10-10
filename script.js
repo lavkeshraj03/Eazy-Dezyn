@@ -216,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // parallax groups; the n200 group holds all 4 copies of the Rs 200 note so they move as one
+    var travel = window.innerWidth < 640 ? 0.4 : 1; // shorter parallax travel on phones so the floating items stay near their spot
     var groups = [
       { group: 'n200',     speed: 1.6,  rot: 20 },
       { group: 'n500',     speed: 0.5,  rot: -16 },
@@ -232,14 +233,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!els.length) return;
       if (item.isCoin) {
         // coins fake a 3D spin with scaleX keyframes
-        tl.fromTo(els, { y: 120 * item.speed, force3D: true }, {
-          y: -120 * item.speed, force3D: true, duration: 1, ease: 'none',
+        tl.fromTo(els, { y: 120 * item.speed * travel, force3D: true }, {
+          y: -120 * item.speed * travel, force3D: true, duration: 1, ease: 'none',
           keyframes: { scaleX: [1, 0.5, 1, 0.5, 1] }
         }, 0);
       } else {
         tl.fromTo(els,
-          { y: 120 * item.speed, rotation: -item.rot / 2, force3D: true },
-          { y: -120 * item.speed, rotation: item.rot / 2, force3D: true, duration: 1, ease: 'none' }, 0);
+          { y: 120 * item.speed * travel, rotation: -item.rot / 2, force3D: true },
+          { y: -120 * item.speed * travel, rotation: item.rot / 2, force3D: true, duration: 1, ease: 'none' }, 0);
       }
     });
   });
