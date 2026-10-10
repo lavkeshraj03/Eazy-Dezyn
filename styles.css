@@ -2285,8 +2285,9 @@ svg {
 }
 
 .bonus-placeholder-banner {
-  background: #EFF7F3;
-  height: 200px;
+  background: #E7F3ED;
+  height: auto;
+  aspect-ratio: 1200 / 690; /* cover image shows in full, no cropping */
   position: relative;
   overflow: hidden;
   display: flex;
