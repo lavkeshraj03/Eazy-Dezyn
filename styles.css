@@ -4994,8 +4994,8 @@ svg {
     position: relative;
     padding: 0;
     overflow: hidden;
-    /* no box: the soft light background fills the whole section */
-    background: radial-gradient(ellipse at 50% 50%, #ffffff 0%, var(--card) 60%, #e7ebf0 100%);
+    /* no box: a flat mint background fills the whole section */
+    background: #D9EBE2;
     display: block;
   }
 
