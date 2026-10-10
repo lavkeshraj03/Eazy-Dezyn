@@ -5084,6 +5084,17 @@ svg {
     pointer-events: none;
   }
 
+  /* one smaller line under the big headline */
+  .mm-wrap .mm-big-sub {
+    display: block;
+    margin-top: 0.14em;
+    font-size: 0.3em;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    line-height: 1.1;
+    color: var(--navy);
+  }
+
 
   /* ===== Base Floating Element Classes ===== */
   .mm-wrap .float {
