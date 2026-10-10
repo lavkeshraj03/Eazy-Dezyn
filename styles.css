@@ -5279,7 +5279,7 @@ svg {
 .mm-wrap .mm-num {
     display: block;
     font-size: clamp(40px, calc(min(6vw, 9vh) - 4px), 86px); /* 4px smaller than before */
-    margin-left: -2px; /* the big glyphs have side space; this lines the digits up with the description text */
+    margin-left: -4px; /* the big glyphs have side space; this lines the digits up with the description text */
     font-weight: 900;
     line-height: 1;
     /* frosted "bathroom glass" numbers: dark smoked-glass fill, light glass edge, soft blur and glow */
