@@ -4428,6 +4428,29 @@ svg {
   box-shadow: 0 14px 30px rgba(46, 120, 92, 0.36);
 }
 
+/* gentle heartbeat: a quick double pulse (lub-dub), then a rest, repeating */
+.final-offer-btn {
+  animation: offerHeartbeat 1.8s ease-in-out infinite;
+}
+
+.final-offer-btn:hover,
+.final-offer-btn:focus-visible {
+  animation: none; /* stop pulsing while the visitor is on it; the hover lift takes over */
+}
+
+@keyframes offerHeartbeat {
+  0%   { transform: scale(1); }
+  14%  { transform: scale(1.06); }
+  28%  { transform: scale(1); }
+  42%  { transform: scale(1.045); }
+  60%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .final-offer-btn { animation: none; }
+}
+
 .final-offer-arrow {
   font-size: 24px;
   font-weight: 800;
