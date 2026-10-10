@@ -5278,17 +5278,11 @@ svg {
   }
 .mm-wrap .mm-num {
     display: block;
-    font-size: clamp(36px, calc(min(6vw, 9vh) - 10px), 80px); /* a little smaller */
+    font-size: clamp(36px, calc(min(6vw, 9vh) - 10px), 80px);
     margin-left: -4px; /* the big glyphs have side space; this lines the digits up with the description text */
     font-weight: 900;
     line-height: 1;
-    /* frosted "bathroom glass" numbers: dark smoked-glass fill, light glass edge, soft blur and glow */
-    color: transparent;
-    background: linear-gradient(160deg, rgba(120, 132, 142, 0.9) 0%, rgba(40, 52, 62, 0.96) 45%, rgba(13, 24, 33, 1) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    /* no text-stroke: it drew lines where the glyph outlines overlap (inside 3 and 4); a soft white halo gives the glass edge instead */
-    filter: none; /* no glow or shadow */
+    color: #000000; /* jet black */
     opacity: 1;
     margin-bottom: clamp(6px, 1.2vh, 12px);
     user-select: none;
