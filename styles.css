@@ -549,9 +549,10 @@ svg {
 /* Caption — beside spreadsheet card under trailer */
 .video-caption {
   position: absolute;
-  bottom: -28px;
-  left: 168px;
+  bottom: -34px;
+  left: 0;
   right: 0;
+  text-align: center; /* centred under the video card (the PDF card it used to sit beside is gone) */
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13.5px;
   color: #7A8E85;
