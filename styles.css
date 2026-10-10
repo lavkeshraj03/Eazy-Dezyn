@@ -4870,6 +4870,13 @@ svg {
   flex-shrink: 0;
 }
 
+.industry-author-role {
+  font-size: 0.72em;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
+}
+
 .industry-quote-text {
   font-family: var(--font-body);
   font-size: 13.5px;
