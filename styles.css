@@ -224,8 +224,12 @@ svg {
   margin-bottom: 18px;
 }
 
-.hero-headline .ghost-word {
+.hero-headline .close-word {
   color: var(--green);
+}
+
+.hero-headline .ghost-word {
+  color: #EF4444; /* same red as the Ghosted headline in the final section */
 }
 
 /* Body text */
