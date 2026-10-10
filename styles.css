@@ -5278,7 +5278,7 @@ svg {
   }
 .mm-wrap .mm-num {
     display: block;
-    font-size: clamp(40px, calc(min(6vw, 9vh) - 4px), 86px); /* 4px smaller than before */
+    font-size: clamp(36px, calc(min(6vw, 9vh) - 10px), 80px); /* a little smaller */
     margin-left: -4px; /* the big glyphs have side space; this lines the digits up with the description text */
     font-weight: 900;
     line-height: 1;
@@ -5288,7 +5288,7 @@ svg {
     -webkit-background-clip: text;
     background-clip: text;
     /* no text-stroke: it drew lines where the glyph outlines overlap (inside 3 and 4); a soft white halo gives the glass edge instead */
-    filter: blur(0.4px) drop-shadow(0 0 1.5px rgba(255, 255, 255, 0.9)) drop-shadow(0 6px 12px rgba(13, 36, 51, 0.30));
+    filter: none; /* no glow or shadow */
     opacity: 1;
     margin-bottom: clamp(6px, 1.2vh, 12px);
     user-select: none;
