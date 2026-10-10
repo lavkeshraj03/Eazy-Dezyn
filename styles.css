@@ -5156,7 +5156,7 @@ svg {
   /* ₹500 Note: BEHIND text, top-right near ECTS, rotated -18° */
   .mm-wrap .note-500 {
     width: clamp(230px, 23vw, 410px);
-    left: calc(64% + 150px);
+    left: calc(64% + 170px);
     top: -34%;
     rotate: -18deg;
     z-index: 1;
