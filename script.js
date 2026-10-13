@@ -471,3 +471,26 @@ document.addEventListener('DOMContentLoaded', () => {
   measure();
   requestAnimationFrame(function (t) { last = t; tick(t); });
 })();
+
+/* --- Close Projects on phones: headline words and point cards slide in as they come into view --- */
+(function () {
+  if (!window.gsap || !window.ScrollTrigger) return;
+  if (window.innerWidth > 640) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var section = document.getElementById('mm-section');
+  if (!section) return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(section.querySelectorAll('.mm-word'), {
+    y: 34, opacity: 0, duration: 0.7, ease: 'power3.out', stagger: 0.14,
+    scrollTrigger: { trigger: section, start: 'top 75%', once: true }
+  });
+  gsap.from(section.querySelector('.mm-big-sub'), {
+    scale: 0.6, opacity: 0, duration: 0.55, ease: 'back.out(2.2)', delay: 0.35,
+    scrollTrigger: { trigger: section, start: 'top 75%', once: true }
+  });
+  gsap.from(section.querySelectorAll('.mm-item'), {
+    y: 40, opacity: 0, duration: 0.6, ease: 'power3.out', stagger: 0.12,
+    scrollTrigger: { trigger: section.querySelector('.mm-grid'), start: 'top 90%', once: true }
+  });
+})();
