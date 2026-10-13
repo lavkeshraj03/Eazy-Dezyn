@@ -1091,9 +1091,27 @@
 
         <h2 class="pricing-main-title">Pick Your Plan</h2>
 
+        <!-- Plan tabs: each one jumps to its plan card below -->
+        <nav class="plan-tabs" aria-label="Choose a plan">
+          <a href="#plan-template" class="plan-tab">
+            <span class="plan-tab-main">
+              <span class="plan-tab-name">Template Only</span>
+              <span class="plan-tab-price">₹1,200</span>
+            </span>
+            <span class="plan-tab-tag">Plan 1</span>
+          </a>
+          <a href="#plan-complete" class="plan-tab is-active" aria-current="true">
+            <span class="plan-tab-main">
+              <span class="plan-tab-name">Complete</span>
+              <span class="plan-tab-price">₹2,499</span>
+            </span>
+            <span class="plan-tab-tag">Plan 2</span>
+          </a>
+        </nav>
+
         <div class="price-cards-grid">
           <!-- Card 1: Template Only -->
-          <div class="price-plan-card">
+          <div class="price-plan-card" id="plan-template">
             <div class="plan-header-strip strip-muted">
               Template only
             </div>
@@ -1157,7 +1175,7 @@
           </div>
 
           <!-- Card 2: Complete (Featured) -->
-          <div class="price-plan-card featured-plan-card">
+          <div class="price-plan-card featured-plan-card" id="plan-complete">
             <!-- Floating Tilted Badge -->
             <div class="plan-floating-badge">★ Most Popular</div>
 

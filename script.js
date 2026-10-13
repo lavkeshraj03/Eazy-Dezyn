@@ -494,3 +494,47 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTrigger: { trigger: section.querySelector('.mm-grid'), start: 'top 90%', once: true }
   });
 })();
+
+/* --- Plan tabs under "Pick Your Plan": jump to the chosen plan card and keep the active tab in sync --- */
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.plan-tab'));
+  if (!tabs.length) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function setActive(id) {
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('href') === '#' + id;
+      t.classList.toggle('is-active', on);
+      if (on) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
+    });
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function (e) {
+      var id = tab.getAttribute('href').slice(1);
+      var card = document.getElementById(id);
+      if (!card) return;
+      e.preventDefault();
+      setActive(id);
+      card.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      card.classList.remove('plan-flash');
+      void card.offsetWidth; // restart the glow if it was already running
+      card.classList.add('plan-flash');
+      setTimeout(function () { card.classList.remove('plan-flash'); }, 1600);
+    });
+  });
+
+  // when the cards are stacked (tablet / phone), the tab follows whichever card is more in view
+  if ('IntersectionObserver' in window) {
+    var cards = tabs.map(function (t) { return document.getElementById(t.getAttribute('href').slice(1)); }).filter(Boolean);
+    var ratios = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { ratios[en.target.id] = en.intersectionRatio; });
+      if (window.innerWidth > 820) return; // side by side on desktop: keep the tab the visitor chose
+      var best = null;
+      cards.forEach(function (c) { if (!best || (ratios[c.id] || 0) > (ratios[best.id] || 0)) best = c; });
+      if (best && (ratios[best.id] || 0) > 0) setActive(best.id);
+    }, { threshold: [0, 0.15, 0.3, 0.5, 0.7, 0.9, 1] });
+    cards.forEach(function (c) { io.observe(c); });
+  }
+})();

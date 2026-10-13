@@ -7138,3 +7138,137 @@ svg {
     font-size: 10.5px;
   }
 }
+
+/* ============ PLAN TABS (under "Pick Your Plan") ============ */
+.pricing-main-title {
+  margin-bottom: 24px;
+}
+
+.plan-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  max-width: 680px;
+  margin: 0 auto 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.plan-tab {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px 14px 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1.5px solid rgba(255, 255, 255, 0.26);
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: left;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.plan-tab:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.17);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.plan-tab:focus-visible {
+  outline: 3px solid #7FE1BC;
+  outline-offset: 3px;
+}
+
+.plan-tab-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  line-height: 1.15;
+  min-width: 0;
+}
+
+.plan-tab-name {
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.plan-tab-price {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  color: #BFEBD7;
+}
+
+.plan-tab-tag {
+  flex-shrink: 0;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: #44B28D;
+  color: #FFFFFF;
+  font-family: var(--font-subhead);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* selected tab */
+.plan-tab.is-active {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #14221C;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+
+.plan-tab.is-active .plan-tab-price {
+  color: #2E8F6C;
+}
+
+/* the plan cards stop below the sticky header when a tab scrolls to them */
+.price-plan-card {
+  scroll-margin-top: 110px;
+}
+
+/* brief glow on the card a tab just jumped to */
+.price-plan-card.plan-flash {
+  animation: planFlash 1.5s ease-out;
+}
+
+@keyframes planFlash {
+  0%   { outline: 4px solid rgba(127, 225, 188, 0.95); outline-offset: 4px; }
+  70%  { outline: 4px solid rgba(127, 225, 188, 0.55); outline-offset: 8px; }
+  100% { outline: 4px solid rgba(127, 225, 188, 0);    outline-offset: 12px; }
+}
+
+@media (max-width: 640px) {
+  .plan-tabs {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .plan-tab {
+    padding: 13px 14px 13px 18px;
+  }
+
+  .plan-tab-name {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .price-plan-card.plan-flash {
+    animation: none;
+  }
+  .plan-tab {
+    transition: none;
+  }
+}
