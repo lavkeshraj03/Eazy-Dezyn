@@ -7163,9 +7163,9 @@ svg {
   gap: 12px;
   padding: 14px 20px 14px 16px;
   border-radius: 18px;
-  background: #4BB28D;
-  border: 1.5px solid rgba(255, 255, 255, 0.38);
-  color: #FFFFFF;
+  background: #FFFFFF;
+  border: 1.5px solid #FFFFFF;
+  color: #14221C;
   text-decoration: none;
   text-align: left;
   -webkit-backdrop-filter: blur(8px);
@@ -7176,8 +7176,8 @@ svg {
 
 .plan-tab:hover {
   transform: translateY(-3px);
-  background: #55BD98;
-  border-color: rgba(255, 255, 255, 0.7);
+  background: #F1FAF6;
+  border-color: #BFE6D4;
 }
 
 .plan-tab:focus-visible {
@@ -7208,7 +7208,7 @@ svg {
   flex-shrink: 0;
   line-height: 1.1;
   font-family: var(--font-head);
-  color: #FFFFFF;
+  color: #2E8F6C;
 }
 
 .plan-tab-now {
@@ -7220,26 +7220,26 @@ svg {
 .plan-tab-old {
   font-size: 13px;
   font-weight: 700;
-  color: #C0281E;
+  color: #EF4444;
   text-decoration: line-through;
   text-decoration-thickness: 1.5px;
 }
 
 .plan-tab.is-active .plan-tab-old {
-  color: #EF4444;
+  color: #C0281E;
 }
 
 .plan-tab.is-active .plan-tab-tag {
-  background: #4BB28D;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #2E8F6C;
 }
 
 .plan-tab-tag {
   flex-shrink: 0;
   padding: 6px 13px;
   border-radius: 999px;
-  background: #FFFFFF;
-  color: #2E8F6C;
+  background: #4BB28D;
+  color: #FFFFFF;
   font-family: var(--font-subhead);
   font-size: 11.5px;
   font-weight: 800;
@@ -7248,16 +7248,21 @@ svg {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* selected tab */
+/* selected tab: solid #4BB28D green with white text */
 .plan-tab.is-active {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
-  color: #14221C;
+  background: #4BB28D;
+  border-color: rgba(255, 255, 255, 0.38);
+  color: #FFFFFF;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
 }
 
+.plan-tab.is-active:hover {
+  background: #55BD98;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
 .plan-tab.is-active .plan-tab-price {
-  color: #2E8F6C;
+  color: #FFFFFF;
 }
 
 /* the plan cards stop below the sticky header when a tab scrolls to them */
