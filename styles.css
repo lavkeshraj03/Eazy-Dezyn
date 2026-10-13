@@ -7055,7 +7055,7 @@ svg {
   }
 
   /* floating objects moved to the edges so they frame the headline instead of covering it */
-  .mm-wrap .coin-1 { left: 7%;  top: 2%; }
+  .mm-wrap .coin-1 { left: 7%;  top: 2%; z-index: 3; } /* above the blurred house so the coin stays sharp and bright */
   .mm-wrap .coin-2 { left: auto; right: 8%; top: calc(72% + 70px); }
   .mm-wrap .note-500 { width: 150px; left: auto; right: -34px; top: -6%; }
   .mm-wrap .note-200 { width: 126px; left: -30px; top: 66%; }
