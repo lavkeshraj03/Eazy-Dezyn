@@ -7131,8 +7131,8 @@ svg {
 @media (max-width: 640px) {
   .plan-floating-badge {
     right: 12px;
-    top: -15px;
-    transform: none; /* straight, no tilt */
+    top: -20px;
+    transform: rotate(12deg); /* tilted, but small enough to stay fully inside the screen */
     height: 28px;
     width: 118px;
     font-size: 10.5px;
