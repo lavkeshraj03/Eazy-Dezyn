@@ -7161,7 +7161,7 @@ svg {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 14px 16px 14px 22px;
+  padding: 14px 20px 14px 16px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.09);
   border: 1.5px solid rgba(255, 255, 255, 0.26);
@@ -7185,11 +7185,10 @@ svg {
   outline-offset: 3px;
 }
 
-.plan-tab-main {
+.plan-tab-left {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
-  line-height: 1.15;
+  align-items: center;
+  gap: 12px;
   min-width: 0;
 }
 
@@ -7197,20 +7196,27 @@ svg {
   font-family: var(--font-head);
   font-size: 17px;
   font-weight: 800;
+  line-height: 1.15;
 }
 
+/* price block sits on the right: crossed-out original above, the price you pay below */
 .plan-tab-price {
   display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 2px 9px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+  flex-shrink: 0;
+  line-height: 1.1;
   font-family: var(--font-head);
-  font-size: 16px;
-  font-weight: 800;
   color: #BFEBD7;
 }
 
-/* discount price: the original price is crossed out in red beside the price you pay */
+.plan-tab-now {
+  font-size: 19px;
+  font-weight: 800;
+}
+
+/* discount price: the original price is crossed out in red */
 .plan-tab-old {
   font-size: 13px;
   font-weight: 600;
@@ -7273,7 +7279,7 @@ svg {
   }
 
   .plan-tab {
-    padding: 13px 14px 13px 18px;
+    padding: 13px 16px 13px 13px;
   }
 
   .plan-tab-name {
@@ -7288,4 +7294,12 @@ svg {
   .plan-tab {
     transition: none;
   }
+}
+
+@media (max-width: 360px) {
+  .plan-tab-left { gap: 8px; }
+  .plan-tab-name { font-size: 14.5px; }
+  .plan-tab-tag { padding: 5px 10px; font-size: 10.5px; }
+  .plan-tab-now { font-size: 17px; }
+  .plan-tab-old { font-size: 12px; }
 }
