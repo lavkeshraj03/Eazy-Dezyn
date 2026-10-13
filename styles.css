@@ -7320,3 +7320,18 @@ svg {
     margin-bottom: 48px; /* original spacing under the heading when there are no tabs */
   }
 }
+
+/* "Plan 1" / "Plan 2" tag in the title row of each big plan card (shown on every screen size) */
+.plan-card-tag {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #4BB28D;
+  color: #FFFFFF;
+  font-family: var(--font-subhead);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  box-shadow: 0 6px 14px rgba(75, 178, 141, 0.35);
+}
