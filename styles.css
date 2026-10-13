@@ -7130,9 +7130,9 @@ svg {
 /* "Most Popular" tag on phones: sits on the card's top-right corner but stays fully inside the screen */
 @media (max-width: 640px) {
   .plan-floating-badge {
-    right: 10px;
-    top: -21px;
-    transform: rotate(10deg);
+    right: 12px;
+    top: -15px;
+    transform: none; /* straight, no tilt */
     height: 28px;
     width: 118px;
     font-size: 10.5px;
