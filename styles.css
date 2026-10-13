@@ -7200,10 +7200,27 @@ svg {
 }
 
 .plan-tab-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px 9px;
   font-family: var(--font-head);
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 800;
   color: #BFEBD7;
+}
+
+/* discount price: the original price is crossed out in red beside the price you pay */
+.plan-tab-old {
+  font-size: 13px;
+  font-weight: 600;
+  color: #FF7B7B;
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.plan-tab.is-active .plan-tab-old {
+  color: #EF4444;
 }
 
 .plan-tab-tag {
