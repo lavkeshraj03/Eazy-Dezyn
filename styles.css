@@ -7163,8 +7163,8 @@ svg {
   gap: 12px;
   padding: 14px 20px 14px 16px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.09);
-  border: 1.5px solid rgba(255, 255, 255, 0.26);
+  background: #4BB28D;
+  border: 1.5px solid rgba(255, 255, 255, 0.38);
   color: #FFFFFF;
   text-decoration: none;
   text-align: left;
@@ -7176,8 +7176,8 @@ svg {
 
 .plan-tab:hover {
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.17);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: #55BD98;
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .plan-tab:focus-visible {
@@ -7208,7 +7208,7 @@ svg {
   flex-shrink: 0;
   line-height: 1.1;
   font-family: var(--font-head);
-  color: #BFEBD7;
+  color: #FFFFFF;
 }
 
 .plan-tab-now {
@@ -7219,8 +7219,8 @@ svg {
 /* discount price: the original price is crossed out in red */
 .plan-tab-old {
   font-size: 13px;
-  font-weight: 600;
-  color: #FF7B7B;
+  font-weight: 700;
+  color: #C0281E;
   text-decoration: line-through;
   text-decoration-thickness: 1.5px;
 }
@@ -7229,12 +7229,17 @@ svg {
   color: #EF4444;
 }
 
+.plan-tab.is-active .plan-tab-tag {
+  background: #4BB28D;
+  color: #FFFFFF;
+}
+
 .plan-tab-tag {
   flex-shrink: 0;
   padding: 6px 13px;
   border-radius: 999px;
-  background: #44B28D;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #2E8F6C;
   font-family: var(--font-subhead);
   font-size: 11.5px;
   font-weight: 800;
