@@ -7308,3 +7308,15 @@ svg {
   .plan-tab-now { font-size: 17px; }
   .plan-tab-old { font-size: 12px; }
 }
+
+/* Plan tabs are only for tablet and phone, where the two plan cards stack. Hidden on desktop,
+   where both cards are already side by side. */
+@media (min-width: 901px) {
+  .plan-tabs {
+    display: none;
+  }
+
+  .pricing-main-title {
+    margin-bottom: 48px; /* original spacing under the heading when there are no tabs */
+  }
+}
