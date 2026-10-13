@@ -7131,8 +7131,8 @@ svg {
 @media (max-width: 640px) {
   .plan-floating-badge {
     right: 12px;
-    top: -20px;
-    transform: rotate(12deg); /* tilted, but small enough to stay fully inside the screen */
+    top: -14px; /* centred on the card's top edge: half above it, half on the header strip */
+    transform: rotate(9deg); /* tilted, but small enough to stay fully inside the screen */
     height: 28px;
     width: 118px;
     font-size: 10.5px;
@@ -7339,4 +7339,20 @@ svg {
   letter-spacing: 0.05em;
   white-space: nowrap;
   box-shadow: 0 6px 14px rgba(75, 178, 141, 0.35);
+}
+
+/* phones: leave room at the right end of the strip title so the tilted tag never covers its last letters */
+@media (max-width: 640px) {
+  .featured-plan-card .plan-header-strip {
+    padding-right: 44px;
+  }
+}
+
+@media (max-width: 360px) {
+  .featured-plan-card .plan-header-strip {
+    padding-right: 30px;
+    padding-left: 10px;
+    font-size: 11.5px;
+    white-space: nowrap;
+  }
 }
