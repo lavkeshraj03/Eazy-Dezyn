@@ -6910,3 +6910,93 @@ svg {
     top: 24%;
   }
 }
+/* "Watch it work" steps on phones: two rows. Row 1 = step 1 → step 2, row 2 = step 3 (centred). */
+@media (max-width: 640px) {
+  .learn-steps-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 8px;
+    margin-top: 14px;
+  }
+
+  .learn-step-arrow {
+    transform: none;      /* arrow points right again, between step 1 and step 2 */
+    height: auto;
+  }
+
+  .learn-step-arrow:nth-child(4) {
+    display: none;        /* the arrow between step 2 and step 3 would sit at a line break */
+  }
+
+  .learn-step-arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .learn-step-pill {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    padding: 5px 14px 5px 5px;
+    gap: 8px;
+  }
+
+  .learn-step-num {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .learn-step-text {
+    font-size: 12.5px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .learn-steps-row {
+    gap: 10px 5px;
+  }
+
+  .learn-step-pill {
+    padding: 4px 10px 4px 4px;
+    gap: 6px;
+  }
+
+  .learn-step-num {
+    width: 22px;
+    height: 22px;
+  }
+
+  .learn-step-text {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 340px) {
+  .learn-steps-row {
+    gap: 8px 3px;
+  }
+
+  .learn-step-pill {
+    padding: 3px 8px 3px 3px;
+    gap: 5px;
+  }
+
+  .learn-step-num {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  .learn-step-text {
+    font-size: 10.5px;
+  }
+
+  .learn-step-arrow svg {
+    width: 10px;
+    height: 10px;
+  }
+}
