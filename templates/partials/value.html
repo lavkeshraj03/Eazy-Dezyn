@@ -1,0 +1,27 @@
+    <!-- ===== VALUE STACK RECEIPT ===== -->
+    <section class="value-stack-section" id="value">
+      <div class="container text-center">
+        <h2 class="vs-main-title">{{value.title}}</h2>
+
+        <div class="val-receipt-card">
+{{#each value.items}}
+          <div class="val-receipt-item">
+            <span class="val-item-name">{{name}}</span>
+            <span class="val-item-dots"></span>
+            <span class="val-item-price{{#if priceless}} price-priceless{{/if}}">{{price}}</span>
+          </div>
+
+{{/each}}
+          <div class="val-receipt-divider"></div>
+
+          <!-- Today Offer Bar -->
+          <div class="val-today-bar">
+            <div class="val-today-offer">
+              <span class="val-today-text">{{value.todayText}}</span>
+              <strong class="val-today-price">{{value.todayPrice}}</strong>
+            </div>
+            <s class="val-total-crossed val-total-steel">{{value.totalCrossed}}<i class="cut-stroke" aria-hidden="true"></i></s>
+          </div>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,116 @@
+    <!-- ===== PRICING ===== -->
+    <section class="pricing-section" id="pricing">
+      <!-- Watermark Graphics in Background -->
+      <div class="pricing-watermark-wrap" aria-hidden="true">
+        <img src="{{root}}assets/mark.png" alt="" class="pricing-watermark-img" />
+      </div>
+
+      <div class="container text-center">
+
+        <h2 class="pricing-main-title">{{pricing.title}}</h2>
+
+        <!-- Plan tabs: each one jumps to its plan card below -->
+        <nav class="plan-tabs" aria-label="{{pricing.tabsLabel}}">
+          <a href="#plan-template" class="plan-tab">
+            <span class="plan-tab-left">
+              <span class="plan-tab-tag">{{pricing.template.tag}}</span>
+              <span class="plan-tab-name">{{pricing.template.name}}</span>
+            </span>
+            <span class="plan-tab-price"><s class="plan-tab-old">{{pricing.template.oldPrice}}</s><span class="plan-tab-now">{{pricing.template.price}}</span></span>
+          </a>
+          <a href="#plan-complete" class="plan-tab is-active" aria-current="true">
+            <span class="plan-tab-left">
+              <span class="plan-tab-tag">{{pricing.complete.tag}}</span>
+              <span class="plan-tab-name">{{pricing.complete.name}}</span>
+            </span>
+            <span class="plan-tab-price"><s class="plan-tab-old">{{pricing.complete.oldPrice}}</s><span class="plan-tab-now">{{pricing.complete.price}}</span></span>
+          </a>
+        </nav>
+
+        <div class="price-cards-grid">
+          <!-- Card 1: smaller plan -->
+          <div class="price-plan-card" id="plan-template">
+            <div class="plan-header-strip strip-muted">
+              {{pricing.template.strip}}
+            </div>
+            <div class="plan-card-body">
+              <div class="plan-top-info">
+                <div class="plan-name-row">
+                  <h3 class="plan-card-name">{{pricing.template.name}}</h3>
+                  <span class="plan-card-tag">{{pricing.template.tag}}</span>
+                </div>
+                <p class="plan-card-desc">{{pricing.template.desc}}</p>
+              </div>
+
+              <div class="plan-price-block">
+                <div class="plan-price-row">
+                  <strong class="plan-price-num">{{pricing.template.price}}</strong>
+                  <span class="plan-price-unit plan-price-unit-dark">{{pricing.template.unit}}</span>
+                </div>
+              </div>
+
+              <div class="plan-hairline"></div>
+
+              <div class="plan-checklist">
+{{#each pricing.template.features}}
+{{> feature}}
+
+{{/each}}
+              </div>
+
+              <div class="plan-btn-wrap">
+                <a href="{{pricing.template.link}}" class="btn-plan-outline">{{pricing.template.button}}</a>
+                <span class="plan-sub-note">{{pricing.template.note}}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: featured plan -->
+          <div class="price-plan-card featured-plan-card" id="plan-complete">
+            <!-- Floating Tilted Badge -->
+            <div class="plan-floating-badge">{{pricing.complete.badge}}</div>
+
+            <div class="plan-header-strip strip-green">
+              {{pricing.complete.strip}}
+            </div>
+            <div class="plan-card-body">
+              <div class="plan-top-info">
+                <div class="plan-name-row">
+                  <h3 class="plan-card-name">{{pricing.complete.name}}</h3>
+                  <span class="plan-card-tag">{{pricing.complete.tag}}</span>
+                </div>
+                <p class="plan-card-desc">{{pricing.complete.desc}}</p>
+              </div>
+
+              <div class="plan-price-block">
+                <div class="plan-price-row">
+                  <strong class="plan-price-num text-green">{{pricing.complete.price}}</strong>
+                  <span class="plan-price-unit plan-price-unit-green">{{pricing.complete.unit}}</span>
+                </div>
+
+                <div class="plan-savings-row">
+                  <del class="plan-crossed-value">{{pricing.complete.valueText}}</del>
+                  <span class="plan-ltd-offer-badge">{{pricing.complete.offerBadge}}</span>
+                </div>
+              </div>
+
+              <div class="plan-hairline"></div>
+
+              <div class="plan-plus-header">{{pricing.complete.plusHeader}}</div>
+
+              <div class="plan-checklist">
+{{#each pricing.complete.features}}
+{{> feature}}
+
+{{/each}}
+              </div>
+
+              <div class="plan-btn-wrap">
+                <a href="{{pricing.complete.link}}" class="btn-plan-solid-green">{{pricing.complete.button}}</a>
+                <span class="plan-sub-note">{{pricing.complete.note}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

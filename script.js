@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal        = document.getElementById('videoModal');
   const iframe       = document.getElementById('videoIframe');
   const closeBtn     = document.getElementById('closeModal');
-  const VIDEO_URL    = 'https://www.youtube.com/embed/9cPGtfponsY?autoplay=1&rel=0';
+  // the video comes from the page itself (data-video-id on the popup), so every page can have its own
+  const VIDEO_ID     = (modal && modal.dataset.videoId) || '9cPGtfponsY';
+  const VIDEO_URL    = 'https://www.youtube.com/embed/' + VIDEO_ID + '?autoplay=1&rel=0';
 
   const openVideoModal = () => {
     if (!modal) return;

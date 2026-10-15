@@ -1,0 +1,565 @@
+{
+  "output": "estimate.html",
+  "meta": {
+    "title": "Initial Estimate Course &amp; Template | Eazy Dezyn",
+    "description": "India's first Initial Estimate course and template for interior designers and architects. Close clients in the first meeting under 10 minutes."
+  },
+  "video": {
+    "id": "9cPGtfponsY"
+  },
+  "header": {
+    "tagline": "India's First Initial Estimate Course + Template"
+  },
+  "hero": {
+    "badge": "Attention Interior Designers And Architects",
+    "headline": "<span class=\"close-word\">Close</span> Them Before<br>They <span class=\"ghost-word\">Ghost</span> You",
+    "body": "India's first Initial Estimate course and template. The professional estimate you hand over live under 10 minutes with budget &amp; quality options, in the first meeting, so there is nothing left to ghost.",
+    "proof": {
+      "rating": "4.9 Rating",
+      "people": "2,300+ Designers",
+      "guarantee": "100% Money Back"
+    },
+    "primaryButton": "Get Instant Access",
+    "secondaryButton": "Watch Demo",
+    "playLabel": "Play trailer",
+    "caption": "60 second look at what you are getting"
+  },
+  "pillars": [
+    {
+      "label": "Works Seamlessly on",
+      "title": "Excel + Google Sheets"
+    },
+    {
+      "label": "Easy to Use",
+      "title": "No Excel Skills Needed"
+    },
+    {
+      "label": "Start Immediately",
+      "title": "Instant Access"
+    }
+  ],
+  "trusted": {
+    "heading": "Trusted by Designers at",
+    "brands": [
+      {
+        "name": "Livespace",
+        "class": "brand-livespace"
+      },
+      {
+        "name": "Homelane",
+        "class": "brand-homelane"
+      },
+      {
+        "name": "Essajees Atelier",
+        "class": "brand-essajees"
+      },
+      {
+        "name": "Gauri Khan Designs",
+        "class": "brand-gauri"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "label": "Get",
+      "value": "Course + Template"
+    },
+    {
+      "label": "Speed",
+      "value": "Under 10 min"
+    },
+    {
+      "label": "Inside",
+      "value": "1 file, 2 bonuses free"
+    },
+    {
+      "label": "Excel Expertise Needed",
+      "value": "None"
+    },
+    {
+      "label": "Runs On",
+      "value": "Excel + Google Sheets"
+    }
+  ],
+  "experts": {
+    "eyebrow": "Expert Review",
+    "title": "What Industry’s Biggest<br>Designers Have To Say",
+    "cards": [
+      {
+        "image": "assets/creator-rahul-sharma.jpg",
+        "alt": "Rahul Sharma",
+        "name": "Rahul Sharma",
+        "handle": "@civilsitevisit",
+        "projects": "170+ projects",
+        "subs": "2.05M YouTube subs",
+        "quote": "“Very well done &amp; must have for every interior designer &amp; architects. Sites are executed very smoothly, when things are pre-done. Great work!”",
+        "link": "https://www.youtube.com/@civilsitevisit",
+        "buttonText": "See His Work"
+      },
+      {
+        "image": "assets/creator-dhiraj-arora.jpg",
+        "alt": "Dhiraj Arora",
+        "name": "Dhiraj Arora",
+        "role": "Author",
+        "handle": "@InteriorContractor",
+        "projects": "550 projects",
+        "subs": "123k YouTube subs",
+        "quote": "“Huge thanks to Siya for the amazing systems &amp; templates! My team used to struggle with clients needing endless revisions. After giving Siya’s template a try, everything became smoother...fewer changes, happy clients, a more efficient team, and happy me. Thank you, Siya!”",
+        "link": "https://www.instagram.com/iaminteriorcontractor/",
+        "buttonText": "See His Work"
+      }
+    ]
+  },
+  "demo": {
+    "title": "Watch It Work",
+    "sub": "Two minutes. Watch Demo first, then decide.",
+    "thumbnail": "assets/siya-video-thumbnail.jpg",
+    "thumbnailAlt": "Siya Agrawal teaching Initial Estimate",
+    "playLabel": "Play Masterclass Overview",
+    "steps": [
+      "Select the Rooms",
+      "Pick a Grade",
+      "Hand Over the PDF"
+    ]
+  },
+  "ghosted": {
+    "title": "Ghosted <span class=\"ghosted-green\">Again?</span>",
+    "lead": "It is rarely the design or you. It is the quote that came too slow and looked too rough.",
+    "subtext": "Sound familiar?",
+    "steps": [
+      {
+        "tag": "First Meeting",
+        "text": "The First Meeting Ends with “We'll Get Back to You.”"
+      },
+      {
+        "tag": "Two Days Later",
+        "text": "You Send an Estimate Built in a Rushed Excel."
+      },
+      {
+        "tag": "Then...",
+        "text": "Read Message. No Reply."
+      },
+      {
+        "tag": "The Worst Part",
+        "text": "You Never Find Out the Reason."
+      }
+    ]
+  },
+  "quote": {
+    "readyTag": "Client Ready",
+    "doc": {
+      "initials": "SV",
+      "studio": "Studio Verma",
+      "location": "Interiors, Mumbai",
+      "label": "Initial Estimate",
+      "sub": "14 Jul 2026 • 3BHK, Andheri",
+      "items": [
+        {
+          "name": "Living room",
+          "grade": "A2",
+          "gradeClass": "grade-a2",
+          "price": "₹4,85,000"
+        },
+        {
+          "name": "Master bedroom",
+          "grade": "A3",
+          "gradeClass": "grade-a3",
+          "price": "₹3,20,000"
+        },
+        {
+          "name": "Modular kitchen",
+          "grade": "A1",
+          "gradeClass": "grade-a1",
+          "price": "₹6,10,000"
+        },
+        {
+          "name": "Bathrooms ×2",
+          "grade": "A4",
+          "gradeClass": "grade-a4",
+          "price": "₹1,90,000"
+        }
+      ],
+      "calc": [
+        {
+          "label": "Subtotal",
+          "value": "₹16,05,000"
+        },
+        {
+          "label": "Design fee, 8%",
+          "value": "₹1,28,400"
+        },
+        {
+          "label": "GST, 18%",
+          "value": "₹3,12,012"
+        }
+      ],
+      "totalLabel": "Grand total",
+      "total": "₹20,45,412",
+      "scheduleTitle": "Payment Schedule",
+      "schedule": [
+        "10%<br>Booking",
+        "40% Materials",
+        "40% Execution",
+        "10%"
+      ],
+      "footnote": "Illustrative sample, not real rates",
+      "signature": "Authorised signature"
+    },
+    "title": "Give a Quote, <span class=\"text-green-live\">Live</span><br>Under 10 Minutes",
+    "checklist": [
+      "Select their spaces, live",
+      "Pick a grade per room",
+      "Maths, fees and GST, handled",
+      "Hand over the PDF"
+    ],
+    "footnote": "The estimate shown is an illustrative sample."
+  },
+  "closeprojects": {
+    "title": "Why do You need it?",
+    "word1": "CLOSE",
+    "word2": "PROJECTS",
+    "tagline": "&amp; STOP THE GHOSTING",
+    "sub": "This is for you if:",
+    "points": [
+      "\"Kitna kharcha aayega\" makes you freeze",
+      "Your quotes reach clients too late",
+      "Your estimates look like a rushed Excel",
+      "Clients go quiet the moment you send the price"
+    ]
+  },
+  "six": {
+    "title": "Six Things It Does for You",
+    "items": [
+      {
+        "title": "Grade Every Room, A1 to A4",
+        "desc": "Premium living room, budget bath. Mix like clients do.",
+        "tone": "mint"
+      },
+      {
+        "title": "Two Ways to Enter Area",
+        "desc": "Room by room, or total area auto split.",
+        "tone": "peach"
+      },
+      {
+        "title": "A Client Ready PDF",
+        "desc": "Estimated Costs, payment schedule, signature. Print ready.",
+        "tone": "yellow"
+      },
+      {
+        "title": "Set Rates Once",
+        "desc": "Update once, every estimate updates.",
+        "tone": "yellow"
+      },
+      {
+        "title": "Charge Fees Your Way",
+        "desc": "Per sqft, lump sum or percentage.",
+        "tone": "mint"
+      },
+      {
+        "title": "Nothing Forgotten",
+        "desc": "Curtains, white goods, GST, contingency. Built in.",
+        "tone": "peach"
+      }
+    ]
+  },
+  "curriculum": {
+    "title": "Course Curriculum",
+    "sub": "Recorded lessons take you from zero to confident.",
+    "moduleWord": "Module",
+    "modules": [
+      "What an Estimate Really Is &amp; Industry Insights",
+      "Block vs Detail vs BOQ (Real Difference)",
+      "When and How to Estimate",
+      "All 3 Templates Tutorial (Initial Estimate, Master Rate Sheet, GST Invoice)",
+      "Load Your Own Rates",
+      "How to Present It and Win"
+    ],
+    "thumbnail": "assets/siya-video-thumbnail.jpg",
+    "thumbnailAlt": "Demo Video with Siya Agrawal",
+    "playLabel": "Play Demo Video",
+    "summaryTitle": "Course Summary",
+    "summaryText": "Learn how to calculate interior &amp; architectural project costs live in under 10 minutes, eliminate client pricing anxiety, automate GST &amp; fees, and close deals on the spot.",
+    "rating": "4.93",
+    "learners": "2,340+ learners"
+  },
+  "bonuses": {
+    "title": "Two Free <span class=\"bonuses-green-word\">Bonuses</span>",
+    "sub": "Each one is a full course and template on its own.",
+    "tagWord": "Bonus",
+    "worthLabel": "Worth",
+    "freeLabel": "Free",
+    "cards": [
+      {
+        "image": "assets/bonus-master-rate-sheet.jpg",
+        "alt": "Master Rate Sheet cover: real costs in, your rate out",
+        "title": "Master Rate Sheet",
+        "desc": "Ever wondered where the rates in BOQs come from? This is where you'll calculate them.",
+        "type": "Course + template",
+        "worth": "₹3,500"
+      },
+      {
+        "image": "assets/bonus-gst-invoice.jpg",
+        "alt": "GST Invoice Template cover: every rupee worked out",
+        "title": "GST Invoice Template",
+        "desc": "8 Types of Legal Invoice document in under a minute, fully compliant.",
+        "type": "Course + template",
+        "worth": "₹2,500"
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Don’t Just Take Our Word For It",
+    "images": [
+      {
+        "src": "assets/reviews/1.jpeg",
+        "width": 836,
+        "alt": "Review from Sonu, a verified owner"
+      },
+      {
+        "src": "assets/reviews/4.jpeg",
+        "width": 1170,
+        "alt": "Client message about the template"
+      },
+      {
+        "src": "assets/reviews/2.jpeg",
+        "width": 912,
+        "alt": "Review from Sanjana"
+      },
+      {
+        "src": "assets/reviews/5.jpeg",
+        "width": 1170,
+        "alt": "Client message about the questionnaire"
+      },
+      {
+        "src": "assets/reviews/3.jpeg",
+        "width": 1036,
+        "alt": "Review from laxmimanasa392"
+      },
+      {
+        "src": "assets/reviews/6.jpeg",
+        "width": 1170,
+        "alt": "Client message thanking Siya for the template and checklist"
+      },
+      {
+        "src": "assets/reviews/7.jpeg",
+        "width": 1170,
+        "alt": "Client message about the templates and video"
+      }
+    ]
+  },
+  "value": {
+    "title": "Here Is the Real Value",
+    "items": [
+      {
+        "name": "Full Estimation Course (Recorded Lessons)",
+        "price": "Rs 7,000"
+      },
+      {
+        "name": "Initial Estimate Master Template (<span class=\"nocap\">.xlsx</span>)",
+        "price": "Rs 5,000"
+      },
+      {
+        "name": "Complete User Guides",
+        "price": "Rs 1,500"
+      },
+      {
+        "name": "Bonus: Master Rate Sheet<span class=\"nocap\">.xlsx</span>&nbsp; (Course + Template)",
+        "price": "Rs 3,500"
+      },
+      {
+        "name": "Bonus: GST Invoice Template<span class=\"nocap\">.xlsx</span>&nbsp; (Course + Template)",
+        "price": "Rs 2,500"
+      },
+      {
+        "name": "Every Future Update, Free Forever",
+        "price": "Priceless",
+        "priceless": true
+      }
+    ],
+    "todayText": "Today, all of it for",
+    "todayPrice": "Rs 2,499.",
+    "totalCrossed": "Rs 19,500"
+  },
+  "pricing": {
+    "title": "Pick Your Plan",
+    "tabsLabel": "Choose a plan",
+    "template": {
+      "tag": "Plan 1",
+      "name": "Template Only",
+      "strip": "Template only",
+      "desc": "The tool and the guides to use it.",
+      "price": "₹1,200",
+      "oldPrice": "₹6,500",
+      "unit": "one time",
+      "features": [
+        {
+          "text": "Initial Estimate Master Template (<span class=\"nocap\">.xlsx</span>)"
+        },
+        {
+          "text": "Complete written user guides"
+        },
+        {
+          "text": "No video course",
+          "off": true
+        },
+        {
+          "text": "No bonus templates &amp; course",
+          "off": true
+        },
+        {
+          "text": "Free future updates",
+          "off": true
+        }
+      ],
+      "button": "Get the Template",
+      "link": "#pricing",
+      "note": "One-time payment, Instant access."
+    },
+    "complete": {
+      "tag": "Plan 2",
+      "name": "Complete",
+      "badge": "★ Most Popular",
+      "strip": "Everything, at the price of one course",
+      "desc": "The course, the template, both bonuses, all future updates free.",
+      "price": "₹2,499",
+      "oldPrice": "₹19,500",
+      "unit": "only",
+      "valueText": "₹19,500 value",
+      "offerBadge": "Limited Time Offer",
+      "plusHeader": "Everything in Template Only, plus:",
+      "features": [
+        {
+          "text": "The full Estimation video course"
+        },
+        {
+          "text": "Bonus: Master Rate Sheet (course + template)"
+        },
+        {
+          "text": "Bonus: GST Invoice Template (course + template)"
+        },
+        {
+          "text": "Every future update, free forever"
+        }
+      ],
+      "button": "Get Instant Access",
+      "link": "#pricing",
+      "note": "100% money-back guarantee."
+    }
+  },
+  "guarantee": {
+    "watermark": "100%",
+    "sealAlt": "100% Money Back Guarantee",
+    "tag": "Zero-Risk Purchase",
+    "title": "The Risk Is Mine.",
+    "desc": "Use it on your next project. If it's not for you, get a full refund.",
+    "pills": [
+      "100% Money Back",
+      "Zero Questions Asked"
+    ]
+  },
+  "instructor": {
+    "image": "assets/instructor-siya.jpg",
+    "imageAlt": "Siya Agrawal - Founder, Eazy Dezyn",
+    "tag": "Meet Your Instructor",
+    "heading": "The Person Who Built This",
+    "subtitle": "Siya Agrawal, Founder of Siya Interiors and Eazy Dezyn",
+    "bio": "Siya runs two businesses. Siya Interiors, her own interior design studio, and Eazy Dezyn, where she has built one of India's largest platforms for interior design business education. She built India's first Initial Estimate Course + Template made specifically for interior designers.",
+    "quote": "\"I made every one of these mistakes first. I froze on pricing, I lost projects to slow quotes, I undercharged for years. Then I built the systems I wish someone had handed me. This is one of them.\"",
+    "stats": [
+      {
+        "value": "110+",
+        "label": "Projects Executed Personally"
+      },
+      {
+        "value": "150K+",
+        "label": "Designers Following Her Work"
+      },
+      {
+        "value": "4,000+",
+        "label": "Designers Taught"
+      }
+    ]
+  },
+  "who": {
+    "title": "Who This Is for",
+    "sub": "A quick check before you get started.",
+    "good": {
+      "heading": "This <span class=\"who-hl\">Is for You</span> If:",
+      "items": [
+        "You present pricing to clients and want to look in control doing it",
+        "You want to quote fast, before the client cools off and goes quiet",
+        "You are tired of building messy Excel sheets by hand",
+        "You are ready to learn estimation properly, once"
+      ]
+    },
+    "bad": {
+      "heading": "This Is <span class=\"who-hl\">Not for You</span> If:",
+      "items": [
+        "You only design and never handle project pricing",
+        "You want a magic button with no learning at all",
+        "You are not willing to put your own rates into the tool"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Before You Ask",
+    "items": [
+      {
+        "q": "When and How Do I Get Access?",
+        "a": "The moment you buy, you are taken to your Course dashboard with everything inside. A confirmation email with your links also arrives within 5 to 10 minutes. If you do not see it, check spam or the promotions tab. Log in with the email you bought with."
+      },
+      {
+        "q": "Do I Need to Know Excel?",
+        "a": "Not at all! If you can enter numbers in a box and pick from a dropdown menu, you can use this tool effortlessly. You type in the highlighted cells, and the template handles all 456+ formulas automatically."
+      },
+      {
+        "q": "Does It Work on Google Sheets and on Mac?",
+        "a": "Yes! The master files are 100% compatible with Microsoft Excel (Windows &amp; macOS) as well as Google Sheets on any desktop, tablet, or smartphone."
+      },
+      {
+        "q": "What Is the Difference Between the Two Plans?",
+        "a": "The Template Only plan gives you instant access to the core Initial Estimate template and tutorial. The Complete Bundle includes all 3 templates (Initial Estimate, Master Rate Sheet, GST Invoice) plus full video masterclass training and all bonuses."
+      },
+      {
+        "q": "Is This a One Time Payment?",
+        "a": "Yes, it is a single one-time payment. You get lifetime access to the course and all templates, including every future update completely free."
+      },
+      {
+        "q": "Can I Get a Refund?",
+        "a": "Yes! We offer a 100% risk-free money-back guarantee. If you use the template and don't feel it saves you hours of time or helps you close clients faster, simply reach out to us for a prompt refund."
+      },
+      {
+        "q": "Will the Price Go Up?",
+        "a": "Yes. The current price is our founding member launch offer. Once the introductory timer ends, the price will increase permanently."
+      },
+      {
+        "q": "How Is This Different from a Free Template Online?",
+        "a": "Free online templates are generic spreadsheets with broken formulas and no Indian interior design standards. Our system is built specifically for Indian interior designers and architects, preloaded with real room types, material grades (A1–A4), auto-calculating fees, GST, and client-ready branded PDF export."
+      },
+      {
+        "q": "I Still Have a Question.",
+        "a": "Our student support team is always available via email at <a href=\"mailto:support@eazydezyn.com\" style=\"color: #2E8F6C; text-decoration: underline; text-transform: none;\">support@eazydezyn.com</a> to assist you with any questions or template customizations."
+      }
+    ]
+  },
+  "final": {
+    "eyebrow": "One Click Before Your Next Meeting",
+    "headline": "<span class=\"final-headline-lead\">Your <span class=\"final-next-project\">Next Project</span> Is Coming.</span>\n          <span class=\"final-donot\">Do Not Get</span> <span class=\"final-ghosted-word\">Ghosted Again</span>",
+    "sub": "Every week you wait is another client who goes quiet after your quote. The fix is one click away, at the lowest price it will ever be.",
+    "offer": {
+      "label": "Today Only",
+      "price": "₹2,499",
+      "old": "₹19,500",
+      "note": "Goes to <strong>₹3,499</strong> with the next update. Buy now and you get it free.",
+      "button": "Get Instant Access"
+    },
+    "points": [
+      "Instant Access",
+      "100% Money-Back",
+      "Updates Included"
+    ]
+  },
+  "footer": {
+    "copy": "© Eazy Dezyn. India's first Initial Estimate course + template for interior designers."
+  }
+}

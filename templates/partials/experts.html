@@ -1,0 +1,47 @@
+    <!-- ===== WHAT INDUSTRY'S BIGGEST DESIGNERS HAVE TO SAY ===== -->
+    <section class="industry-designers-section" id="industry-designers">
+      <div class="industry-designers-outer">
+        <div class="industry-big-card">
+          <span class="industry-eyebrow">{{experts.eyebrow}}</span>
+          <h2 class="industry-main-title">
+            {{experts.title}}
+          </h2>
+
+          <div class="industry-cards-grid">
+{{#each experts.cards}}
+            <div class="industry-card">
+              <div class="industry-card-header">
+                <img src="{{root}}{{image}}" alt="{{alt}}" class="industry-avatar-img">
+                <div class="industry-header-info">
+                  <h3 class="industry-author-name">{{name}}{{#if role}} <span class="industry-author-role">({{role}})</span>{{/if}}</h3>
+                  <span class="industry-author-handle">{{handle}}</span>
+                  <div class="industry-meta-row">
+                    <span class="industry-meta-item">
+                      <svg class="industry-meta-icon" width="15" height="15" viewBox="0 0 24 24" fill="#000000" aria-hidden="true"><path d="M12 2.6 1.8 11.4a1 1 0 0 0 .65 1.76H4V21a1 1 0 0 0 1 1h5v-6h4v6h5a1 1 0 0 0 1-1v-7.84h1.55a1 1 0 0 0 .65-1.76z"/></svg>
+                      {{projects}}
+                    </span>
+                    <span class="industry-meta-item">
+                      <svg class="industry-meta-icon" width="19" height="14" viewBox="0 0 24 17" aria-hidden="true"><rect width="24" height="17" rx="4.5" fill="#000000"/><path d="M9.7 4.6v7.8L16.5 8.5z" fill="#FFFFFF"/></svg>
+                      {{subs}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="industry-quote-text">
+                {{quote}}
+              </p>
+
+              <a href="{{link}}" target="_blank" rel="noopener noreferrer" class="industry-download-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+                <span>{{buttonText}}</span>
+              </a>
+            </div>
+{{/each}}
+          </div>
+        </div>
+      </div>
+    </section>

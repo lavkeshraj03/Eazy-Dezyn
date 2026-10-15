@@ -1,0 +1,23 @@
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <!-- Top Row: Logo Left, Nav Links Right -->
+      <div class="footer-top-row">
+        <a href="#top" class="footer-logo-link">
+          <img src="{{root}}{{brand.logo}}" alt="{{brand.name}}" class="footer-logo-img">
+        </a>
+
+        <nav class="footer-nav-links">
+{{#each footer.links}}
+          <a href="{{href}}"{{#if external}} target="_blank" rel="noopener"{{/if}}>{{text}}</a>
+{{/each}}
+        </nav>
+      </div>
+
+      <!-- Bottom Disclaimer / Legal Text -->
+      <div class="footer-bottom-info">
+        <p class="footer-copy-text">{{footer.copy}}</p>
+        <p class="footer-disclaimer-text">{{footer.disclaimer}}</p>
+      </div>
+    </div>
+  </footer>

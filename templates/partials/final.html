@@ -1,0 +1,52 @@
+    <!-- ===== FINAL CTA ===== -->
+    <section class="final-cta-section" id="final">
+      <!-- Watermark Left (Eazy Dezyn 'e' monogram) -->
+      <div class="final-watermark-left">
+        <img src="{{root}}assets/mark.png" alt="" class="final-watermark-img">
+      </div>
+
+      <!-- Floating 3D Gold Rupee Coins -->
+      <div class="final-coin final-coin-left">
+        <img src="{{root}}assets/coin-3d.svg" alt="Rupee Coin">
+      </div>
+      <div class="final-coin final-coin-right">
+        <img src="{{root}}assets/coin-3d.svg" alt="Rupee Coin">
+      </div>
+
+      <div class="container text-center final-inner">
+        <!-- Eyebrow Pill -->
+        <div class="final-eyebrow-pill">{{final.eyebrow}}</div>
+
+        <!-- Headline (with red ghosted text) -->
+        <h2 class="final-headline">
+          {{final.headline}}
+        </h2>
+
+        <!-- Subtitle -->
+        <p class="final-sub">
+          {{final.sub}}
+        </p>
+
+
+        <!-- Offer card with price, CTA and the three trust points underneath -->
+        <div class="final-offer-wrap">
+          <div class="final-offer-card">
+          <div class="final-offer-left">
+            <span class="final-offer-label">{{final.offer.label}}</span>
+            <div class="final-offer-price-row">
+              <span class="final-offer-price">{{final.offer.price}}</span>
+              <s class="final-offer-old">{{final.offer.old}}</s>
+            </div>
+            <p class="final-offer-note">{{final.offer.note}}</p>
+          </div>
+          <a href="#pricing" class="final-offer-btn">{{final.offer.button}} <span class="final-offer-arrow" aria-hidden="true">→</span></a>
+        </div>
+          <div class="final-offer-points">
+{{#each final.points}}
+            <div class="final-point"><span class="final-point-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>{{.}}</span></div>
+{{/each}}
+          </div>
+        </div>
+
+      </div>
+    </section>

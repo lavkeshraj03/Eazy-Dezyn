@@ -1,0 +1,84 @@
+    <!-- ===== HERO SECTION ===== -->
+    <section id="top" class="hero-section">
+      <!-- Soft mint radial gradient blob behind the visual column -->
+      <div class="hero-bg-glow"></div>
+      <div class="hero-container">
+
+        <!-- Left Content Column -->
+        <div class="hero-content-col">
+          <!-- Solid Green Attention Pill -->
+          <div class="hero-attention-badge">
+            {{hero.badge}}
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="hero-headline">
+            {{hero.headline}}
+          </h1>
+
+          <!-- Body Copy -->
+          <p class="hero-body">
+            {{hero.body}}
+          </p>
+
+          <!-- 3 Proof Badges -->
+          <div class="hero-proof-row">
+            <div class="proof-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#F5B940">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <span>{{hero.proof.rating}}</span>
+            </div>
+            <div class="proof-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#45B28D" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <span>{{hero.proof.people}}</span>
+            </div>
+            <div class="proof-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#45B28D" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <span>{{hero.proof.guarantee}}</span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta-row">
+            <a href="#pricing" class="btn-primary-green">{{hero.primaryButton}}</a>
+            <a href="#demo" class="btn-secondary-outline" id="heroWatchBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#1E2B24">
+                <polygon points="7 4 19 12 7 20 7 4" />
+              </svg>
+              <span>{{hero.secondaryButton}}</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Visual Column -->
+        <div class="hero-visual-col">
+          <div class="hero-visual-inner">
+
+            <!-- Dark Forest Video / Trailer Card (Figma Exact single container) -->
+            <div class="video-card-dark" id="heroVideoCard">
+              <button class="video-play-btn" id="heroPlayBtn" aria-label="{{hero.playLabel}}">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#1E2B24">
+                  <polygon points="8 5 19 12 8 19" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Caption under the video card -->
+            <p class="video-caption">{{hero.caption}}</p>
+          </div><!-- /.hero-visual-inner -->
+        </div>
+
+      </div><!-- /.hero-container -->
+
+    </section><!-- /.hero-section -->

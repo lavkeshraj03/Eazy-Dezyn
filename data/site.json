@@ -1,0 +1,61 @@
+{
+  "brand": {
+    "logo": "assets/logo-wordmark-green.png",
+    "name": "Eazy Dezyn"
+  },
+  "header": {
+    "button": "Get Instant Access"
+  },
+  "footer": {
+    "links": [
+      {
+        "href": "#top",
+        "text": "Home"
+      },
+      {
+        "href": "#features",
+        "text": "Product"
+      },
+      {
+        "href": "mailto:support@eazydezyn.com",
+        "text": "support@eazydezyn.com"
+      },
+      {
+        "href": "#terms",
+        "text": "Terms &amp; Conditions"
+      },
+      {
+        "href": "https://instagram.com",
+        "text": "Instagram",
+        "external": true
+      }
+    ],
+    "disclaimer": "Due to the digital nature of the product, resale and redistribution are not permitted."
+  },
+  "video": {
+    "title": "Masterclass Video",
+    "closeLabel": "Close Video"
+  },
+  "sections": {
+    "hero": true,
+    "pillars": true,
+    "trusted": true,
+    "metrics": true,
+    "experts": true,
+    "demo": true,
+    "ghosted": true,
+    "quote": true,
+    "closeprojects": true,
+    "six": true,
+    "curriculum": true,
+    "bonuses": true,
+    "reviews": true,
+    "value": true,
+    "pricing": true,
+    "guarantee": true,
+    "instructor": true,
+    "who": true,
+    "faq": true,
+    "final": true
+  }
+}

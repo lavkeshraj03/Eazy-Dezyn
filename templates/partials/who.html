@@ -1,0 +1,65 @@
+    <!-- ===== WHO THIS IS FOR ===== -->
+    <section class="who-section" id="who-is-this-for">
+      <!-- Watermark background on bottom-left -->
+      <div class="who-watermark-wrap" aria-hidden="true">
+        <img src="{{root}}assets/mark.png" alt="" class="who-watermark-img" />
+      </div>
+
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 48px;">
+          <h2 class="who-main-title">{{who.title}}</h2>
+          <p class="who-main-subtitle">{{who.sub}}</p>
+        </div>
+
+        <div class="who-comparison-grid">
+          <!-- Left Card: GOOD FIT -->
+          <div class="who-card who-card-good">
+            <div class="who-card-header">
+              <div class="who-icon-circle who-icon-good">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="who-header-text">
+                <h3 class="who-card-heading">{{who.good.heading}}</h3>
+              </div>
+            </div>
+
+            <div class="who-items-list">
+{{#each who.good.items}}
+              <div class="who-item-row">
+                <span>{{.}}</span>
+              </div>
+
+{{/each}}
+            </div>
+          </div>
+
+          <!-- Right Card: NOT THE RIGHT FIT -->
+          <div class="who-card who-card-bad">
+            <div class="who-card-header">
+              <div class="who-icon-circle who-icon-bad">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </div>
+              <div class="who-header-text">
+                <h3 class="who-card-heading">{{who.bad.heading}}</h3>
+              </div>
+            </div>
+
+            <div class="who-items-list">
+{{#each who.bad.items}}
+              <div class="who-item-row">
+                <span>{{.}}</span>
+              </div>
+
+{{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

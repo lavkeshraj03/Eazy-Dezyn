@@ -1,0 +1,19 @@
+    <!-- ===== SIX THINGS IT DOES FOR YOU ===== -->
+    <section class="six-things-section" id="features">
+      <div class="container">
+        <h2 class="six-things-headline">{{six.title}}</h2>
+
+        <div class="six-things-grid">
+{{#each six.items}}
+          <div class="six-item-card">
+            <div class="six-item-body">
+              <h3 class="six-item-title">{{title}}</h3>
+              <p class="six-item-desc">{{desc}}</p>
+            </div>
+            <div class="six-item-num num-{{tone}}">{{@num2}}</div>
+          </div>
+
+{{/each}}
+        </div>
+      </div>
+    </section>

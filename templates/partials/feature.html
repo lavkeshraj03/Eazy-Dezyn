@@ -1,0 +1,16 @@
+{{#if off}}
+                <div class="plan-feat-item feat-disabled">
+                  <span class="plan-feat-icon feat-cross-icon">✕</span>
+                  <span>{{text}}</span>
+                </div>
+{{else}}
+                <div class="plan-feat-item">
+                  <span class="plan-feat-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2E8F6C" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </span>
+                  <span>{{text}}</span>
+                </div>
+{{/if}}

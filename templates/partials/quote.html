@@ -1,0 +1,116 @@
+    <!-- ===== GIVE A QUOTE LIVE UNDER 10 MINUTES SECTION ===== -->
+    <section class="live-quote-section" id="estimate">
+      <div class="container live-quote-grid">
+        <!-- Left: Tilted Floating Estimate Document -->
+        <div class="live-quote-visual-col">
+          <div class="live-quote-card-wrapper">
+            <!-- Floating 'Client ready' Badge on top-right -->
+            <div class="client-ready-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>{{quote.readyTag}}</span>
+            </div>
+
+            <!-- Tilted Paper / Document Card -->
+            <div class="live-estimate-doc">
+              <!-- Doc Header -->
+              <div class="doc-header">
+                <div class="doc-brand">
+                  <div class="doc-logo-box">{{quote.doc.initials}}</div>
+                  <div class="doc-brand-text">
+                    <strong class="doc-studio-name">{{quote.doc.studio}}</strong>
+                    <span class="doc-studio-location">{{quote.doc.location}}</span>
+                  </div>
+                </div>
+                <div class="doc-meta">
+                  <span class="doc-est-label">{{quote.doc.label}}</span>
+                  <span class="doc-est-sub">{{quote.doc.sub}}</span>
+                </div>
+              </div>
+
+              <!-- Line Items List -->
+              <div class="doc-items-list">
+{{#each quote.doc.items}}
+                <div class="doc-item-row">
+                  <span class="doc-item-name">{{name}}</span>
+                  <span class="doc-grade-tag {{gradeClass}}">{{grade}}</span>
+                  <span class="doc-item-price">{{price}}</span>
+                </div>
+
+{{/each}}
+              </div>
+
+              <!-- Calculations Block -->
+              <div class="doc-calc-block">
+{{#each quote.doc.calc}}
+                <div class="doc-calc-row">
+                  <span class="doc-calc-label">{{label}}</span>
+                  <span class="doc-calc-val">{{value}}</span>
+                </div>
+{{/each}}
+              </div>
+
+              <!-- Grand Total Bar -->
+              <div class="doc-grand-total-bar">
+                <span class="grand-total-label">{{quote.doc.totalLabel}}</span>
+                <strong class="grand-total-val">{{quote.doc.total}}</strong>
+              </div>
+
+              <!-- Payment Schedule (Full Width) -->
+              <div class="doc-payment-schedule-block">
+                <span class="schedule-head">{{quote.doc.scheduleTitle}}</span>
+                <div class="schedule-progress-bar">
+                  <div class="sched-seg sched-seg-1"></div>
+                  <div class="sched-seg sched-seg-2"></div>
+                  <div class="sched-seg sched-seg-3"></div>
+                  <div class="sched-seg sched-seg-4"></div>
+                </div>
+                <div class="schedule-labels">
+                  <div class="sched-lbl sched-lbl-1">{{quote.doc.schedule.0}}</div>
+                  <div class="sched-lbl sched-lbl-2">{{quote.doc.schedule.1}}</div>
+                  <div class="sched-lbl sched-lbl-3">{{quote.doc.schedule.2}}</div>
+                  <div class="sched-lbl sched-lbl-4">{{quote.doc.schedule.3}}</div>
+                </div>
+              </div>
+
+              <!-- Document Bottom Row: Footnote on Left + Signature on Right -->
+              <div class="doc-bottom-row">
+                <div class="doc-footnote">{{quote.doc.footnote}}</div>
+                <div class="doc-signature-col">
+                  <svg width="86" height="24" viewBox="0 0 86 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 18 C12 8, 16 22, 24 12 C32 2, 38 20, 46 10 C54 2, 60 18, 70 8 C76 4, 80 10, 84 8"
+                      stroke="#3D4D44" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <div class="sig-hairline"></div>
+                  <span class="sig-label">{{quote.doc.signature}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content & Checklist -->
+        <div class="live-quote-content-col">
+          <h2 class="live-quote-title">{{quote.title}}</h2>
+
+          <div class="live-quote-checklist">
+{{#each quote.checklist}}
+            <div class="live-check-item">
+              <div class="live-check-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2E8F6C" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span class="live-check-text">{{.}}</span>
+            </div>
+
+{{/each}}
+          </div>
+
+          <p class="live-quote-footnote">{{quote.footnote}}</p>
+        </div>
+      </div>
+    </section>

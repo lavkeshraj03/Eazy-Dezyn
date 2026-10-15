@@ -1,0 +1,36 @@
+    <!-- ===== ZERO-RISK PURCHASE GUARANTEE ===== -->
+    <section class="guarantee-section" id="guarantee">
+      <!-- Watermarks in background: the 100% is repeated on both sides -->
+      <div class="guarantee-watermark-bg guarantee-watermark-bg-left" aria-hidden="true">{{guarantee.watermark}}</div>
+      <div class="guarantee-watermark-bg" aria-hidden="true">{{guarantee.watermark}}</div>
+
+      <div class="container">
+        <div class="zero-risk-card">
+          <!-- 3D Gold Starburst Guarantee Seal (Tilted Image) -->
+          <div class="zero-risk-badge-wrap">
+            <!-- Back copy rotates (only its spikes show); front copy is clipped to the inner disc and stays still -->
+            <img src="{{root}}assets/guarantee-seal-gold.png" alt="" aria-hidden="true"
+              class="zero-risk-seal-img zero-risk-seal-spin" loading="lazy">
+            <img src="{{root}}assets/guarantee-seal-gold.png" alt="{{guarantee.sealAlt}}"
+              class="zero-risk-seal-img zero-risk-seal-still" loading="lazy">
+          </div>
+
+          <div class="zero-risk-content">
+            <span class="zero-risk-tag">{{guarantee.tag}}</span>
+            <h3 class="zero-risk-title">{{guarantee.title}}</h3>
+            <p class="zero-risk-desc">{{guarantee.desc}}</p>
+            <div class="zero-risk-trust-pills">
+{{#each guarantee.pills}}
+              <span class="trust-pill">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2E8F6C" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                {{.}}
+              </span>
+{{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

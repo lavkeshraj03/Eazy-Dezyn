@@ -1,0 +1,48 @@
+    <!-- ===== MEET YOUR INSTRUCTOR / THE PERSON WHO BUILT THIS ===== -->
+    <section class="instructor-section" id="instructor">
+      <div class="container instructor-grid">
+        <!-- Left: Image Frame -->
+        <div class="instructor-image-container">
+          <div class="instructor-dashed-border"></div>
+          <div class="instructor-empty-frame">
+            <img src="{{root}}{{instructor.image}}" alt="{{instructor.imageAlt}}" class="instructor-photo-img" width="900" height="1226" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="instructor-content">
+          <span class="instructor-tag">{{instructor.tag}}</span>
+          <h2 class="instructor-heading">{{instructor.heading}}</h2>
+
+          <h3 class="instructor-subtitle">{{instructor.subtitle}}</h3>
+
+          <p class="instructor-bio">{{instructor.bio}}</p>
+
+          <!-- Direct Quote Card -->
+          <div class="instructor-quote-card">
+            <div class="inst-quote-icon">
+              <svg width="20" height="16" viewBox="0 0 24 20" fill="#34A87C">
+                <path
+                  d="M0 11.5C0 5.15 4.14 0 10.35 0V4.24C6.56 4.24 4.83 7.06 4.6 9.88H10.35V20H0V11.5ZM13.65 11.5C13.65 5.15 17.79 0 24 0V4.24C20.21 4.24 18.48 7.06 18.25 9.88H24V20H13.65V11.5Z" />
+              </svg>
+            </div>
+            <p class="inst-quote-text">{{instructor.quote}}</p>
+          </div>
+
+          <!-- 3 Stat / Credential Pills -->
+          <div class="instructor-stats-group">
+            <div class="inst-stat-pill inst-stat-pill-top">
+              <strong>{{instructor.stats.0.value}}</strong> <span>{{instructor.stats.0.label}}</span>
+            </div>
+            <div class="inst-stats-row">
+              <div class="inst-stat-pill">
+                <strong>{{instructor.stats.1.value}}</strong> <span>{{instructor.stats.1.label}}</span>
+              </div>
+              <div class="inst-stat-pill">
+                <strong>{{instructor.stats.2.value}}</strong> <span>{{instructor.stats.2.label}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,80 @@
+    <!-- ===== CURRICULUM ===== -->
+    <section class="curriculum-section" id="curriculum">
+      <div class="container">
+        <div class="text-center curr-header-wrap">
+          <h2 class="curr-main-title">{{curriculum.title}}</h2>
+          <p class="curr-main-sub">{{curriculum.sub}}</p>
+        </div>
+
+        <div class="curr-layout">
+          <!-- Left: 6 Clean Rounded Pill Cards -->
+          <div class="curr-modules-list">
+{{#each curriculum.modules}}
+            <div class="curr-module-pill-card">
+              <span class="curr-mod-tag">{{curriculum.moduleWord}} {{@num2}}</span>
+              <span class="curr-mod-name">{{.}}</span>
+            </div>
+
+{{/each}}
+          </div>
+
+          <!-- Right: Sidebar with Video Thumbnail and Summary Card -->
+          <div class="curr-sidebar">
+            <!-- Demo Video Box -->
+            <div class="curr-video-card">
+              <img src="{{root}}{{curriculum.thumbnail}}" alt="{{curriculum.thumbnailAlt}}" class="curr-video-img"
+                onerror="this.style.display='none'">
+              <div class="curr-video-overlay"></div>
+              <button class="curr-video-play-btn" id="currPlayBtn" aria-label="{{curriculum.playLabel}}">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFFFFF">
+                  <polygon points="7 4 19 12 7 20 7 4" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Course Summary Box -->
+            <div class="curr-summary-card">
+              <h3 class="curr-summary-title">{{curriculum.summaryTitle}}</h3>
+              <p class="curr-summary-text">{{curriculum.summaryText}}</p>
+              <div class="curr-summary-meta">
+                <div class="curr-meta-left">
+                  <div class="curr-stars-row">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="#F5B940">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="#F5B940">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="#F5B940">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="#F5B940">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="#F5B940">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                  </div>
+                  <strong class="curr-rating-num">{{curriculum.rating}}</strong>
+                </div>
+                <div class="curr-meta-right">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E8F6C" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                  <span>{{curriculum.learners}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

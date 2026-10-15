@@ -1,0 +1,49 @@
+    <!-- ===== TWO FREE BONUSES ===== -->
+    <section class="bonuses-section" id="bonuses">
+      <div class="container">
+        <div class="text-center bonuses-head-wrap">
+          <h2 class="bonuses-title">{{bonuses.title}}</h2>
+          <p class="bonuses-sub">{{bonuses.sub}}</p>
+        </div>
+
+        <div class="bonuses-grid">
+{{#each bonuses.cards}}
+          <div class="bonus-card">
+            <div class="bonus-placeholder-banner">
+              <img src="{{root}}{{image}}" alt="{{alt}}" class="bonus-card-img" width="1200" height="690" loading="lazy">
+              <div class="bonus-placeholder-content">
+
+              </div>
+            </div>
+
+            <div class="bonus-body">
+              <div class="bonus-meta-top">
+                <span class="bonus-pill-tag">{{bonuses.tagWord}} {{@index1}}</span>
+                <div class="bonus-icon-badge">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.55197 13.8239C6.41997 13.0439 6.07197 12.2039 5.50797 11.3039C4.94397 10.3919 4.13997 9.54587 3.09597 8.76587C2.06397 7.98587 1.03197 7.48787 -2.97353e-05 7.27187V6.51587C1.01997 6.27587 1.99797 5.83187 2.93397 5.18387C3.88197 4.52387 4.67397 3.73187 5.30997 2.80787C5.95797 1.85987 6.37197 0.92387 6.55197 -0.000129104H7.30797C7.41597 0.59987 7.63197 1.21787 7.95597 1.85387C8.27997 2.47787 8.69397 3.07787 9.19797 3.65387C9.71397 4.21787 10.29 4.72787 10.926 5.18387C11.874 5.85587 12.84 6.29987 13.824 6.51587V7.27187C13.164 7.40387 12.48 7.67387 11.772 8.08187C11.076 8.48987 10.428 8.97587 9.82797 9.53987C9.22797 10.0919 8.73597 10.6739 8.35197 11.2859C7.78797 12.1859 7.43997 13.0319 7.30797 13.8239H6.55197Z"
+                      fill="#0C4F3D" />
+                  </svg>
+
+                </div>
+              </div>
+
+              <h3 class="bonus-item-title">{{title}}</h3>
+              <p class="bonus-item-desc">{{desc}}</p>
+
+              <div class="bonus-dotted-divider"></div>
+
+              <div class="bonus-footer-row">
+                <span class="bonus-product-type">{{type}}</span>
+                <div class="bonus-price-group">
+                  <span class="bonus-worth-text">{{bonuses.worthLabel}} <del>{{worth}}</del></span>
+                  <span class="bonus-free-text">{{bonuses.freeLabel}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+{{/each}}
+        </div>
+      </div>
+    </section>

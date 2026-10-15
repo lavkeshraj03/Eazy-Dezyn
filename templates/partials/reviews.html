@@ -1,0 +1,14 @@
+    <!-- ===== REVIEWS ===== -->
+    <section class="reviews-section" id="reviews">
+      <div class="reviews-container">
+        <h2 class="reviews-title">{{reviews.title}}</h2>
+
+        <div class="reviews-marquee">
+        <div class="reviews-grid">
+{{#each reviews.images}}
+          <figure class="rev-shot" style="--w:{{width}}"><img src="{{root}}{{src}}" alt="{{alt}}" decoding="async"></figure>
+{{/each}}
+        </div>
+        </div>
+      </div>
+    </section>

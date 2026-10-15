@@ -1,0 +1,44 @@
+    <!-- ===== GHOSTED SECTION ===== -->
+    <section class="ghosted-section" id="ghosted">
+      <!-- Watermark Bottom-Left: Large smooth mint quarter-circle arc -->
+      <div class="ghosted-watermark-bl">
+        <svg width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="0" cy="420" r="340" fill="rgba(46, 143, 108, 0.13)" />
+        </svg>
+      </div>
+
+      <!-- Watermark Top-Right: Thick hollow ring matching reference -->
+      <div class="ghosted-watermark-tr">
+        <svg width="380" height="380" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="300" cy="80" r="160" stroke="#E2EFE7" stroke-width="48" fill="none" />
+        </svg>
+      </div>
+
+      <div class="container ghosted-grid">
+        <!-- Left Column -->
+        <div class="ghosted-left-col">
+          <h2 class="ghosted-title">{{ghosted.title}}</h2>
+          <p class="ghosted-lead">{{ghosted.lead}}</p>
+          <span class="ghosted-subtext">{{ghosted.subtext}}</span>
+        </div>
+
+        <!-- Right Column: Timeline Cards -->
+        <div class="ghosted-timeline-wrap">
+          <!-- Connecting Line -->
+          <div class="timeline-line"></div>
+
+{{#each ghosted.steps}}
+          <div class="timeline-row">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-content">
+                <span class="timeline-tag">{{tag}}</span>
+                <h4 class="timeline-text">{{text}}</h4>
+              </div>
+            </div>
+          </div>
+
+{{/each}}
+        </div>
+      </div>
+    </section>
