@@ -1,0 +1,674 @@
+{
+  "output": "commercial.html",
+  "meta": {
+    "title": "Commercial &amp; Hospitality Client Onboarding Course + Template System | Eazy Dezyn",
+    "description": "India's first Commercial and Hospitality Client Onboarding Course. Everything you should be pulling out of a business space before you design it, already written for you, for all 14 kinds of commercial space."
+  },
+  "video": {
+    "id": "9cPGtfponsY"
+  },
+  "header": {
+    "tagline": "India's First Commercial and Hospitality Client Onboarding Course + Template System"
+  },
+  "hero": {
+    "badge": "Attention Interior Designers And Architects",
+    "headline": "The <span class=\"ghost-word\">CHANGES</span> on site<br>simply <span class=\"close-word\">STOP</span>.",
+    "body": "India's first Commercial and Hospitality Client Onboarding Course. Everything you should be pulling out of a business space before you design it, already written for you, for all 14 kinds of commercial space.",
+    "proof": {
+      "people": "700+ Designers",
+      "rating": "4.9 Rating",
+      "guarantee": "100% Money Back"
+    },
+    "primaryButton": "Get Instant Access",
+    "secondaryButton": "Watch Demo",
+    "playLabel": "Play trailer",
+    "caption": "2 minutes. See exactly what you get."
+  },
+  "pillars": [
+    {
+      "label": "Runs on",
+      "title": "Free Tools Only"
+    },
+    {
+      "label": "Easy to use",
+      "title": "Nothing to learn First"
+    },
+    {
+      "label": "Start immediately",
+      "title": "Instant Access"
+    }
+  ],
+  "trusted": {
+    "heading": "Trusted by Designers at",
+    "brands": [
+      {
+        "name": "Livespace",
+        "class": "brand-livespace"
+      },
+      {
+        "name": "Homelane",
+        "class": "brand-homelane"
+      },
+      {
+        "name": "Essajees Atelier",
+        "class": "brand-essajees"
+      },
+      {
+        "name": "Gauri Khan Designs",
+        "class": "brand-gauri"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "label": "You Get",
+      "value": "Course + All 14 Space Packs"
+    },
+    {
+      "label": "Course",
+      "value": "7 Modules, 26 Videos"
+    },
+    {
+      "label": "Packs",
+      "value": "14 Spaces, 14 Files Each"
+    },
+    {
+      "label": "Skill Needed",
+      "value": "None"
+    },
+    {
+      "label": "Works For",
+      "value": "Retail to Hotel, All 14"
+    }
+  ],
+  "experts": {
+    "eyebrow": "Expert Review",
+    "title": "What Industry’s Biggest<br>Designers Have To Say",
+    "cards": [
+      {
+        "image": "assets/creator-rahul-sharma.jpg",
+        "alt": "Rahul Sharma",
+        "name": "Rahul Sharma",
+        "handle": "@civilsitevisit",
+        "projects": "170+ projects",
+        "subs": "2.05M YouTube subs",
+        "quote": "“Very well done &amp; must have for every interior designer &amp; architects. Sites are executed very smoothly, when things are pre-done. Great work!”",
+        "link": "https://www.youtube.com/@civilsitevisit",
+        "buttonText": "See His Work"
+      },
+      {
+        "image": "assets/creator-dhiraj-arora.jpg",
+        "alt": "Dhiraj Arora",
+        "name": "Dhiraj Arora",
+        "role": "Author",
+        "handle": "@InteriorContractor",
+        "projects": "550 projects",
+        "subs": "123k YouTube subs",
+        "quote": "“Huge thanks to Siya for the amazing systems &amp; templates! My team used to struggle with clients needing endless revisions. After giving Siya’s template a try, everything became smoother...fewer changes, happy clients, a more efficient team, and happy me. Thank you, Siya!”",
+        "link": "https://www.instagram.com/iaminteriorcontractor/",
+        "buttonText": "See His Work"
+      }
+    ]
+  },
+  "demo": {
+    "title": "Watch It Work",
+    "sub": "Everything you get, shown on screen. Watch the demo first, then decide.",
+    "thumbnail": "assets/siya-video-thumbnail.jpg",
+    "thumbnailAlt": "Siya Agrawal teaching Commercial Client Onboarding",
+    "playLabel": "Play Masterclass Overview",
+    "steps": [
+      "Select the Rooms",
+      "Pick a Grade",
+      "Hand Over the PDF"
+    ],
+    "chips": [
+      {
+        "label": "Pick the Space",
+        "line": "A System Pack for each of 14 commercial spaces"
+      },
+      {
+        "label": "Run the Questions",
+        "line": "Some in the Meeting, the Smaller Ones on WhatsApp"
+      },
+      {
+        "label": "Get It Signed",
+        "line": "Every Decision Maker Signs, Before You Draw"
+      }
+    ]
+  },
+  "ghosted": {
+    "title": "Redesigning The Whole <span class=\"ghosted-green\">Thing?</span>",
+    "lead": "It is rarely the design. It is everyone who can say no, and nobody told you who they were.",
+    "subtext": "Sound familiar?",
+    "steps": [
+      {
+        "tag": "The Client Says Yes",
+        "text": "The yes comes. You start designing the same week."
+      },
+      {
+        "tag": "Two Weeks Later",
+        "text": "A partner you never met says he wanted something else."
+      },
+      {
+        "tag": "Then The Rulebook",
+        "text": "A fire NOC rule lands, and the whole layout has to change."
+      },
+      {
+        "tag": "The Worst Part",
+        "text": "You redraw everything, nobody pays you, and the lease keeps running."
+      }
+    ]
+  },
+  "quote": {
+    "readyTag": "Client ready",
+    "doc": {
+      "initials": "SV",
+      "studio": "Studio Verma",
+      "location": "Interiors, Mumbai",
+      "label": "Business Brief",
+      "sub": "Signed • Retail Store, Pune",
+      "items": [
+        {
+          "name": "Who can say yes or no",
+          "grade": "Named",
+          "gradeClass": "grade-a1",
+          "price": "✓"
+        },
+        {
+          "name": "How the business runs",
+          "grade": "Agreed",
+          "gradeClass": "grade-a1",
+          "price": "✓"
+        },
+        {
+          "name": "Licences and approvals",
+          "grade": "Listed",
+          "gradeClass": "grade-a1",
+          "price": "✓"
+        },
+        {
+          "name": "Landlord and brand rules",
+          "grade": "Listed",
+          "gradeClass": "grade-a1",
+          "price": "✓"
+        }
+      ],
+      "calc": [],
+      "total": "",
+      "schedule": [],
+      "footnote": "Illustrative sample",
+      "signature": "Every decision maker signs"
+    },
+    "title": "Find Every Rule<br><span class=\"text-green-live\">Before You Draw.</span>",
+    "checklist": [
+      "One light meeting before the yes, enough to Quote honestly",
+      "After the yes, you go in on how the business works, half in person, half on WhatsApp",
+      "Every person and every authority who can say no is named, with exactly what they control",
+      "One signed page that ends \"yeh kisne decide kiya\" forever"
+    ],
+    "footnote": "Illustrative sample"
+  },
+  "closeprojects": {
+    "title": "Why do You need it?",
+    "word1": "NO",
+    "word2": "REWORK",
+    "tagline": "&amp; Every Approval Done the 1st Time",
+    "sub": "This is for you if:",
+    "points": [
+      "A partner turns up in week three and throws out your whole layout.",
+      "Three people want three different stores, and nobody says the final word.",
+      "The mall's rules land on your desk once the work has already started.",
+      "Nobody told you the shop has to keep running through the fit-out."
+    ]
+  },
+  "six": {
+    "title": "Six Things It Does for You",
+    "items": [
+      {
+        "title": "14 spaces, A system for each",
+        "desc": "Store, clinic, restaurant, hotel, gym, salon, showroom, school, factory. Open and run it.",
+        "tone": "mint"
+      },
+      {
+        "title": "Who can kill your design",
+        "desc": "You know whose yes you need for money, for brand, for how the place runs, before you quote.",
+        "tone": "peach"
+      },
+      {
+        "title": "The questions everyone misses",
+        "desc": "Where the dead corner is. How many bills in the single busiest hour. The biggest thing that ever has to come through that door.",
+        "tone": "yellow"
+      },
+      {
+        "title": "Light questions before yes, deep after",
+        "desc": "You never pour a week into a business that has not paid you. After the yes, you go all the way in.",
+        "tone": "yellow"
+      },
+      {
+        "title": "Every rule, before you draw",
+        "desc": "The licences, the landlord's fit-out manual, the working hours, the brand book. All on the table at the start.",
+        "tone": "mint"
+      },
+      {
+        "title": "Signed before you draw",
+        "desc": "Written in their own words, signed by every decision maker, so the argument never starts.",
+        "tone": "peach"
+      }
+    ]
+  },
+  "curriculum": {
+    "title": "What You Will Learn",
+    "sub": "7 modules, 26 recorded lessons, in the exact order a real commercial project happens.",
+    "moduleWord": "Module",
+    "accordion": true,
+    "modules": [
+      {
+        "title": "What onboarding is, and what it saves you",
+        "lessons": [
+          "Welcome, what you have, and how to take this course",
+          "What onboarding really is, and every problem it kills",
+          "What to ask before the yes, what to ask after, and who really decides"
+        ],
+        "count": "3 lessons"
+      },
+      {
+        "title": "The first days after the yes",
+        "lessons": [
+          "Day one and two: the token, the receipt, the contract",
+          "The welcome kit that makes you look sorted from the first hour",
+          "Setting the project up: your team, your folders, one clean channel"
+        ],
+        "count": "3 lessons"
+      },
+      {
+        "title": "The system, and how 14 spaces differ",
+        "lessons": [
+          "The two stages, every file in the pack, and the point where asking stops",
+          "What changes from a shop to a hotel, and what never changes"
+        ],
+        "count": "2 lessons"
+      },
+      {
+        "title": "A retail store, end to end",
+        "lessons": [
+          "The pack, and the first meeting questionnaire",
+          "Reading their eye, without letting them pick materials",
+          "Mapping every person, and who has the final word",
+          "How the shop actually trades, day to day",
+          "The zones you sit and do live, and the ones you send out",
+          "The brand, the real site, and every licence and landlord rule",
+          "Turning it all into design decisions, and getting it signed"
+        ],
+        "count": "7 lessons"
+      },
+      {
+        "title": "A restaurant or cafe, end to end",
+        "lessons": [
+          "The pack, and the first meeting questionnaire",
+          "Reading their eye for a restaurant",
+          "Mapping every person, including the chef who is not hired yet",
+          "How the kitchen and the covers really work",
+          "The kitchen and the dining room done in person, the other zones sent out",
+          "The brand, the real site, the food licence and every other approval",
+          "Turning it all into design decisions, and getting it signed"
+        ],
+        "count": "7 lessons"
+      },
+      {
+        "title": "The client who resists, and the one who goes quiet",
+        "lessons": [
+          "Six situations where a client pushes back, and exactly what to say",
+          "The follow-up system for when answers stop coming"
+        ],
+        "count": "2 lessons"
+      },
+      {
+        "title": "Your own space, and what comes next",
+        "lessons": [
+          "Running the other 12 spaces on the same system",
+          "When the client is a home, and what a project needs after onboarding"
+        ],
+        "count": "2 lessons"
+      }
+    ],
+    "thumbnail": "assets/siya-video-thumbnail.jpg",
+    "thumbnailAlt": "Demo Video with Siya Agrawal",
+    "playLabel": "Play Demo Video",
+    "summaryTitle": "Course Summary",
+    "summaryText": "Learn how to onboard any commercial client properly, from a corner store to a hotel, pull out everything that business runs on, get every approval named before you draw, and lock it all in writing.",
+    "rating": "4.9",
+    "learners": "700+ designers"
+  },
+  "bonuses": {
+    "title": "Three Free <span class=\"bonuses-green-word\">Bonuses</span>",
+    "sub": "Each one works on its own, on any project you run.",
+    "tagWord": "Bonus",
+    "worthLabel": "Worth",
+    "freeLabel": "Free",
+    "threeUp": true,
+    "cards": [
+      {
+        "image": "assets/placeholders/bonus-visual-guide.svg",
+        "alt": "The Visual Guide for Clients, cover coming soon",
+        "title": "The Visual Guide For Clients",
+        "desc": "\"Modern chahiye\" means nothing until they see it. Clients cannot describe what they like. They can point at it. Show them this, watch the reaction, and walk out knowing their eye.",
+        "type": "Client facing deck",
+        "worth": "₹3,500"
+      },
+      {
+        "image": "assets/placeholders/bonus-welcome-kit.svg",
+        "alt": "The Customer Welcome Kit, cover coming soon",
+        "title": "The Customer Welcome Kit",
+        "desc": "The client brings their own Contractors, he delays everything, and you get blamed. This puts that in writing, along with your payment stages and your rules, while they are still excited enough to agree to all of it.",
+        "type": "A warm Welcome Kit",
+        "worth": "₹2,999"
+      },
+      {
+        "image": "assets/placeholders/bonus-site-society.svg",
+        "alt": "The Site and Society Checklist, cover coming soon",
+        "title": "The Site &amp; Society Checklist",
+        "desc": "The society says no drilling after 6pm and wants a deposit nobody budgeted for. Better to know that in week one than in month two. Comes with your own site verification checklist.",
+        "type": "Full Checklist",
+        "worth": "₹1,999"
+      }
+    ]
+  },
+  "reviews": {
+    "title": "What other designers say",
+    "images": [
+      {
+        "src": "assets/reviews/1.jpeg",
+        "width": 836,
+        "alt": "Review from Sonu, a verified owner"
+      },
+      {
+        "src": "assets/reviews/4.jpeg",
+        "width": 1170,
+        "alt": "Client message about the template"
+      },
+      {
+        "src": "assets/reviews/2.jpeg",
+        "width": 912,
+        "alt": "Review from Sanjana"
+      },
+      {
+        "src": "assets/reviews/5.jpeg",
+        "width": 1170,
+        "alt": "Client message about the questionnaire"
+      },
+      {
+        "src": "assets/reviews/3.jpeg",
+        "width": 1036,
+        "alt": "Review from laxmimanasa392"
+      },
+      {
+        "src": "assets/reviews/6.jpeg",
+        "width": 1170,
+        "alt": "Client message thanking Siya for the template and checklist"
+      },
+      {
+        "src": "assets/reviews/7.jpeg",
+        "width": 1170,
+        "alt": "Client message about the templates and video"
+      }
+    ],
+    "eyebrow": "Real Feedback",
+    "rating": "4.9 · 700+ designers"
+  },
+  "value": {
+    "title": "The Real Value",
+    "items": [
+      {
+        "name": "Course, 7 modules, 26 videos",
+        "price": "Rs 9,000"
+      },
+      {
+        "name": "All 14 space packs",
+        "price": "Rs 9,500"
+      },
+      {
+        "name": "Written how-to guidance",
+        "price": "Rs 1,500"
+      },
+      {
+        "name": "Bonus 1: The Visual Guide For Clients",
+        "price": "Rs 3,500"
+      },
+      {
+        "name": "Bonus 2: The Customer Welcome Kit",
+        "price": "Rs 2,999"
+      },
+      {
+        "name": "Bonus 3: The Site &amp; Society Checklist",
+        "price": "Rs 1,999"
+      },
+      {
+        "name": "Every future update, free forever",
+        "price": "Priceless",
+        "priceless": true
+      }
+    ],
+    "todayText": "Today, all of it for",
+    "todayPrice": "Rs 3,999.",
+    "totalCrossed": "Rs 28,498"
+  },
+  "pricing": {
+    "title": "Pick Your Spaces",
+    "sub": "Which spaces do you design?",
+    "tabsLabel": "Choose a plan",
+    "threeUp": true,
+    "footnote": "Most designers take “All Spaces”. It is only ₹1,500 more, and whether the next enquiry is a small salon or a full hotel, you already have the System for it.",
+    "plans": [
+      {
+        "id": "plan-everyday",
+        "tag": "Plan 1",
+        "name": "Everyday &amp; Common Spaces",
+        "strip": "8 of 14 spaces",
+        "desc": "Office, Co-working, Showroom, Salon &amp; Spa, Gym &amp; Fitness, Event &amp; Banquet + Retail &amp; Restaurant / Cafe",
+        "price": "₹2,499",
+        "unit": "one time",
+        "features": [
+          {
+            "text": "The full 26-video course"
+          },
+          {
+            "text": "All 3 bonuses, FREE"
+          },
+          {
+            "text": "Free updates, Forever"
+          }
+        ],
+        "button": "8 / 14 Spaces",
+        "link": "#pricing",
+        "note": "One-time payment, Instant access."
+      },
+      {
+        "id": "plan-large",
+        "tag": "Plan 2",
+        "name": "Large &amp; Specialised Spaces",
+        "strip": "8 of 14 spaces",
+        "desc": "Hotel, Healthcare, Educational, Theatre &amp; Cinema, Museum &amp; Gallery, Factory &amp; Warehouse + Retail &amp; Restaurant / Cafe",
+        "price": "₹2,499",
+        "unit": "one time",
+        "features": [
+          {
+            "text": "The full 26-video course"
+          },
+          {
+            "text": "All 3 bonuses, FREE"
+          },
+          {
+            "text": "Free updates, Forever"
+          }
+        ],
+        "button": "8 / 14 Spaces",
+        "link": "#pricing",
+        "note": "One-time payment, Instant access."
+      },
+      {
+        "id": "plan-all",
+        "featured": true,
+        "tag": "Plan 3",
+        "name": "All Spaces",
+        "badge": "★ Most Popular",
+        "strip": "Everything, all 14 spaces",
+        "desc": "All 14 spaces, so whatever enquiry lands next, you already have the system for it.",
+        "price": "₹3,999",
+        "unit": "one time",
+        "features": [
+          {
+            "text": "All 14 spaces"
+          },
+          {
+            "text": "The full 26-video course"
+          },
+          {
+            "text": "All 3 bonuses, FREE"
+          },
+          {
+            "text": "Free updates, Forever"
+          }
+        ],
+        "button": "Get all 14 Spaces",
+        "link": "#pricing",
+        "note": "100% money-back guarantee."
+      }
+    ]
+  },
+  "guarantee": {
+    "watermark": "100%",
+    "sealAlt": "100% Money Back Guarantee",
+    "tag": "Zero-Risk Purchase",
+    "title": "The Risk Is Mine.",
+    "desc": "Use it on your next project. If it's not for you, get a full refund.",
+    "pills": [
+      "100% Money Back",
+      "Zero Questions Asked"
+    ]
+  },
+  "instructor": {
+    "image": "assets/instructor-siya.jpg",
+    "imageAlt": "Siya Agrawal - Founder, Eazy Dezyn",
+    "tag": "Meet Your Instructor",
+    "heading": "The Person Who Built This",
+    "subtitle": "Siya Agrawal, Founder of Siya Interiors and Eazy Dezyn",
+    "bio": "Siya runs two businesses. Siya Interiors, her own interior design studio, and Eazy Dezyn, where she has built one of India's largest platforms for interior design business education. She built India's first Initial Estimate Course + Template made specifically for interior designers.",
+    "quote": "\"I have had my drawings thrown out by a person who was never in a single meeting. Every time, it came back to a question I never asked at the start. So I built this system so you do not have to.\"",
+    "stats": [
+      {
+        "value": "110+",
+        "label": "Projects Executed Personally"
+      },
+      {
+        "value": "150K+",
+        "label": "Designers Following Her Work"
+      },
+      {
+        "value": "4,000+",
+        "label": "Designers Taught"
+      }
+    ]
+  },
+  "who": {
+    "title": "Who This Is for",
+    "sub": "Be honest with yourself on this one.",
+    "good": {
+      "heading": "This <span class=\"who-hl\">Is for You</span> If:",
+      "items": [
+        "A commercial enquiry has come in and you are not sure how to run it",
+        "Your drawings keep getting reopened by people who were not in the meetings",
+        "You want the bigger commercial projects, not just residential",
+        "Your studio runs from memory and loose WhatsApp chats"
+      ]
+    },
+    "bad": {
+      "heading": "This Is <span class=\"who-hl\">Not for You</span> If:",
+      "items": [
+        "You only design homes, the residential course covers those",
+        "You want to learn design, this is about how a commercial project onboarding is run",
+        "You want a file you buy and never open"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Before You Ask",
+    "items": [
+      {
+        "q": "What exactly am I buying?",
+        "a": "Two things. A course of 26 short videos that teaches you how to take on a commercial client properly, and 14 ready made packs, one for each kind of commercial space, that do the asking for you. A pack is a set of 14 files, everything from the questions you ask in the first meeting right up to the page the client signs before you start designing."
+      },
+      {
+        "q": "I have never done a commercial project. Will I understand it?",
+        "a": "Yes. It starts from the very beginning and assumes zero experience with commercial work or with systems. You watch a real store and a real restaurant get onboarded end to end, and then you can run any of the other 12."
+      },
+      {
+        "q": "Only two spaces are taught in full. What about my clinic, or my office, or my hotel?",
+        "a": "You get all 14 packs whatever your project is. The course teaches a store and a restaurant end to end because they are the two far ends of the range, and every other space sits between them. Module 7 walks you through the other 12 in Brief, and each pack comes with its own guide that runs it start to finish."
+      },
+      {
+        "q": "My client will never sit through this many questions.",
+        "a": "They never do it all at once, and that is the whole design of the system. A light set of questions before the yes, and the deeper details get asked after either on WhatsApp or on a meeting.<br><br>Also, Module 6 gives you the exact methods for the client who pushes back or goes silent."
+      },
+      {
+        "q": "Do I need to buy any software?",
+        "a": "No. The packs sit in Notion, and Notion's free plan covers everything here. Everything that goes to your client goes on WhatsApp or your choice of medium. There is nothing to buy on top of this."
+      },
+      {
+        "q": "Will it work for a small project, like a 400 square foot cafe?",
+        "a": "Yes. You only run the zones your project actually has.<br><br>Like a small cafe has fewer zones than a hotel, so it uses fewer modules (Questionnaires). The system runs the same whether it is a Small independent place or a chain outlet in a metro or small town, the process is identical."
+      },
+      {
+        "q": "When do I get access?",
+        "a": "Straight after payment. You are taken to your dashboard with everything inside it, and you also get an order confirmation email with your access within 5 to 10 minutes. Check spam if you do not see it. Log in with the email/phone number you paid with and start."
+      },
+      {
+        "q": "What is the difference between the three plans?",
+        "a": "All 3 Plans give you the Full 26-video course, all 3 bonuses, and free updates forever. The only thing that changes is which space packs you get. Retail and Restaurant/Cafe come with every plan, because they are the two the course teaches in full.<br><br>1. \"Everyday &amp; Common Spaces\" gives you the 8 spaces designers get asked for most often: Office, Co-working, Showroom, Salon &amp; Spa, Gym &amp; Fitness and Event &amp; Banquet + Retail &amp; Restaurant / Cafe<br>2. \"Large &amp; Specialised Spaces\" gives you the 8 bigger, more regulated ones: Hotel, Healthcare, Educational, Theatre &amp; Cinema, Museum &amp; Gallery and Factory &amp; Warehouse + Retail &amp; Restaurant / Cafe<br>3. \"All Spaces\" gives you all 14, so whatever enquiry lands next, you already have the system for it.<br><br>So pick by the work you actually get. Mostly offices, salons and showrooms, take \"1. Everyday &amp; Common\". Mostly hotels, hospitals and institutions, take \"2. Large &amp; Specialised\". A bit of everything, take All Spaces, which is what most designers do."
+      },
+      {
+        "q": "Is this a one time payment?",
+        "a": "One payment, that is it. Yours forever."
+      },
+      {
+        "q": "Can I get a refund?",
+        "a": "Yes. 100% money back. Use it on your next project, and if it's not for you, write to <a href=\"mailto:support@eazydezyn.com\" style=\"color: #2E8F6C; text-decoration: underline; text-transform: none;\">support@eazydezyn.com</a> and we will refund you."
+      },
+      {
+        "q": "Will the price go up?",
+        "a": "Yes. The price goes up every time new lessons and updates are added. Everyone who buys now gets every future update free, forever. So the earlier you buy, the less you pay and the more you end up with."
+      },
+      {
+        "q": "Why not just use a free commercial questionnaire from the internet?",
+        "a": "Because a free questionnaire is a list somebody generated from AI, which doesn't know shit about running an Interior design or Architecture business. You do not know who wrote it, whether they have ever run a project in India, or why any question is on the list. So you send it, clients don't even fill it, and you still do not have what your design needs, because the questions that matter are not the obvious ones. What I'm giving you is not a list of questions, it is the whole process, built and run on 50+ real projects, with the course that makes it work and a signed brief at the end that protects you. I know exactly what I have made and I am very confident about what it does for you. If it does not do it, you get your money back. As simple as that."
+      },
+      {
+        "q": "I already bought your old Commercial questionnaire template. What about me?",
+        "a": "Well then you might want to check your emails, your spam folders, and promotion folders once, so that you can find our updated access link which includes everything that's mentioned here. If for any reason it didn't reach you, email <a href=\"mailto:support@eazydezyn.com\" style=\"color: #2E8F6C; text-decoration: underline; text-transform: none;\">support@eazydezyn.com</a> and we will sort you out."
+      },
+      {
+        "q": "I still have a question.",
+        "a": "Write to <a href=\"mailto:support@eazydezyn.com\" style=\"color: #2E8F6C; text-decoration: underline; text-transform: none;\">support@eazydezyn.com</a> and we will answer you within 24 working hours."
+      }
+    ]
+  },
+  "final": {
+    "eyebrow": "One Click Before Your Next Project",
+    "headline": "<span class=\"final-headline-lead\">Your <span class=\"final-next-project\">Next Project</span> Is Coming.</span>\n          <span class=\"final-donot\">Do Not Reach</span> <span class=\"final-ghosted-word\">Revision 10 Again</span>",
+    "sub": "Every project you start without this is another round of changes you do for free. The fix is one click away, at the lowest price it will ever be.",
+    "offer": {
+      "label": "Today Only",
+      "price": "₹3,999",
+      "old": "₹28,498",
+      "note": "The price goes up with every update. Buy now and every future update is free.",
+      "button": "Get Instant Access"
+    },
+    "points": [
+      "Instant Access",
+      "100% Money-Back Guarantee",
+      "Future Updates Included"
+    ]
+  },
+  "footer": {
+    "copy": "© Eazy Dezyn. India's first Commercial and Hospitality Client Onboarding course + template system."
+  }
+}

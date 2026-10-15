@@ -8,109 +8,119 @@
       <div class="container text-center">
 
         <h2 class="pricing-main-title">{{pricing.title}}</h2>
+{{#if pricing.sub}}
+        <p class="pricing-sub-title">{{pricing.sub}}</p>
+{{/if}}
 
         <!-- Plan tabs: each one jumps to its plan card below -->
-        <nav class="plan-tabs" aria-label="{{pricing.tabsLabel}}">
-          <a href="#plan-template" class="plan-tab">
+        <nav class="plan-tabs{{#if pricing.threeUp}} plan-tabs-3{{/if}}" aria-label="{{pricing.tabsLabel}}">
+{{#each pricing.plans}}
+          <a href="#{{id}}" class="plan-tab{{#if featured}} is-active{{/if}}"{{#if featured}} aria-current="true"{{/if}}>
             <span class="plan-tab-left">
-              <span class="plan-tab-tag">{{pricing.template.tag}}</span>
-              <span class="plan-tab-name">{{pricing.template.name}}</span>
+              <span class="plan-tab-tag">{{tag}}</span>
+              <span class="plan-tab-name">{{name}}</span>
             </span>
-            <span class="plan-tab-price"><s class="plan-tab-old">{{pricing.template.oldPrice}}</s><span class="plan-tab-now">{{pricing.template.price}}</span></span>
+            <span class="plan-tab-price">{{#if oldPrice}}<s class="plan-tab-old">{{oldPrice}}</s>{{/if}}<span class="plan-tab-now">{{price}}</span></span>
           </a>
-          <a href="#plan-complete" class="plan-tab is-active" aria-current="true">
-            <span class="plan-tab-left">
-              <span class="plan-tab-tag">{{pricing.complete.tag}}</span>
-              <span class="plan-tab-name">{{pricing.complete.name}}</span>
-            </span>
-            <span class="plan-tab-price"><s class="plan-tab-old">{{pricing.complete.oldPrice}}</s><span class="plan-tab-now">{{pricing.complete.price}}</span></span>
-          </a>
+{{/each}}
         </nav>
 
-        <div class="price-cards-grid">
-          <!-- Card 1: smaller plan -->
-          <div class="price-plan-card" id="plan-template">
-            <div class="plan-header-strip strip-muted">
-              {{pricing.template.strip}}
-            </div>
-            <div class="plan-card-body">
-              <div class="plan-top-info">
-                <div class="plan-name-row">
-                  <h3 class="plan-card-name">{{pricing.template.name}}</h3>
-                  <span class="plan-card-tag">{{pricing.template.tag}}</span>
-                </div>
-                <p class="plan-card-desc">{{pricing.template.desc}}</p>
-              </div>
-
-              <div class="plan-price-block">
-                <div class="plan-price-row">
-                  <strong class="plan-price-num">{{pricing.template.price}}</strong>
-                  <span class="plan-price-unit plan-price-unit-dark">{{pricing.template.unit}}</span>
-                </div>
-              </div>
-
-              <div class="plan-hairline"></div>
-
-              <div class="plan-checklist">
-{{#each pricing.template.features}}
-{{> feature}}
-
-{{/each}}
-              </div>
-
-              <div class="plan-btn-wrap">
-                <a href="{{pricing.template.link}}" class="btn-plan-outline">{{pricing.template.button}}</a>
-                <span class="plan-sub-note">{{pricing.template.note}}</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: featured plan -->
-          <div class="price-plan-card featured-plan-card" id="plan-complete">
+        <div class="price-cards-grid{{#if pricing.threeUp}} price-cards-grid-3{{/if}}">
+{{#each pricing.plans}}
+{{#if featured}}
+          <!-- Featured plan -->
+          <div class="price-plan-card featured-plan-card" id="{{id}}">
             <!-- Floating Tilted Badge -->
-            <div class="plan-floating-badge">{{pricing.complete.badge}}</div>
+            <div class="plan-floating-badge">{{badge}}</div>
 
             <div class="plan-header-strip strip-green">
-              {{pricing.complete.strip}}
+              {{strip}}
             </div>
             <div class="plan-card-body">
               <div class="plan-top-info">
                 <div class="plan-name-row">
-                  <h3 class="plan-card-name">{{pricing.complete.name}}</h3>
-                  <span class="plan-card-tag">{{pricing.complete.tag}}</span>
+                  <h3 class="plan-card-name">{{name}}</h3>
+                  <span class="plan-card-tag">{{tag}}</span>
                 </div>
-                <p class="plan-card-desc">{{pricing.complete.desc}}</p>
+                <p class="plan-card-desc">{{desc}}</p>
               </div>
 
               <div class="plan-price-block">
                 <div class="plan-price-row">
-                  <strong class="plan-price-num text-green">{{pricing.complete.price}}</strong>
-                  <span class="plan-price-unit plan-price-unit-green">{{pricing.complete.unit}}</span>
+                  <strong class="plan-price-num text-green">{{price}}</strong>
+                  <span class="plan-price-unit plan-price-unit-green">{{unit}}</span>
                 </div>
+{{#if valueText}}
 
                 <div class="plan-savings-row">
-                  <del class="plan-crossed-value">{{pricing.complete.valueText}}</del>
-                  <span class="plan-ltd-offer-badge">{{pricing.complete.offerBadge}}</span>
+                  <del class="plan-crossed-value">{{valueText}}</del>
+                  <span class="plan-ltd-offer-badge">{{offerBadge}}</span>
                 </div>
+{{/if}}
               </div>
 
               <div class="plan-hairline"></div>
+{{#if plusHeader}}
 
-              <div class="plan-plus-header">{{pricing.complete.plusHeader}}</div>
+              <div class="plan-plus-header">{{plusHeader}}</div>
+{{/if}}
 
               <div class="plan-checklist">
-{{#each pricing.complete.features}}
+{{#each features}}
 {{> feature}}
 
 {{/each}}
               </div>
 
               <div class="plan-btn-wrap">
-                <a href="{{pricing.complete.link}}" class="btn-plan-solid-green">{{pricing.complete.button}}</a>
-                <span class="plan-sub-note">{{pricing.complete.note}}</span>
+                <a href="{{link}}" class="btn-plan-solid-green">{{button}}</a>
+                <span class="plan-sub-note">{{note}}</span>
               </div>
             </div>
           </div>
+{{else}}
+          <!-- Plan card -->
+          <div class="price-plan-card" id="{{id}}">
+            <div class="plan-header-strip strip-muted">
+              {{strip}}
+            </div>
+            <div class="plan-card-body">
+              <div class="plan-top-info">
+                <div class="plan-name-row">
+                  <h3 class="plan-card-name">{{name}}</h3>
+                  <span class="plan-card-tag">{{tag}}</span>
+                </div>
+                <p class="plan-card-desc">{{desc}}</p>
+              </div>
+
+              <div class="plan-price-block">
+                <div class="plan-price-row">
+                  <strong class="plan-price-num">{{price}}</strong>
+                  <span class="plan-price-unit plan-price-unit-dark">{{unit}}</span>
+                </div>
+              </div>
+
+              <div class="plan-hairline"></div>
+
+              <div class="plan-checklist">
+{{#each features}}
+{{> feature}}
+
+{{/each}}
+              </div>
+
+              <div class="plan-btn-wrap">
+                <a href="{{link}}" class="btn-plan-outline">{{button}}</a>
+                <span class="plan-sub-note">{{note}}</span>
+              </div>
+            </div>
+          </div>
+{{/if}}
+
+{{/each}}
         </div>
+{{#if pricing.footnote}}
+        <p class="pricing-footnote">{{pricing.footnote}}</p>
+{{/if}}
       </div>
     </section>

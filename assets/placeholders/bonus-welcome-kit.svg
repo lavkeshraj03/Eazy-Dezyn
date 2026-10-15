@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690">
+  <rect width="1200" height="690" fill="#E7F3ED"/>
+  <circle cx="1080" cy="80" r="190" fill="#D3EADF"/>
+  <circle cx="90" cy="650" r="150" fill="#D3EADF"/>
+  <rect x="420" y="70" width="360" height="86" rx="43" fill="#4BB28D"/>
+  <text x="600" y="126" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">A warm Welcome Kit</text>
+  <text x="600" y="300" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="78" font-weight="800" fill="#1E2B24">The Customer</text>
+  <text x="600" y="392" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="78" font-weight="800" fill="#2E8F6C">Welcome Kit</text>
+  <text x="600" y="520" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#7A9488">Cover image coming soon</text>
+</svg>

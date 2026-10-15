@@ -24,6 +24,29 @@
         </div>
 
         <!-- 3 Step Pills Below Video (Exact match to reference screenshot) -->
+{{#if demo.chips}}
+        <div class="learn-steps-row learn-steps-row-2">
+{{#each demo.chips}}
+          <div class="learn-step-pill learn-step-pill-2">
+            <span class="learn-step-num">{{@index1}}</span>
+            <span class="learn-step-text learn-step-text-2">
+              <span class="learn-step-label">{{label}}</span>
+              <span class="learn-step-line">{{line}}</span>
+            </span>
+          </div>
+{{#if @last}}
+{{else}}
+
+          <div class="learn-step-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A9488" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+{{/if}}
+{{/each}}
+{{else}}
         <div class="learn-steps-row">
 {{#each demo.steps}}
           <div class="learn-step-pill">
@@ -42,6 +65,7 @@
           </div>
 {{/if}}
 {{/each}}
+{{/if}}
         </div>
       </div>
     </section>

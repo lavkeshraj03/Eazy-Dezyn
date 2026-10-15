@@ -1,7 +1,13 @@
     <!-- ===== REVIEWS ===== -->
     <section class="reviews-section" id="reviews">
       <div class="reviews-container">
+{{#if reviews.eyebrow}}
+        <span class="reviews-eyebrow">{{reviews.eyebrow}}</span>
+{{/if}}
         <h2 class="reviews-title">{{reviews.title}}</h2>
+{{#if reviews.rating}}
+        <p class="reviews-rating-line">{{reviews.rating}}</p>
+{{/if}}
 
         <div class="reviews-marquee">
         <div class="reviews-grid">

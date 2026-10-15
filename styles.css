@@ -7356,3 +7356,287 @@ svg {
     white-space: nowrap;
   }
 }
+
+/* ============ EXTRA PAGE VARIANTS (used by the course pages built from templates/) ============ */
+
+/* Pricing: optional sub heading and foot line */
+.pricing-sub-title {
+  margin: -30px auto 34px;
+  max-width: 640px;
+  font-family: var(--font-subhead);
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.pricing-footnote {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 34px auto 0;
+  font-family: var(--font-subhead);
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: none;
+}
+
+/* Pricing: three plan cards side by side on desktop */
+@media (min-width: 901px) {
+  .price-cards-grid.price-cards-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1140px;
+    gap: 24px;
+  }
+}
+
+.plan-tabs.plan-tabs-3 {
+  flex-direction: column;
+  max-width: 460px;
+  gap: 10px;
+}
+
+/* "Watch it work": two line step chips (label + line) */
+.learn-steps-row.learn-steps-row-2 {
+  align-items: stretch;
+  gap: 14px;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.learn-step-pill.learn-step-pill-2 {
+  flex: 1 1 0;
+  min-width: 0;
+  align-items: center;
+  border-radius: 22px;
+  padding: 12px 22px 12px 12px;
+  text-align: left;
+}
+
+.learn-step-text.learn-step-text-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.learn-step-label {
+  font-family: var(--font-subhead);
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2E8F6C;
+}
+
+.learn-step-line {
+  font-family: var(--font-subhead);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #3D4D44;
+}
+
+.learn-steps-row-2 .learn-step-arrow {
+  align-self: center;
+}
+
+@media (max-width: 900px) {
+  .learn-steps-row.learn-steps-row-2 {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    max-width: 460px;
+    gap: 10px;
+  }
+
+  .learn-steps-row-2 .learn-step-arrow {
+    display: none;
+  }
+
+  .learn-step-pill.learn-step-pill-2 {
+    flex: none;
+    padding: 10px 16px 10px 10px;
+  }
+
+  .learn-step-line {
+    font-size: 13.5px;
+  }
+}
+
+/* Curriculum: modules that open to show their lessons */
+.curr-module-pill-card.curr-acc {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+}
+
+.curr-acc-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px 16px 24px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.curr-acc-btn .curr-mod-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: #1E2B24;
+  text-transform: none;
+}
+
+.curr-mod-count {
+  flex-shrink: 0;
+  font-family: var(--font-subhead);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #55685E;
+  white-space: nowrap;
+}
+
+.curr-acc-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #E7F3ED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.curr-acc.open .curr-acc-icon {
+  transform: rotate(45deg);
+}
+
+.curr-acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.curr-acc.open .curr-acc-panel {
+  grid-template-rows: 1fr;
+}
+
+.curr-lessons {
+  overflow: hidden;
+  min-height: 0;
+  margin: 0;
+  padding: 0 24px 0 24px;
+  list-style: none;
+  counter-reset: lesson;
+}
+
+.curr-acc.open .curr-lessons {
+  padding-bottom: 18px;
+}
+
+.curr-lessons li {
+  counter-increment: lesson;
+  position: relative;
+  padding: 9px 0 9px 34px;
+  border-top: 1px solid rgba(30, 43, 36, 0.07);
+  font-family: var(--font-subhead);
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #3D4D44;
+  text-transform: none;
+}
+
+.curr-lessons li::before {
+  content: counter(lesson);
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #E7F3ED;
+  color: #238461;
+  font-size: 11.5px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .curr-acc-btn {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 14px 14px 14px 16px;
+  }
+
+  .curr-acc-btn .curr-mod-name {
+    flex: 1 1 100%;
+    order: 3;
+  }
+
+  .curr-acc-icon {
+    margin-left: auto;
+  }
+
+  .curr-lessons {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Bonuses: three cards in a row on desktop */
+@media (min-width: 901px) {
+  .bonuses-grid.bonuses-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1140px;
+    gap: 24px;
+  }
+}
+
+/* Reviews: optional eyebrow and rating line */
+.reviews-eyebrow {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: var(--font-subhead);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2E8F6C;
+}
+
+.reviews-rating-line {
+  text-align: center;
+  margin: -26px 0 36px;
+  font-family: var(--font-subhead);
+  font-size: 16px;
+  font-weight: 700;
+  color: #55685E;
+}
+
+/* Curriculum accordion: cards keep their natural height when opened */
+.curr-modules-list:has(.curr-acc) {
+  height: auto;
+  justify-content: flex-start;
+  align-self: start;
+}
+
+.curr-module-pill-card.curr-acc {
+  flex-shrink: 0;
+}
+
+.learn-step-text.learn-step-text-2,
+.learn-step-label,
+.learn-step-line {
+  white-space: normal;
+}

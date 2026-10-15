@@ -540,3 +540,16 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach(function (c) { io.observe(c); });
   }
 })();
+
+/* --- Curriculum modules that open to show their lessons --- */
+(function () {
+  var mods = Array.prototype.slice.call(document.querySelectorAll('.curr-acc'));
+  mods.forEach(function (m) {
+    var btn = m.querySelector('.curr-acc-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var open = m.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+})();

@@ -6,7 +6,7 @@
           <p class="bonuses-sub">{{bonuses.sub}}</p>
         </div>
 
-        <div class="bonuses-grid">
+        <div class="bonuses-grid{{#if bonuses.threeUp}} bonuses-grid-3{{/if}}">
 {{#each bonuses.cards}}
           <div class="bonus-card">
             <div class="bonus-placeholder-banner">

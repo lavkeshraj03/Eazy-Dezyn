@@ -42,6 +42,7 @@
 {{/each}}
               </div>
 
+{{#if quote.doc.calc}}
               <!-- Calculations Block -->
               <div class="doc-calc-block">
 {{#each quote.doc.calc}}
@@ -51,13 +52,17 @@
                 </div>
 {{/each}}
               </div>
+{{/if}}
 
+{{#if quote.doc.total}}
               <!-- Grand Total Bar -->
               <div class="doc-grand-total-bar">
                 <span class="grand-total-label">{{quote.doc.totalLabel}}</span>
                 <strong class="grand-total-val">{{quote.doc.total}}</strong>
               </div>
+{{/if}}
 
+{{#if quote.doc.schedule}}
               <!-- Payment Schedule (Full Width) -->
               <div class="doc-payment-schedule-block">
                 <span class="schedule-head">{{quote.doc.scheduleTitle}}</span>
@@ -74,6 +79,7 @@
                   <div class="sched-lbl sched-lbl-4">{{quote.doc.schedule.3}}</div>
                 </div>
               </div>
+{{/if}}
 
               <!-- Document Bottom Row: Footnote on Left + Signature on Right -->
               <div class="doc-bottom-row">

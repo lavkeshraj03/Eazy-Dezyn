@@ -9,6 +9,34 @@
         <div class="curr-layout">
           <!-- Left: 6 Clean Rounded Pill Cards -->
           <div class="curr-modules-list">
+{{#if curriculum.accordion}}
+{{#each curriculum.modules}}
+            <div class="curr-module-pill-card curr-acc{{#if @first}} open{{/if}}">
+              <button class="curr-acc-btn" type="button" aria-expanded="{{#if @first}}true{{else}}false{{/if}}">
+                <span class="curr-mod-tag">{{curriculum.moduleWord}} {{@num2}}</span>
+                <span class="curr-mod-name">{{title}}</span>
+{{#if count}}
+                <span class="curr-mod-count">{{count}}</span>
+{{/if}}
+                <span class="curr-acc-icon" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2E8F6C" stroke-width="2.6"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="curr-acc-panel">
+                <ol class="curr-lessons">
+{{#each lessons}}
+                  <li>{{.}}</li>
+{{/each}}
+                </ol>
+              </div>
+            </div>
+
+{{/each}}
+{{else}}
 {{#each curriculum.modules}}
             <div class="curr-module-pill-card">
               <span class="curr-mod-tag">{{curriculum.moduleWord}} {{@num2}}</span>
@@ -16,6 +44,7 @@
             </div>
 
 {{/each}}
+{{/if}}
           </div>
 
           <!-- Right: Sidebar with Video Thumbnail and Summary Card -->

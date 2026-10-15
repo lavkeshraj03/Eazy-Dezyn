@@ -383,68 +383,73 @@
   "pricing": {
     "title": "Pick Your Plan",
     "tabsLabel": "Choose a plan",
-    "template": {
-      "tag": "Plan 1",
-      "name": "Template Only",
-      "strip": "Template only",
-      "desc": "The tool and the guides to use it.",
-      "price": "₹1,200",
-      "oldPrice": "₹6,500",
-      "unit": "one time",
-      "features": [
-        {
-          "text": "Initial Estimate Master Template (<span class=\"nocap\">.xlsx</span>)"
-        },
-        {
-          "text": "Complete written user guides"
-        },
-        {
-          "text": "No video course",
-          "off": true
-        },
-        {
-          "text": "No bonus templates &amp; course",
-          "off": true
-        },
-        {
-          "text": "Free future updates",
-          "off": true
-        }
-      ],
-      "button": "Get the Template",
-      "link": "#pricing",
-      "note": "One-time payment, Instant access."
-    },
-    "complete": {
-      "tag": "Plan 2",
-      "name": "Complete",
-      "badge": "★ Most Popular",
-      "strip": "Everything, at the price of one course",
-      "desc": "The course, the template, both bonuses, all future updates free.",
-      "price": "₹2,499",
-      "oldPrice": "₹19,500",
-      "unit": "only",
-      "valueText": "₹19,500 value",
-      "offerBadge": "Limited Time Offer",
-      "plusHeader": "Everything in Template Only, plus:",
-      "features": [
-        {
-          "text": "The full Estimation video course"
-        },
-        {
-          "text": "Bonus: Master Rate Sheet (course + template)"
-        },
-        {
-          "text": "Bonus: GST Invoice Template (course + template)"
-        },
-        {
-          "text": "Every future update, free forever"
-        }
-      ],
-      "button": "Get Instant Access",
-      "link": "#pricing",
-      "note": "100% money-back guarantee."
-    }
+    "plans": [
+      {
+        "tag": "Plan 1",
+        "name": "Template Only",
+        "strip": "Template only",
+        "desc": "The tool and the guides to use it.",
+        "price": "₹1,200",
+        "oldPrice": "₹6,500",
+        "unit": "one time",
+        "features": [
+          {
+            "text": "Initial Estimate Master Template (<span class=\"nocap\">.xlsx</span>)"
+          },
+          {
+            "text": "Complete written user guides"
+          },
+          {
+            "text": "No video course",
+            "off": true
+          },
+          {
+            "text": "No bonus templates &amp; course",
+            "off": true
+          },
+          {
+            "text": "Free future updates",
+            "off": true
+          }
+        ],
+        "button": "Get the Template",
+        "link": "#pricing",
+        "note": "One-time payment, Instant access.",
+        "id": "plan-template"
+      },
+      {
+        "tag": "Plan 2",
+        "name": "Complete",
+        "badge": "★ Most Popular",
+        "strip": "Everything, at the price of one course",
+        "desc": "The course, the template, both bonuses, all future updates free.",
+        "price": "₹2,499",
+        "oldPrice": "₹19,500",
+        "unit": "only",
+        "valueText": "₹19,500 value",
+        "offerBadge": "Limited Time Offer",
+        "plusHeader": "Everything in Template Only, plus:",
+        "features": [
+          {
+            "text": "The full Estimation video course"
+          },
+          {
+            "text": "Bonus: Master Rate Sheet (course + template)"
+          },
+          {
+            "text": "Bonus: GST Invoice Template (course + template)"
+          },
+          {
+            "text": "Every future update, free forever"
+          }
+        ],
+        "button": "Get Instant Access",
+        "link": "#pricing",
+        "note": "100% money-back guarantee.",
+        "id": "plan-complete",
+        "featured": true
+      }
+    ]
   },
   "guarantee": {
     "watermark": "100%",
