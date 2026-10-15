@@ -30,7 +30,25 @@
         "external": true
       }
     ],
-    "disclaimer": "Due to the digital nature of the product, resale and redistribution are not permitted."
+    "disclaimer": "Due to the digital nature of the product, resale and redistribution are not permitted.",
+    "pages": [
+      {
+        "href": "index.html",
+        "text": "Initial Estimate"
+      },
+      {
+        "href": "residential.html",
+        "text": "Residential Onboarding"
+      },
+      {
+        "href": "commercial.html",
+        "text": "Commercial Onboarding"
+      },
+      {
+        "href": "contracts.html",
+        "text": "Contracts &amp; Legalities"
+      }
+    ]
   },
   "video": {
     "title": "Masterclass Video",

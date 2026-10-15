@@ -7640,3 +7640,20 @@ svg {
 .learn-step-line {
   white-space: normal;
 }
+
+/* Footer: row linking to every course page */
+.footer-pages-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 18px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+@media (max-width: 640px) {
+  .footer-pages-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

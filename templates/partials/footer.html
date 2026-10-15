@@ -14,6 +14,13 @@
         </nav>
       </div>
 
+      <!-- All course pages -->
+      <nav class="footer-nav-links footer-pages-row" aria-label="All courses">
+{{#each footer.pages}}
+        <a href="{{root}}{{href}}">{{text}}</a>
+{{/each}}
+      </nav>
+
       <!-- Bottom Disclaimer / Legal Text -->
       <div class="footer-bottom-info">
         <p class="footer-copy-text">{{footer.copy}}</p>
